@@ -1,0 +1,31 @@
+`file: articles/2026-08-05-quantum-experiment-run-from-the-cloud-linkedin.txt`
+
+Three physicists just made an experimental discovery without ever setting foot in a lab.
+
+They confirmed a quantum prediction that sat untested for more than 20 years.
+
+The twist: none of them owned the apparatus.
+
+The prediction is called anomalous tunneling. In an ultracold cloud of atoms, the lowest-energy waves slip through an energy barrier with near-perfect transmission, the exact opposite of how a normal particle behaves. Clean idea. Almost impossible to test, because the hardware to do it lives in a handful of labs on Earth.
+
+So the team, all theorists, rented time on one.
+
+They used a cloud platform that operates a Bose-Einstein condensate in a US vacuum chamber cooled below 100 nanokelvin. They sent instructions over the internet. The machine built the condensate, raised the barrier, and sent the images back. The data matched the theory.
+
+The result is real physics, now published in a Nature-portfolio journal.
+
+But the method is the bigger story.
+
+For most of history, a great idea in experimental science hit the same wall: you needed the building, the instrument, and the years to run it. Frontier capability lived where the capital lived.
+
+That wall is turning into an API call.
+
+Cloud computing did this to servers. Cloud sequencing did it to genomics. Now it is reaching the physics bench. When a scarce, expensive capability becomes a shared service, the people who can make discoveries stops being "the labs that own the hardware" and becomes "anyone with a testable idea."
+
+That is how a field speeds up. Not by making the machine cheaper. By making it shared.
+
+What capability in your industry is still gated by who owns the hardware, and what happens the day it becomes a service anyone can rent?
+
+#QuantumComputing #DeepTech #Innovation #RandD #FutureOfScience #CloudComputing
+
+Full article on dev.to 🔗 [link in comments]

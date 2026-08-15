@@ -1,0 +1,67 @@
+Every quantum photonics lab starts the same way: turn on the laser.
+
+A team just skipped that step entirely.
+
+Researchers from the University of Ottawa and the Max Planck Institute for the Science of Light generated real quantum entanglement using nothing but sunlight. No laser.
+
+Their result, published in Optica:
+
+→ Ordinary sunlight funneled into a crystal the size of a grain of rice
+→ Entangled photon pairs at ~94% fidelity to a perfect state
+→ Correlations that violated Bell's inequality, the gold-standard test for genuine entanglement
+
+For decades the assumption was airtight: you need coherent light for this, and sunlight is the opposite of coherent. It spreads everywhere, carries every color, and its waves are out of sync.
+
+So how did they do it?
+
+They stopped trying to fix what sunlight lacks and used the one thing it already has. Sunlight can be strongly polarized. They encoded the entanglement in polarization and engineered the rest of the disorder to pass through harmlessly.
+
+The first author admits world-renowned researchers doubted they would detect anything at all.
+
+To be clear about what this is not: it is a proof of principle. The source needs to be brighter before it competes with lasers. A milestone, not a product.
+
+But the lesson is one I keep seeing in real innovation.
+
+Everyone treated the laser as a fixed cost. The breakthrough came from asking whether the component was needed at all, once you noticed the real requirement was narrower than the part you were paying for.
+
+What expensive component in your system are you optimizing, when you should be questioning whether you need it?
+
+#Innovation #QuantumComputing #DeepTech #Photonics #RandD #FutureOfTech #Physics
+
+Full article on dev.to 🔗 [link in comments]
+
+### LinkedIn post (companion file)
+
+`file: articles/2026-08-10-sunlight-quantum-entanglement-linkedin.txt`
+
+Every quantum photonics lab starts the same way: turn on the laser.
+
+A team just skipped that step entirely.
+
+Researchers from the University of Ottawa and the Max Planck Institute for the Science of Light generated real quantum entanglement using nothing but sunlight. No laser.
+
+Their result, published in Optica:
+
+→ Ordinary sunlight funneled into a crystal the size of a grain of rice
+→ Entangled photon pairs at ~94% fidelity to a perfect state
+→ Correlations that violated Bell's inequality, the gold-standard test for genuine entanglement
+
+For decades the assumption was airtight: you need coherent light for this, and sunlight is the opposite of coherent. It spreads everywhere, carries every color, and its waves are out of sync.
+
+So how did they do it?
+
+They stopped trying to fix what sunlight lacks and used the one thing it already has. Sunlight can be strongly polarized. They encoded the entanglement in polarization and engineered the rest of the disorder to pass through harmlessly.
+
+The first author admits world-renowned researchers doubted they would detect anything at all.
+
+To be clear about what this is not: it is a proof of principle. The source needs to be brighter before it competes with lasers. A milestone, not a product.
+
+But the lesson is one I keep seeing in real innovation.
+
+Everyone treated the laser as a fixed cost. The breakthrough came from asking whether the component was needed at all, once you noticed the real requirement was narrower than the part you were paying for.
+
+What expensive component in your system are you optimizing, when you should be questioning whether you need it?
+
+#Innovation #QuantumComputing #DeepTech #Photonics #RandD #FutureOfTech #Physics
+
+Full article on dev.to 🔗 [link in comments]

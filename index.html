@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<section class="hero">
+  <p class="eyebrow">The R&amp;D Innovate blog</p>
+  <h1>Notes from the cutting edge.</h1>
+  <p class="lede">Daily reporting on the research that will reshape how things get built &mdash;
+  with an honest read on what each result actually proves, and what it means for R&amp;D investment.</p>
+</section>
+
+{%- assign latest = site.posts.first -%}
+{%- if latest -%}
+<a class="card feature" href="{{ latest.url | relative_url }}">
+  <span class="tag">Latest</span>
+  <time datetime="{{ latest.date | date_to_xmlschema }}">{{ latest.date | date: "%-d %B %Y" }}</time>
+  <h2>{{ latest.title }}</h2>
+  <p>{{ latest.excerpt | strip_html | truncate: 260 }}</p>
+  <span class="more">Read article &rarr;</span>
+</a>
+{%- endif -%}
+
+<div class="grid">
+{%- for post in site.posts offset: 1 -%}
+  <a class="card" href="{{ post.url | relative_url }}">
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+    <span class="more">Read article &rarr;</span>
+  </a>
+{%- endfor -%}
+</div>

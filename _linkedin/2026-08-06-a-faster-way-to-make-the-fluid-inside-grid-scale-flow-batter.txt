@@ -1,0 +1,45 @@
+`file: articles/2026-08-06-faster-flow-battery-electrolyte-linkedin.txt`
+
+The cheapest part of a grid battery might be the metal. The most expensive part is the liquid.
+
+Vanadium flow batteries can store many hours of electricity, which is exactly what AI data centers and renewable grids now need.
+
+But a big chunk of their cost is not the tanks or the pumps.
+
+It is the electrolyte, the fluid that runs through them.
+
+Making that fluid cleanly and cheaply has been a bottleneck for years.
+
+A KAIST team just cut the production time by about two-thirds.
+
+Their insight was almost embarrassingly simple.
+
+The reduction reaction that makes the fluid moves fast at first, then stalls at a specific point.
+
+So they stopped forcing one method through the whole process.
+
+Chemistry does the fast early phase.
+
+A catalyst takes over exactly at the stall point.
+
+Two problems that were wearing the same coat, finally split apart.
+
+Production time down roughly 67 percent. Impurities gone. Catalyst reused 2,500-plus times.
+
+Here is the broader lesson for anyone building deep tech:
+
+The next big cost reduction is rarely in the headline breakthrough.
+
+It is usually hiding in the boring middle of the manufacturing line.
+
+The physics of the vanadium flow battery has been understood for decades.
+
+What held it back was how expensive it was to make its working fluid.
+
+Fix the unglamorous step, and a niche technology suddenly looks like infrastructure.
+
+Where in your own process are you forcing one tool to do a job that is really two jobs?
+
+#EnergyStorage #CleanTech #Innovation #DeepTech #GridStorage #Batteries #RandD
+
+Full article on dev.to 🔗 [link in comments]

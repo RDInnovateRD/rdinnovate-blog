@@ -1,0 +1,48 @@
+A 27-billion-parameter AI model just started running on an iPhone.
+
+Not a shrunk-down demo. Not a cloud model in disguise.
+
+The real thing. On the device. No signal required.
+
+For years the rule felt permanent: powerful AI is too big to leave the data centre. Your phone is just a window into a server farm.
+
+On July 14, a Caltech spinout called PrismML picked that rule apart.
+
+Here's the number that matters:
+
+That model, stored normally, needs about 54 GB of memory. No phone has that.
+
+PrismML got it down to 3.9 GB.
+
+Same 27.8 billion parameters. Squeezed by more than 13x. Still keeping 90%+ of full performance. Released free and open on Hugging Face.
+
+How? Extreme quantization: every parameter crushed down to a single bit (+1 or -1), with a clever "group-wise scaling" trick to hold the math together.
+
+The tradeoff is honest: raw factual recall drops. But reasoning, math and coding hold up. The part that makes a model feel smart survives.
+
+Apple is already evaluating the tech.
+
+Here's why every innovator should sit with this:
+
+For years the whole industry sprinted the same direction. Bigger models. More parameters. Larger data centres. Scale, scale, scale.
+
+PrismML asked a different question.
+
+Not "how do we build a bigger brain in the cloud?"
+But "how little can we spend to store the one we already have?"
+
+The answer was more than 10x smaller than anyone assumed was possible.
+
+When a whole field is optimizing the same variable, the opening is usually in the variable nobody is looking at.
+
+While everyone races to ADD, the breakthrough is often in what you can afford to REMOVE.
+
+Where in your work is everyone chasing "bigger," when the real move is "smaller"?
+
+Full breakdown on our blog 🔗 [link in comments]
+
+#Innovation #RandD #ArtificialIntelligence #EdgeAI #DeepTech #OnDeviceAI #FutureOfTech
+
+---
+
+*Sources: "PrismML Announces 1-bit Bonsai 27B, The First 27B Model to Run on a Phone," PrismML company announcement, 14 July 2026 (prismml.com), model card on Hugging Face; "Caltech Startup Fit a 27B AI Model Into an iPhone: Apple Is Evaluating the Tech," Tech Times, 15 July 2026; reporting via CNBC, 14 July 2026, with comments from PrismML CEO Babak Hassibi.*

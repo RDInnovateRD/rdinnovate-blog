@@ -1,0 +1,35 @@
+`file: articles/2026-08-08-solar-nanoreactor-hydrogen-peroxide-linkedin.txt`
+
+What if a factory could make its own bleach and disinfectant out of thin air?
+
+Not a metaphor. Air, water, and sunlight.
+
+A team at the Dalian Institute of Chemical Physics just built a hollow nanoreactor that makes hydrogen peroxide from visible light, oxygen, and water. No hydrogen gas. No palladium. No giant centralized plant.
+
+The clever part is not a stronger catalyst. It is the architecture.
+
+They copied a living cell.
+
+Cells do not run chemistry in an open beaker. They compartmentalize. They concentrate reactants in tiny pockets and shuttle protons across surfaces with precise molecular relays.
+
+So the researchers built exactly that:
+A cadmium sulfide core in a polydopamine shell.
+A built-in proton relay borrowed from the same molecules biology has used for billions of years.
+A hollow cavity that traps light and holds reactants close to where the reaction happens.
+
+The result runs on sunlight and leaves water as its only trace.
+
+Here is the innovation lesson I keep coming back to.
+
+When a problem resists brute force, stop asking which ingredient is stronger.
+Start asking how the space itself is arranged.
+
+Biology solved that a long time ago. We are finally learning to read its notes.
+
+Peroxide today. Fuels and other chemicals from sunlight tomorrow.
+
+If your process has been stuck for years, is the bottleneck really the material, or is it the structure around it?
+
+#Innovation #CleanTech #Chemistry #Sustainability #DeepTech #RandD #ArtificialPhotosynthesis
+
+Full article on dev.to 🔗 [link in comments]

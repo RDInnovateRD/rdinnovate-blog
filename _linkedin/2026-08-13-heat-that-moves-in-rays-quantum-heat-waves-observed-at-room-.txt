@@ -1,0 +1,27 @@
+`file: articles/2026-08-13-quantum-heat-waves-room-temperature-linkedin.txt`
+
+For 70 years, chip design has run on one assumption: heat spreads.
+
+UCLA engineers just broke it.
+
+They guided heat through a crystal in tight, focused rays. Like a beam of light. At room temperature.
+
+Not near absolute zero in a cryogenic lab. At the same 300 kelvin your laptop runs at.
+
+The material is boron arsenide. Weak phonon scattering, so the vibrations that carry heat stop behaving like a diffusing gas and start behaving like a wave you can aim. Sixfold, eightfold, and fourfold focusing patterns, set by the crystal itself.
+
+Why it matters:
+
+Modern AI chips don't fail because they run out of compute. They fail because a few dense hot spots run out of ways to shed heat. If you can route that heat along a planned path instead of letting it smear everywhere, you relax one of the tightest ceilings in hardware.
+
+The bigger lesson has nothing to do with heat.
+
+Most stubborn engineering limits are material limits wearing a disguise. The whole industry optimized around "heat spreads" as if it were a law of nature. Change the material and it turns into a design choice.
+
+The best R&D teams don't ask how to beat the constraint faster. They ask whether the constraint was ever real.
+
+What "law of nature" in your field is actually just an untested material assumption?
+
+#DeepTech #Semiconductors #Innovation #QuantumEngineering #RnD #FutureOfComputing #MaterialsScience
+
+Full article on dev.to 🔗 [link in comments]

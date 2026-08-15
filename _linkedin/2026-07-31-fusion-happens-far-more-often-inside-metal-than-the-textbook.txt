@@ -1,0 +1,31 @@
+They packed heavy hydrogen into metal foils and fusion started happening a quintillion times more often than the textbooks allow.
+
+No giant reactor. No plasma hotter than the sun. Just titanium and palladium foils on a lab bench.
+
+For a century the rule was simple: two nuclei both carry positive charge, they repel, and the lower the energy the harder it is to make them fuse. Below a certain point the reaction rate is supposed to fall off a cliff.
+
+A team from UC Davis and Lawrence Berkeley National Laboratory just published a result in Nature Communications where the cliff wasn't there.
+
+Here's what they found:
+
+→ They loaded deuterium into titanium and palladium foils and drove fusion at very low energies, below 2.5 keV.
+
+→ Instead of collapsing, the reaction rate leveled into a plateau.
+
+→ The likely reason is electron screening: electrons and defects inside the metal crowd around each nucleus and partially cancel the repulsion, shaving down the Coulomb barrier.
+
+To be clear about what this is NOT: it's not net energy, not a power reactor, not a city on a foil. The baseline is tiny. But it's a real lever for compact neutron sources used in cargo screening, materials inspection, and medical imaging.
+
+Here's the part worth sitting with:
+
+Fusion research has always attacked the barrier with brute force. Hotter, stronger, bigger. This team changed what surrounds the nuclei instead and let the environment do part of the work.
+
+The reaction was never a property of two nuclei alone. It was a property of the nuclei AND their setting. And the setting turned out to be tunable.
+
+When a process resists every attempt to push it harder, maybe the constraint isn't the thing you keep pushing. Maybe it's the medium you never thought to redesign.
+
+What in your work have you been trying to force, when you should be changing the room it lives in?
+
+Full article on dev.to 🔗 [link in comments]
+
+#Innovation #RandD #Fusion #DeepTech #Energy #MaterialsScience #Physics

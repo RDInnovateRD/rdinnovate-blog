@@ -1,0 +1,15 @@
+title: R&D Innovate
+description: Daily signal from the cutting edge of research and development.
+url: "https://blog.rdinnovate.com"
+baseurl: ""
+permalink: /:year/:month/:day/:title/
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+exclude:
+  - _linkedin
+  - _source
+  - Gemfile
+  - Gemfile.lock
+  - vendor

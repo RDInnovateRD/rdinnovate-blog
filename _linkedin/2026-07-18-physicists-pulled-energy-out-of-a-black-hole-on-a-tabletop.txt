@@ -1,0 +1,51 @@
+Physicists just pulled energy out of a "black hole."
+
+On a tabletop. In a lab. No black hole required.
+
+For 50 years this was pure theory.
+
+Roger Penrose showed that an object falling into a spinning black hole could split, and one piece could fly back out with MORE energy than it started with, skimmed off the black hole's spin.
+
+Yakov Zel'dovich went further: any object spinning fast enough could amplify a wave that hit it right.
+
+Beautiful idea. One fatal catch.
+
+To do it with light, you'd have to spin a physical object faster than light.
+
+Impossible. So for half a century, it stayed on the chalkboard.
+
+This month, a team at CUNY moved it onto a bench. Published in Nature, July 8.
+
+Here's the clever part:
+
+They didn't spin anything.
+
+They built a ring of electronic circuits and changed each one in a timed sequence, so a pattern travels around the loop. To an incoming wave, that pattern looks exactly like ultrafast rotation, faster than any motor could ever spin.
+
+They call it "synthetic rotation."
+
+Waves that entered the ring came out amplified, exactly as Penrose and Zel'dovich predicted. Selective. Broadband. Real.
+
+Possible uses: wireless comms, quantum optics, low-noise amplifiers. Funded by the NSF, the Simons Foundation, and the Department of Defense.
+
+But here's the part every innovator should sit with:
+
+For 50 years the blocker was "you can't spin matter that fast."
+
+The team didn't fight that limit. They asked a sharper question: is spinning matter the ONLY way to produce this effect?
+
+It wasn't.
+
+When a project slams into a hard limit, the reflex is to attack the limit or quit. The better move is often to separate the outcome you need from the mechanism everyone assumes must deliver it.
+
+The wall is in the mechanism. The outcome usually has another door.
+
+Where in your work are you fighting a limit, when you should be changing the mechanism?
+
+Full breakdown on our blog 🔗 [link in comments]
+
+#Innovation #RandD #Physics #DeepTech #QuantumTech #Photonics #FutureOfTech
+
+---
+
+*Sources: "Wave amplification via synthetic time-engineered rotation," H. Nasari, H. Moussa, A. Alù et al., CUNY Advanced Science Research Center, published in Nature, 8 July 2026 (DOI: 10.1038/s41586-026-10725-y); "A black hole theory comes to life in the lab," CUNY ASRC and EurekAlert!, July 2026; reporting via ScienceDaily and Phys.org, July 2026.*

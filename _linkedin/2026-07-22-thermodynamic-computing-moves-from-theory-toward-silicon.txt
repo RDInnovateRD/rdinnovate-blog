@@ -1,0 +1,32 @@
+`file: articles/2026-07-22-thermodynamic-computing-linkedin.txt`
+
+For 70 years, chip design has had one enemy: noise.
+
+Every transistor burns energy to force a clean 0 or 1, fighting the random thermal jitter that heat creates.
+
+A handful of teams just flipped the script.
+
+Their chips don't fight the noise. They compute with it.
+
+It's called thermodynamic computing. Instead of switching values into place, the physics lets the system settle into the answer, the way a ball rolls to the bottom of a valley. And that behavior happens to match how AI image generators work: start with noise, remove it, get a picture.
+
+The numbers making people look:
+- Extropic and MIT: about 10,000x less energy per image sample (in simulation)
+- Lawrence Berkeley: up to 100 billion times less heat for diffusion inference (in theory)
+
+The honest part, straight from the researchers:
+- These are projections, not measurements
+- Today's prototypes are only as capable as a 1990-era neural network
+- The real chip has not been built yet
+
+Here is the lesson I keep coming back to:
+
+The biggest efficiency gains rarely come from optimizing harder inside the current playbook. They come from questioning the assumption the playbook is built on. Digital computing spent decades getting better at suppressing noise. This bet is that the real leap comes from using it.
+
+Most breakthroughs look like this at the start: bold projection, candid limits, no product yet. The teams that pair the two honestly are the ones worth watching.
+
+What is your take: is thermodynamic computing the next quantum (real, but decades out), or something that arrives faster?
+
+#DeepTech #AI #Computing #Energy #Innovation #Semiconductors
+
+Full article on dev.to 🔗 [link in comments]

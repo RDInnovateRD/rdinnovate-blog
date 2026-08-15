@@ -1,0 +1,47 @@
+`file: articles/2026-08-12-durable-fuel-cell-catalyst-linkedin.txt`
+
+The part of a hydrogen fuel cell that fails first is not the hydrogen.
+
+It is the catalyst.
+
+Platinum makes the reaction run. But in a working cell it slowly dissolves, and its tiny particles clump into useless blobs.
+
+Every start, stop, and change in power speeds that decay up.
+
+A team at Washington University in St. Louis just built a catalyst that shrugged it off.
+
+85 percent of its performance retained after 150,000 severe voltage cycles.
+
+Roughly 25,000 hours of real operation.
+
+Here is the elegant part.
+
+The best platinum-cobalt catalysts need to be heated to 1000 degrees to lock their atoms into an ordered lattice.
+
+But that same heat makes the particles clump.
+
+Order and small size have pulled against each other for years.
+
+So the team did not touch the metal.
+
+They redesigned the scaffold under it.
+
+A carbon support threaded with tiny radial channels held each particle in place during the heat, so it could order without wandering.
+
+The failing component was the catalyst.
+
+The fix lived in the support next to it.
+
+That is the lesson worth stealing:
+
+When two properties you need seem mutually exclusive, the conflict is often an artifact of the environment, not a law of nature.
+
+Change what surrounds the problem before you accept the tradeoff.
+
+The payoff here is real. Clean, quiet, on-site power for AI data centers that are starting to strain the grid.
+
+Where in your own work are you treating a tradeoff as fundamental when it is really just a bad scaffold?
+
+#CleanTech #HydrogenEnergy #FuelCells #DeepTech #Innovation #DataCenters #RandD
+
+Full article on dev.to 🔗 [link in comments]

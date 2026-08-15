@@ -1,0 +1,35 @@
+`file: articles/2026-08-07-compressorless-hydrogen-detonation-turbine-linkedin.txt`
+
+Half of every gas turbine's power is wasted before it makes a single watt.
+
+A team in Germany just built one that skips that waste entirely.
+
+Here is the problem nobody questions. A conventional gas turbine has to compress incoming air before it can burn fuel efficiently. That compressor is driven by the engine's own shaft, so roughly 50% of the power the turbine makes gets fed straight back into squeezing the next batch of air. It is a cost so old that most engineers treat it as a law of nature.
+
+Researchers at the Karlsruhe Institute of Technology asked a sharper question: what if the combustion does the squeezing?
+
+Their compressorless hydrogen turbine uses pressure-gain combustion. Instead of a mechanical compressor, detonation waves moving faster than sound compress the gas as they burn it. The pressure comes from the chemistry, not from a spinning stage.
+
+The results:
+
+→ 303 seconds of continuous running, beating NASA's previous 250-second record.
+
+→ First electricity generated from a turbine of this kind.
+
+→ One of the largest, most maintenance-heavy assemblies in the engine, gone.
+
+This is still a lab demonstration, not a power plant. But the mechanism held together long enough to turn a generator.
+
+Here is the part worth sitting with.
+
+For a century, engine design has meant making each stage a little better. Build a better compressor. Cool the blades more cleverly.
+
+This team did not improve the compressor. They asked whether it needed to exist at all.
+
+The biggest inefficiencies in any system are usually the ones baked so deep into the design that nobody thinks to challenge them. A fixed cost is only fixed until someone treats it as a choice.
+
+What "fixed cost" in your own systems have you simply stopped questioning?
+
+#Hydrogen #CleanEnergy #Engineering #DeepTech #Innovation #Turbines #EnergyTransition
+
+Full article on dev.to 🔗 [link in comments]

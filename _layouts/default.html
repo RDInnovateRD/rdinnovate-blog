@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+{%- seo -%}
+<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+<link rel="alternate" type="application/atom+xml" href="{{ '/feed.xml' | relative_url }}">
+</head>
+<body>
+<header class="site">
+  <a class="brand" href="{{ '/' | relative_url }}">R&amp;D Innovate</a>
+  <nav><a href="https://rdinnovate.com">Main site &rarr;</a></nav>
+</header>
+<main>{{ content }}</main>
+<footer class="site">
+  <span>&copy; {{ 'now' | date: "%Y" }} R&amp;D Innovate</span>
+  <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+</footer>
+</body>
+</html>

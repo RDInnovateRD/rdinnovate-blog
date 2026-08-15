@@ -1,0 +1,35 @@
+For years the quantum internet had one dealbreaker.
+
+It needed its own private fiber. Dark, undisturbed, kept clear of ordinary internet traffic.
+
+That assumption just took a hit.
+
+A Northwestern University team sent entangled photons 24.4 kilometers across Chicago, over commercial telecom fiber that was carrying a full load of live internet traffic at the same time.
+
+The details, from their paper in Optica Quantum:
+
+→ Two nodes, Evanston to downtown Chicago
+→ The same fiber pushing two 800 Gbps data channels, loaded to emulate a ~36 Tbps commercial link
+→ Entanglement fidelity above 94 percent
+
+The lead researcher put it well. A quantum signal next to classical ones is like an ant walking a path full of elephants.
+
+Their move was not to clear the road. It was to give the ant its own lane. Quantum photons in the O-band, classical traffic in the C-band, precise timing to keep the two ends locked together.
+
+To be clear about what this is not: it is entanglement distribution, not full teleportation yet, and it still needs carefully engineered conditions. A milestone, not a product.
+
+Here is the lesson I keep coming back to.
+
+The assumption was that a fragile new capability needs a pristine, purpose-built environment. So progress meant building that environment from scratch.
+
+This team asked the better question. Can we make the effect tough enough to survive the environment we already have?
+
+The most deployable innovations rarely ask the world to be rebuilt around them. They learn to run on the world as it already is.
+
+Before you build a dedicated stack for your new capability, ask: could it just share the one already in the ground?
+
+What in your own work are you rebuilding, when you could be sharing?
+
+#Innovation #QuantumInternet #DeepTech #RandD #Photonics #FutureOfTech #Engineering
+
+Full article on dev.to 🔗 [link in comments]
