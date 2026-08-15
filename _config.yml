@@ -1,7 +1,7 @@
 title: R&D Innovate
 description: Daily signal from the cutting edge of research and development.
 url: "https://blog.rdinnovate.com"
-baseurl: "/rdinnovate-blog"
+baseurl: ""
 permalink: /:year/:month/:day/:title/
 markdown: kramdown
 
