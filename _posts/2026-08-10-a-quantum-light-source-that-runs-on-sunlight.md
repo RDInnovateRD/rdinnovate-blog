@@ -2,16 +2,8 @@
 layout: post
 title: "A Quantum Light Source That Runs on Sunlight"
 date: 2026-08-10
-excerpt: "<!--"
+excerpt: "Researchers generated entangled photons directly from sunlight, no laser required, at 94% fidelity. A cheaper, more accessible path for quantum tech."
 ---
-
-<!--
-title: A Quantum Light Source That Runs on Sunlight
-description: Researchers generated entangled photons directly from sunlight, no laser required, at 94% fidelity. A cheaper, more accessible path for quantum tech.
-tags: science,quantum,physics,futurism
-published: pending (dev.to auto-publish requires the user's Mac; not connected on this scheduled run)
--->
-
 
 Almost every quantum photonics experiment begins the same way, with a laser. If you want to produce entangled photons, the pairs of particles whose linked states power quantum encryption, sensing, and computing, you need a source of light that is coherent, meaning its waves march in lockstep. Lasers provide that coherence, and they also draw real power and add cost, weight, and complexity to any system built around them. For a technology that everyone wants to make smaller, cheaper, and more deployable, the laser has always been an awkward starting point.
 
