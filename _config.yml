@@ -4,12 +4,20 @@ url: "https://blog.rdinnovate.com"
 baseurl: "/rdinnovate-blog"
 permalink: /:year/:month/:day/:title/
 markdown: kramdown
+
+# Scheduling: posts dated in the future stay hidden until the daily
+# rebuild (GitHub Actions cron) runs on or after their date.
+future: false
+timezone: Australia/Sydney
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
 exclude:
   - _linkedin
   - _source
   - Gemfile
   - Gemfile.lock
   - vendor
+  - .github
