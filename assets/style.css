@@ -193,3 +193,15 @@ main{max-width:1180px;margin:0 auto;padding:0 5vw}
 #catFilter option{background:#fff;color:var(--ink);font-weight:400}
 .fcount{font-size:13.5px;color:var(--mut);font-weight:300}
 .empty{text-align:center;color:var(--mut);padding:56px 0 70px;font-size:17px}
+
+/* ── fallback: any unrecognised category renders in house maroon ──
+   Set on :root so undefined catslugs inherit rather than break.     */
+:root{--c1:#7a2224; --c2:#a8494a; --c3:#3d0e0f}
+
+/* ── additional categories ──────────────────────────── */
+.cat-robotics            {--c1:#1e293b; --c2:#64748b; --c3:#0f172a}
+.cat-climate-environment {--c1:#0f766e; --c2:#5eead4; --c3:#134e4a}
+.cat-medicine            {--c1:#9f1239; --c2:#f87171; --c3:#4c0519}
+.cat-chemistry           {--c1:#581c87; --c2:#c084fc; --c3:#3b0764}
+.cat-space               {--c1:#1e1b4b; --c2:#818cf8; --c3:#0f0d2e}
+.cat-neuroscience        {--c1:#86198f; --c2:#f0abfc; --c3:#4a044e}
