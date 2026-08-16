@@ -82,8 +82,9 @@ When you do create one:
    (e.g. "Fusion Power" -> `fusion-power`).
 2. It will appear in the site's dropdown filter automatically, with the
    correct count. Nothing needs adding for that to work.
-3. It will render in the default house maroon gradient rather than a bespoke
-   colour. This looks intentional, not broken.
+3. Running `sync_categories.py` (step 6) generates a colour for it
+   automatically and writes it to `_data/categories.yml`. The colour is
+   derived from the slug, so it is stable and distinct.
 4. SAY SO CLEARLY in your final report, so a custom colour can be added:
    "NEW CATEGORY CREATED: Fusion Power / fusion-power"
 
@@ -112,10 +113,16 @@ Run exactly these commands:
 
 ```bash
 cd ~/Documents/CodingProjects/rdinnovate-blog
+python3 _source/sync_categories.py
 git add -A
 git commit -m "Article: $(date +%Y-%m-%d)"
 git push
 ```
+
+`sync_categories.py` gives any brand-new category a colour in
+`_data/categories.yml` so the card renders correctly. It is safe to run every
+time — it prints "No new categories" and exits when there is nothing to do.
+Run it BEFORE `git add`, or the new colour will not be included in the commit.
 
 Pushing triggers a GitHub Actions build. The article is live in 2–3 minutes.
 
