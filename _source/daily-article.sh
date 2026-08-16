@@ -46,7 +46,7 @@ mkdir -p "$LOGDIR"
   # non-interactive without disabling permissions wholesale.
   claude -p "$(cat "$INSTRUCTIONS")" \
       --permission-mode acceptEdits \
-      --allowedTools "Read,Write,Edit,Bash" 2>&1
+      --allowedTools "Read,Write,Edit,Bash,WebSearch,WebFetch" 2>&1
 
   STATUS=$?
   echo "----------------------------------------------------"
