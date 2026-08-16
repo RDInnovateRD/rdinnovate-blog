@@ -1,0 +1,37 @@
+The metal that holds a green hydrogen plant together fails long before the chemistry does.
+
+For years, only one material could survive inside a seawater electrolyzer: titanium, often coated in gold or platinum.
+
+Expensive. Scarce. A quiet ceiling on the whole industry.
+
+A team at the University of Hong Kong just built a stainless steel that stands where only titanium could.
+
+They call it SS-H2.
+
+Here is the strange part.
+
+Ordinary stainless steel protects itself with a single chromium oxide film. Push the voltage past about 1000 millivolts and that film breaks down. Water splitting happens above that line, so conventional steel was simply disqualified.
+
+SS-H2 grows a second protective layer on top of the first, holding stable all the way to roughly 1700 millivolts.
+
+That second layer is made of manganese.
+
+Manganese is the element corrosion textbooks tell you to avoid. It is supposed to make steel corrode faster, not slower.
+
+The lead researcher put it plainly: this cannot be explained by current knowledge in corrosion science.
+
+The payoff is not subtle. Swapping titanium for SS-H2 could cut those structural material costs by roughly 40 times in a 10 megawatt system. The team is already producing the steel by the ton.
+
+Here is the lesson I keep coming back to.
+
+The obvious move in a corrosive environment is to hunt for a metal that never reacts, and pay whatever it costs.
+
+They did the opposite. They engineered a second reaction to guard the first, using the one ingredient the rulebook forbids.
+
+The constraint everyone treated as fundamental turned out to be an unexplored corner of the design space.
+
+Where in your own work are you paying a premium to avoid a problem you could out-engineer instead?
+
+#GreenHydrogen #MaterialsScience #CleanEnergy #DeepTech #Innovation #Electrolysis #RandD
+
+Full article: https://blog.rdinnovate.com/2026/08/14/a-stainless-steel-that-survives-where-only-titanium-could/

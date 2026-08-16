@@ -1,0 +1,36 @@
+90% of drugs that pass animal testing still fail in humans.
+
+We have known this for years. We kept using mice anyway.
+
+A company called Vivodyne just did something about it.
+
+South of San Francisco, they built what they call a human biological datacenter. Twelve robotic labs, each the size of a wardrobe. Inside, robots grow living human tissue and run experiments on it 24/7.
+
+The numbers are hard to believe:
+
+3.1 million human tissues per year.
+More than 20 organ types: liver, lung, gut, kidney, pancreas, bone marrow.
+Roughly twice the scale of every US clinical trial combined.
+25 test cycles run in the time it takes to breed one batch of modified mice.
+
+But the tissue is not the point.
+
+The point is the data.
+
+Because every tissue is grown and tested by the same robotic line, the results are finally comparable. Millions of clean, standardized experiments. Enough to train an AI world model of human biology, the same way language models learned language.
+
+The lab becomes the training environment. Human tissue becomes the ground truth.
+
+Here is the lesson that reaches past biology:
+
+For decades, drug discovery was not short on ideas. It was short on trustworthy experiments. Slow, costly, impossible to compare.
+
+The breakthrough did not come from a smarter hypothesis. It came from industrializing the experiment itself. Turn a craft into a production line, and the raw material stops being tissue. It becomes data.
+
+That pattern shows up everywhere. When a field is stuck, look at what its experiments cost. Whoever makes them cheap, fast, and comparable usually ends up setting the pace.
+
+What slow, hand-run experiment in your field is quietly holding back everything downstream?
+
+#Biotech #DrugDiscovery #AI #DeepTech #Innovation #RnD #FutureOfMedicine
+
+Full article: https://blog.rdinnovate.com/2026/08/16/a-biological-datacenter-vivodyne-human-tissue-at-scale/
