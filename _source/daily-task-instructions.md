@@ -50,18 +50,45 @@ category: "Quantum"
 catslug: "quantum"
 ---
 
-### Valid category / catslug pairs — use ONLY these
+### Category / catslug pairs
 
-| category            | catslug          |
-|---------------------|------------------|
-| Quantum             | quantum          |
-| Compute & AI        | compute-ai       |
-| Energy              | energy           |
-| Materials           | materials        |
-| Bio                 | bio              |
-| Physics & Space     | physics-space    |
+Prefer an existing category. These already have styling and appear in the
+site's dropdown filter:
 
-The catslug drives the card colour. A wrong slug renders a grey, unstyled card.
+| category            | catslug                | typical subject matter          |
+|---------------------|------------------------|---------------------------------|
+| Quantum             | quantum                | entanglement, qubits, coherence |
+| Compute & AI        | compute-ai             | chips, models, lithography      |
+| Energy              | energy                 | batteries, fuel cells, fusion   |
+| Materials           | materials              | catalysts, crystals, polymers   |
+| Bio                 | bio                    | genetics, cells, organisms      |
+| Physics & Space     | physics-space          | astrophysics, particles         |
+| Robotics            | robotics               | autonomy, actuators, machines   |
+| Climate & Environment | climate-environment  | emissions, capture, ecosystems  |
+| Medicine            | medicine               | clinical results, therapeutics  |
+| Chemistry           | chemistry              | reactions, synthesis            |
+| Neuroscience        | neuroscience           | brain, neural interfaces        |
+
+The catslug sets the card's gradient colour and must match the table exactly.
+
+### If the topic genuinely does not fit any of the above
+
+You MAY create a new category. Only do this when forcing the article into an
+existing one would be actively misleading — not merely imperfect. A story
+about a new battery chemistry is Energy or Materials, not "Battery Tech".
+
+When you do create one:
+1. Use Title Case for `category`, and its lower-case kebab form for `catslug`
+   (e.g. "Fusion Power" -> `fusion-power`).
+2. It will appear in the site's dropdown filter automatically, with the
+   correct count. Nothing needs adding for that to work.
+3. It will render in the default house maroon gradient rather than a bespoke
+   colour. This looks intentional, not broken.
+4. SAY SO CLEARLY in your final report, so a custom colour can be added:
+   "NEW CATEGORY CREATED: Fusion Power / fusion-power"
+
+Never invent a catslug for a category that already exists in the table above.
+Mismatched slugs fragment the dropdown into near-duplicate entries.
 
 ## 5. Body rules — CRITICAL
 
