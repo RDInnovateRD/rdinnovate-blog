@@ -1,0 +1,48 @@
+# Category colours — single source of truth for card gradients.
+# New categories are appended automatically by _source/sync_categories.py.
+# Hand-edit any entry to override; the script never touches an existing slug.
+
+quantum:
+  c1: "#6d28d9"
+  c2: "#c026d3"
+  c3: "#312e81"
+compute-ai:
+  c1: "#0369a1"
+  c2: "#06b6d4"
+  c3: "#0c4a6e"
+energy:
+  c1: "#047857"
+  c2: "#84cc16"
+  c3: "#064e3b"
+materials:
+  c1: "#b45309"
+  c2: "#f59e0b"
+  c3: "#7c2d12"
+bio:
+  c1: "#be185d"
+  c2: "#fb7185"
+  c3: "#831843"
+physics-space:
+  c1: "#3730a3"
+  c2: "#0ea5e9"
+  c3: "#1e1b4b"
+robotics:
+  c1: "#1e293b"
+  c2: "#64748b"
+  c3: "#0f172a"
+climate-environment:
+  c1: "#0f766e"
+  c2: "#5eead4"
+  c3: "#134e4a"
+medicine:
+  c1: "#9f1239"
+  c2: "#f87171"
+  c3: "#4c0519"
+chemistry:
+  c1: "#581c87"
+  c2: "#c084fc"
+  c3: "#3b0764"
+neuroscience:
+  c1: "#86198f"
+  c2: "#f0abfc"
+  c3: "#4a044e"

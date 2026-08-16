@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-<div class="posthead cat-{{ page.catslug }}" data-cat="{{ page.catslug }}">
+{%- assign pc = site.data.categories[page.catslug] -%}
+<div class="posthead cat-{{ page.catslug }}" data-cat="{{ page.catslug }}"
+     {% if pc %}style="--c1:{{ pc.c1 }};--c2:{{ pc.c2 }};--c3:{{ pc.c3 }}"{% endif %}>
   <div class="posthead-inner">
     <p class="eyebrow"><a href="{{ '/' | relative_url }}">&larr; All articles</a></p>
     <span class="cat-pill">{{ page.category }}</span>

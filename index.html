@@ -26,8 +26,10 @@ layout: default
 
 {%- assign latest = site.posts.first -%}
 {%- if latest -%}
+{%- assign fc = site.data.categories[latest.catslug] -%}
 <a class="card feature cat-{{ latest.catslug }}" data-cat="{{ latest.catslug }}"
-   href="{{ latest.url | relative_url }}">
+   href="{{ latest.url | relative_url }}"
+   {% if fc %}style="--c1:{{ fc.c1 }};--c2:{{ fc.c2 }};--c3:{{ fc.c3 }}"{% endif %}>
   <div class="banner"><span class="motif"></span><span class="cat-label">{{ latest.category }}</span></div>
   <div class="body">
     <span class="tag">Latest</span>
@@ -41,8 +43,10 @@ layout: default
 
 <div class="grid">
 {%- for post in site.posts offset: 1 -%}
+  {%- assign gc = site.data.categories[post.catslug] -%}
   <a class="card cat-{{ post.catslug }}" data-cat="{{ post.catslug }}"
-     href="{{ post.url | relative_url }}" style="--i:{{ forloop.index }}">
+     href="{{ post.url | relative_url }}"
+     style="--i:{{ forloop.index }}{% if gc %};--c1:{{ gc.c1 }};--c2:{{ gc.c2 }};--c3:{{ gc.c3 }}{% endif %}">
     <div class="banner"><span class="motif"></span><span class="cat-label">{{ post.category }}</span></div>
     <div class="body">
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
