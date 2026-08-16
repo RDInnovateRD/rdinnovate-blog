@@ -172,3 +172,24 @@ main{max-width:1180px;margin:0 auto;padding:0 5vw}
   .card:hover{transform:none}
   .card:hover .motif{transform:none}
 }
+
+/* ── category filter ────────────────────────────────── */
+[hidden]{display:none !important}
+
+.filterbar{display:flex;align-items:center;gap:13px;flex-wrap:wrap}
+.filterbar label{font-size:11px;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--mut)}
+.selwrap{position:relative;display:inline-block}
+.selwrap::after{content:"";position:absolute;right:15px;top:50%;width:9px;height:9px;
+  margin-top:-6px;border-right:2px solid #fff;border-bottom:2px solid #fff;
+  transform:rotate(45deg);pointer-events:none}
+#catFilter{appearance:none;-webkit-appearance:none;
+  background:linear-gradient(115deg,var(--maroon-dk),var(--maroon) 60%,#7a2224);
+  color:#fff;border:0;border-radius:100px;padding:11px 42px 11px 20px;
+  font:700 14px Roboto,sans-serif;letter-spacing:.01em;cursor:pointer;
+  box-shadow:0 3px 14px rgba(95,23,24,.28);transition:transform .16s,box-shadow .16s}
+#catFilter:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(95,23,24,.34)}
+#catFilter:focus-visible{outline:3px solid rgba(95,23,24,.35);outline-offset:2px}
+#catFilter option{background:#fff;color:var(--ink);font-weight:400}
+.fcount{font-size:13.5px;color:var(--mut);font-weight:300}
+.empty{text-align:center;color:var(--mut);padding:56px 0 70px;font-size:17px}
