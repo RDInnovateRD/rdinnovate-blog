@@ -3,6 +3,8 @@ layout: post
 title: "A Faster Way to Make the Fluid Inside Grid-Scale Flow Batteries"
 date: 2026-08-06
 excerpt: "Vanadium flow batteries are one of the more promising ways to store many hours of electricity for the grid, but they have long carried a quiet cost problem. A large share of a flow battery's price ..."
+category: "Energy"
+catslug: "energy"
 ---
 
 Vanadium flow batteries are one of the more promising ways to store many hours of electricity for the grid, but they have long carried a quiet cost problem. A large share of a flow battery's price sits not in its pumps or tanks but in the liquid that runs through it. On August 5, 2026, a team at the Korea Advanced Institute of Science and Technology (KAIST) published a method that cuts the time to make that liquid by roughly two-thirds, a step that could meaningfully lower the cost of the technology just as data centers and renewable grids are hunting for long-duration storage.

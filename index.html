@@ -3,29 +3,44 @@ layout: default
 ---
 <section class="hero">
   <p class="eyebrow">The R&amp;D Innovate blog</p>
-  <h1>Notes from the cutting edge.</h1>
+  <h1>Notes from the <span class="grad">cutting edge</span>.</h1>
   <p class="lede">Daily reporting on the research that will reshape how things get built &mdash;
   with an honest read on what each result actually proves, and what it means for R&amp;D investment.</p>
+  <div class="chips">
+    <span class="chip chip-all">All {{ site.posts | size }}</span>
+    {%- assign cats = site.posts | map: "category" | uniq | sort -%}
+    {%- for c in cats -%}
+      {%- assign one = site.posts | where: "category", c | first -%}
+      <span class="chip cat-{{ one.catslug }}">{{ c }}</span>
+    {%- endfor -%}
+  </div>
 </section>
 
 {%- assign latest = site.posts.first -%}
 {%- if latest -%}
-<a class="card feature" href="{{ latest.url | relative_url }}">
-  <span class="tag">Latest</span>
-  <time datetime="{{ latest.date | date_to_xmlschema }}">{{ latest.date | date: "%-d %B %Y" }}</time>
-  <h2>{{ latest.title }}</h2>
-  <p>{{ latest.excerpt | strip_html | truncate: 260 }}</p>
-  <span class="more">Read article &rarr;</span>
+<a class="card feature cat-{{ latest.catslug }}" href="{{ latest.url | relative_url }}">
+  <div class="banner"><span class="motif"></span><span class="cat-label">{{ latest.category }}</span></div>
+  <div class="body">
+    <span class="tag">Latest</span>
+    <time datetime="{{ latest.date | date_to_xmlschema }}">{{ latest.date | date: "%-d %B %Y" }}</time>
+    <h2>{{ latest.title }}</h2>
+    <p>{{ latest.excerpt | strip_html | truncate: 240 }}</p>
+    <span class="more">Read article &rarr;</span>
+  </div>
 </a>
 {%- endif -%}
 
 <div class="grid">
 {%- for post in site.posts offset: 1 -%}
-  <a class="card" href="{{ post.url | relative_url }}">
-    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
-    <h2>{{ post.title }}</h2>
-    <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
-    <span class="more">Read article &rarr;</span>
+  <a class="card cat-{{ post.catslug }}" href="{{ post.url | relative_url }}"
+     style="--i:{{ forloop.index }}">
+    <div class="banner"><span class="motif"></span><span class="cat-label">{{ post.category }}</span></div>
+    <div class="body">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.excerpt | strip_html | truncate: 130 }}</p>
+      <span class="more">Read article &rarr;</span>
+    </div>
   </a>
 {%- endfor -%}
 </div>

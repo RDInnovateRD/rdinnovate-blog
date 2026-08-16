@@ -3,6 +3,8 @@ layout: post
 title: "Twisting Oxide Crystals at Scale: A Route to Programmable Electronics"
 date: 2026-08-02
 excerpt: "For the better part of a decade, one of the most exciting ideas in materials physics has come with an asterisk attached. Stack two atom-thin crystals, rotate one by a small angle, and the mismatch ..."
+category: "Materials"
+catslug: "materials"
 ---
 
 ## Twisting Oxide Crystals at Scale: A Route to Programmable Electronics

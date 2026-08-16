@@ -3,6 +3,8 @@ layout: post
 title: "The Off Switch: Mammals May Have Been Hiding the Power to Regrow Themselves All Along"
 date: 2026-07-16
 excerpt: "A salamander can lose a leg and grow a new one. Cut a zebrafish's fin and it simply builds another. Mammals, us included, got the consolation prize: a scar. For a century, biologists assumed that s..."
+category: "Bio"
+catslug: "bio"
 ---
 
 *R&D Innovate — Cutting Edge, 16 July 2026*

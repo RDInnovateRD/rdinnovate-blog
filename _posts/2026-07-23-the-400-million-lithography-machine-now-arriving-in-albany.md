@@ -3,6 +3,8 @@ layout: post
 title: "The $400 million lithography machine now arriving in Albany"
 date: 2026-07-23
 excerpt: "The most advanced piece of manufacturing equipment on the planet is being bolted together inside a building in upstate New York, and almost nobody outside the semiconductor world noticed. On July 2..."
+category: "Compute & AI"
+catslug: "compute-ai"
 ---
 
 The most advanced piece of manufacturing equipment on the planet is being bolted together inside a building in upstate New York, and almost nobody outside the semiconductor world noticed. On July 21, New York officials confirmed that the first major sections of ASML's High NA EUV lithography system had begun arriving at the Albany NanoTech Complex, run by NY Creates. It is the leading edge of a $10 billion public and private effort to keep the hardest problem in modern manufacturing moving forward: how to print circuit features so small that the light used to draw them is itself part of the challenge.

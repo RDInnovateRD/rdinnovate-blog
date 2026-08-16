@@ -3,6 +3,8 @@ layout: post
 title: "Heat That Moves in Rays: Quantum Heat Waves Observed at Room Temperature"
 date: 2026-08-13
 excerpt: "For most of the history of electronics, heat has been the enemy that spreads. Turn on a chip and the warmth it generates fans out in every direction, blurring across the silicon like ink dropped in..."
+category: "Materials"
+catslug: "materials"
 ---
 
 For most of the history of electronics, heat has been the enemy that spreads. Turn on a chip and the warmth it generates fans out in every direction, blurring across the silicon like ink dropped in water. Engineers have spent decades fighting that diffusion with heat sinks, fans, vapor chambers, and liquid loops, all of which manage heat after it has already gone where it pleases. A team at UCLA has now shown something that upends the usual picture: in the right crystal, heat can travel in tight, directional rays, and it can do so at room temperature.

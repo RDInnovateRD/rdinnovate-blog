@@ -3,6 +3,8 @@ layout: post
 title: "A Fuel Cell Catalyst Built to Survive 150,000 Voltage Cycles"
 date: 2026-08-12
 excerpt: "Hydrogen fuel cells have a well understood chemistry problem that has nothing to do with hydrogen. It has to do with the catalyst. The reaction that turns hydrogen and oxygen into electricity and w..."
+category: "Materials"
+catslug: "materials"
 ---
 
 *R&D Innovate, Cutting Edge, 12 August 2026*

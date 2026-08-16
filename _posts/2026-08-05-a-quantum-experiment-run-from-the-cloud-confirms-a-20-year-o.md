@@ -3,6 +3,8 @@ layout: post
 title: "A Quantum Experiment Run From the Cloud Confirms a 20-Year-Old Prediction"
 date: 2026-08-05
 excerpt: "For most of the history of physics, a theorist with a bold prediction faced a hard bottleneck. To test the idea, someone had to build an apparatus, or the theorist had to persuade an experimental g..."
+category: "Quantum"
+catslug: "quantum"
 ---
 
 For most of the history of physics, a theorist with a bold prediction faced a hard bottleneck. To test the idea, someone had to build an apparatus, or the theorist had to persuade an experimental group to spend months of scarce lab time on it. A result reported this week shows another path. A team confirmed a quantum prediction that had gone untested for more than two decades, and they did it by using an ultracold-atom machine they never touched, operated entirely through the cloud.

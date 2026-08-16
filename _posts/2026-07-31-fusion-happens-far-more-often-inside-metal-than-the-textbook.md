@@ -3,6 +3,8 @@ layout: post
 title: "Fusion Happens Far More Often Inside Metal Than the Textbooks Allow"
 date: 2026-07-31
 excerpt: "For as long as anyone has studied it, nuclear fusion has been governed by one stubborn fact. Two atomic nuclei both carry positive charge, and like charges repel. To fuse, they have to be pushed cl..."
+category: "Energy"
+catslug: "energy"
 ---
 
 *R&D Innovate, Cutting Edge, 31 July 2026*

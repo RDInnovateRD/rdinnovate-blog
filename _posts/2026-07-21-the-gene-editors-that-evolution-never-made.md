@@ -3,6 +3,8 @@ layout: post
 title: "The Gene Editors That Evolution Never Made"
 date: 2026-07-21
 excerpt: "For a decade, the frontier of gene editing has been a search for better scissors that already exist. Researchers combed hot springs, cow guts, and ocean sediment for natural proteins that cut DNA i..."
+category: "Bio"
+catslug: "bio"
 ---
 
 *R&D Innovate, Cutting Edge, 21 July 2026*

@@ -3,6 +3,8 @@ layout: post
 title: "A Neutrino Camera in a Single Block"
 date: 2026-07-30
 excerpt: "A neutrino detector is usually a monument to brute force. To catch particles that slip through a light year of lead without noticing it, physicists build machines the size of buildings and fill the..."
+category: "Physics & Space"
+catslug: "physics-space"
 ---
 
 A neutrino detector is usually a monument to brute force. To catch particles that slip through a light year of lead without noticing it, physicists build machines the size of buildings and fill them with millions of finely machined parts. A team from ETH Zurich and EPFL has just shown a different route. Their prototype, called PLATON, replaces the millions of parts with one block of plastic, a special camera, and a neural network. It is a reminder that in instrumentation, as in computing, the winning move is often to move the complexity out of the hardware and into the software.

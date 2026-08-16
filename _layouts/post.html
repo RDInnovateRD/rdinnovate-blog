@@ -1,10 +1,15 @@
 ---
 layout: default
 ---
+<div class="posthead cat-{{ page.catslug }}">
+  <div class="posthead-inner">
+    <p class="eyebrow"><a href="{{ '/' | relative_url }}">&larr; All articles</a></p>
+    <span class="cat-pill">{{ page.category }}</span>
+    <h1>{{ page.title }}</h1>
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+  </div>
+</div>
 <article class="post">
-  <p class="eyebrow"><a href="{{ '/' | relative_url }}">&larr; All articles</a></p>
-  <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
-  <h1>{{ page.title }}</h1>
   {{ content }}
 </article>
 <nav class="pagenav">

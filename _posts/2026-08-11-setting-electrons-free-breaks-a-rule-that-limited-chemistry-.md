@@ -3,6 +3,8 @@ layout: post
 title: "Setting Electrons Free Breaks a Rule That Limited Chemistry for Decades"
 date: 2026-08-11
 excerpt: "Most chemical reactions that build molecules run on electron transfer. One molecule hands an electron to another, a bond forms or breaks, and a new structure appears. For as long as chemists have s..."
+category: "Materials"
+catslug: "materials"
 ---
 
 Most chemical reactions that build molecules run on electron transfer. One molecule hands an electron to another, a bond forms or breaks, and a new structure appears. For as long as chemists have studied this, one rule has quietly set the boundaries of what is possible: when two molecules compete for an electron, the one that is easier to reduce wins. Thermodynamics decides, and the chemist mostly watches. That preference is convenient when it points at the product you want. It is a wall when it does not, because it locks off whole families of reactions before they can begin.

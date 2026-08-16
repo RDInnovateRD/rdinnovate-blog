@@ -3,6 +3,8 @@ layout: post
 title: "Single-Atom Catalyst Turns Lignin Into Valuable Chemicals"
 date: 2026-07-26
 excerpt: "Every year the world's paper mills, biorefineries, and farms generate mountains of lignin, the tough polymer that gives plant cell walls their rigidity. Biomass can be up to 35 percent lignin by we..."
+category: "Materials"
+catslug: "materials"
 ---
 
 Every year the world's paper mills, biorefineries, and farms generate mountains of lignin, the tough polymer that gives plant cell walls their rigidity. Biomass can be up to 35 percent lignin by weight, and almost all of it is burned for low grade heat or simply thrown away. The reason is chemical, not economic. Lignin is a dense, irregular tangle of carbon to carbon and carbon to oxygen bonds that resists the clean, selective reactions industry relies on. A team at the University of Manchester has now shown a way to pick that tangle apart one bond at a time, using a catalyst built around single atoms of ruthenium.

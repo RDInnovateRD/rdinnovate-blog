@@ -3,6 +3,8 @@ layout: post
 title: "The first atmosphere found on a rocky planet in a habitable zone"
 date: 2026-07-27
 excerpt: "For thirty years the search for life beyond the solar system has run into the same wall. We can find rocky planets the right distance from their stars, the zone where liquid water is at least possi..."
+category: "Physics & Space"
+catslug: "physics-space"
 ---
 
 ## The first atmosphere found on a rocky planet in a habitable zone

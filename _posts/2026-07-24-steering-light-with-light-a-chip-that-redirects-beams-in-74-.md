@@ -3,6 +3,8 @@ layout: post
 title: "Steering Light With Light: A Chip That Redirects Beams in 74 Femtoseconds"
 date: 2026-07-24
 excerpt: "For decades, the machines that point and shape light have leaned on moving parts or slow electronics. Mechanical mirrors pivot, liquid crystals reorient, and voltage-driven phase shifters nudge a b..."
+category: "Compute & AI"
+catslug: "compute-ai"
 ---
 
 For decades, the machines that point and shape light have leaned on moving parts or slow electronics. Mechanical mirrors pivot, liquid crystals reorient, and voltage-driven phase shifters nudge a beam a fraction of a degree at a time. All of these work, and all of them share the same ceiling: they are limited by how fast matter can be pushed around with electricity. A team at Caltech has just shown a way past that ceiling. Their device steers one beam of light using nothing but a second beam of light, and it does so in about 74 femtoseconds. That is roughly the time light itself takes to cross the width of a human hair.

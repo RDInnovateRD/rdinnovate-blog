@@ -3,6 +3,8 @@ layout: post
 title: "A Hydrogen Turbine That Runs Without a Compressor"
 date: 2026-08-07
 excerpt: "Almost every gas turbine ever built shares one expensive habit. Before it can burn fuel efficiently, it has to squeeze incoming air to high pressure, and it does that with a compressor bolted to th..."
+category: "Energy"
+catslug: "energy"
 ---
 
 *R&D Innovate, Cutting Edge, 7 August 2026*

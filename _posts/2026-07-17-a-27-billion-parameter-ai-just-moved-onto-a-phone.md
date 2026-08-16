@@ -3,6 +3,8 @@ layout: post
 title: "A 27-Billion-Parameter AI Just Moved Onto a Phone"
 date: 2026-07-17
 excerpt: "For the last few years, the deal has felt permanent. The powerful AI models live in giant data centres, humming behind racks of Nvidia chips, and your phone is just a window into them. Every clever..."
+category: "Compute & AI"
+catslug: "compute-ai"
 ---
 
 *R&D Innovate, Cutting Edge, 17 July 2026*

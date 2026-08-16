@@ -3,6 +3,8 @@ layout: post
 title: "Thermodynamic Computing Moves From Theory Toward Silicon"
 date: 2026-07-22
 excerpt: "For seventy years, digital engineering has treated thermal noise as the enemy. Every transistor spends energy forcing electrons into a clean 0 or 1, fighting the random jostling that heat introduce..."
+category: "Compute & AI"
+catslug: "compute-ai"
 ---
 
 For seventy years, digital engineering has treated thermal noise as the enemy. Every transistor spends energy forcing electrons into a clean 0 or 1, fighting the random jostling that heat introduces. A small but growing group of researchers is now building machines that do the opposite. Instead of suppressing noise, they use it as the raw material of computation. In mid-July 2026 the approach crossed an important line: it stopped being a whiteboard idea and started appearing in peer-reviewed hardware architectures and working prototypes.

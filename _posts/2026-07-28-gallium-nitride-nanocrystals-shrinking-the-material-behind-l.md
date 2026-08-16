@@ -3,6 +3,8 @@ layout: post
 title: "Gallium Nitride Nanocrystals: Shrinking the Material Behind LED Lighting"
 date: 2026-07-28
 excerpt: "Gallium nitride is one of the most important materials in modern electronics, the semiconductor behind efficient LED lighting, fast phone chargers, and the power components that keep data centers r..."
+category: "Materials"
+catslug: "materials"
 ---
 
 Gallium nitride is one of the most important materials in modern electronics, the semiconductor behind efficient LED lighting, fast phone chargers, and the power components that keep data centers running. For all its value, chemists have never been able to make it the way they make many other advanced materials, as tiny free floating nanocrystals suspended in liquid. Those inks are what let manufacturers print electronics, tune colors atom by atom, and coat flexible surfaces. A team at the University of Chicago has now closed that gap. In a paper published in Nature on July 15, 2026, they report a route to nanocrystals of gallium nitride and roughly a dozen related metal nitrides, a class of materials the field had largely written off as impossible to shrink this way.

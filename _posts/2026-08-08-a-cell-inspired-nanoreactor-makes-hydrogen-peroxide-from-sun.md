@@ -3,6 +3,8 @@ layout: post
 title: "A Cell-Inspired Nanoreactor Makes Hydrogen Peroxide From Sunlight"
 date: 2026-08-08
 excerpt: "Hydrogen peroxide is one of those quiet industrial chemicals that touches almost everything. It bleaches paper, disinfects hospitals and municipal water, etches semiconductors, and serves as a clea..."
+category: "Materials"
+catslug: "materials"
 ---
 
 Hydrogen peroxide is one of those quiet industrial chemicals that touches almost everything. It bleaches paper, disinfects hospitals and municipal water, etches semiconductors, and serves as a clean oxidant in fine chemical synthesis whose only byproduct is water. Global demand runs into the millions of tonnes a year. Yet the way we make it has barely changed in decades, and it is far from green. A team at the Dalian Institute of Chemical Physics has now demonstrated a route that sidesteps the old process entirely, using a hollow nanoreactor that borrows its architecture from living cells to synthesize hydrogen peroxide from nothing more than water, oxygen, and visible light.

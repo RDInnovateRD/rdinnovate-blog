@@ -3,6 +3,8 @@ layout: post
 title: "A Meteorite Fell Into a New Jersey Bedroom. Inside Was the Chemistry of Life"
 date: 2026-07-20
 excerpt: "On the afternoon of 16 July 2024, a fireball crossed the sky over the northeastern United States and ended its journey in the ceiling of a home in Hillsborough, New Jersey. The rock punched through..."
+category: "Physics & Space"
+catslug: "physics-space"
 ---
 
 *R&D Innovate, Cutting Edge, 20 July 2026*

@@ -3,6 +3,8 @@ layout: post
 title: "A Quantum Material That Holds Its Coherence at Room Temperature"
 date: 2026-07-25
 excerpt: "For most of its history, quantum technology has carried a hidden tax, and the tax is cold. The delicate states that make a quantum computer or a quantum sensor useful tend to survive only a fractio..."
+category: "Quantum"
+catslug: "quantum"
 ---
 
 *R&D Innovate, Cutting Edge, 25 July 2026*

@@ -3,6 +3,8 @@ layout: post
 title: "Physicists Pulled Energy Out of a 'Black Hole' on a Tabletop"
 date: 2026-07-18
 excerpt: "Fifty years ago, Roger Penrose sketched an idea so audacious it sounded like a trick. Drop an object into the swirling region just outside a spinning black hole, let it split in two at the right mo..."
+category: "Physics & Space"
+catslug: "physics-space"
 ---
 
 *R&D Innovate, Cutting Edge, 18 July 2026*

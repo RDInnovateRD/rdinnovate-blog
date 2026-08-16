@@ -3,6 +3,8 @@ layout: post
 title: "Quantum Entanglement You Can Hold in Your Hand"
 date: 2026-07-16
 excerpt: "Quantum entanglement is supposed to be shy. It lives in the domain of a few atoms trapped by lasers, or pairs of photons flying through a fibre, and it usually survives only in the cold and the dar..."
+category: "Quantum"
+catslug: "quantum"
 ---
 
 *R&D Innovate, Cutting Edge, 16 July 2026*

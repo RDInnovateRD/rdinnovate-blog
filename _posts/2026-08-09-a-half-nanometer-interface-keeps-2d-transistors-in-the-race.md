@@ -3,6 +3,8 @@ layout: post
 title: "A Half-Nanometer Interface Keeps 2D Transistors in the Race"
 date: 2026-08-09
 excerpt: "Silicon transistors are running out of room. As the industry pushes toward features measured in single-digit nanometers, the silicon channel itself becomes too thick to control cleanly, and leakage..."
+category: "Compute & AI"
+catslug: "compute-ai"
 ---
 
 Silicon transistors are running out of room. As the industry pushes toward features measured in single-digit nanometers, the silicon channel itself becomes too thick to control cleanly, and leakage and variability start to win. For years the leading candidate to take over has been a class of atomically thin materials known as 2D semiconductors, sheets a single molecule deep. They are physically thinner than anything silicon can offer, which is exactly why they are attractive. The problem has never been the sheet. It has been everything you have to attach to it.

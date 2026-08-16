@@ -3,6 +3,8 @@ layout: post
 title: "Metal Mining's Hidden Carbon"
 date: 2026-07-29
 excerpt: "When we tally the carbon cost of the metals that build our world, we usually count the diesel in the haul trucks, the electricity in the smelters, and the fuel burned to move ore. A new study from ..."
+category: "Materials"
+catslug: "materials"
 ---
 
 When we tally the carbon cost of the metals that build our world, we usually count the diesel in the haul trucks, the electricity in the smelters, and the fuel burned to move ore. A new study from the University of St Andrews argues that this accounting misses a large and long lasting source of emissions hiding in plain sight, one that keeps releasing carbon dioxide for centuries after the miners have gone home. When the numbers are added up, the full carbon footprint of producing a metal like copper could be more than ten times higher than conventional estimates suggest.

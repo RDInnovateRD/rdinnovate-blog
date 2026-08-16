@@ -3,6 +3,8 @@ layout: post
 title: "Quantum Entanglement Now Travels Live Telecom Fiber"
 date: 2026-08-03
 excerpt: "Entangled photons crossed 24.4 km of live commercial telecom fiber at 94% fidelity, a real step toward a practical quantum internet."
+category: "Quantum"
+catslug: "quantum"
 ---
 
 Quantum networks have always come with an expensive footnote. To send entangled photons between two points, you needed your own fiber, dark and undisturbed, kept clear of the ordinary internet traffic that would drown a quantum signal. That footnote is a big reason the quantum internet has stayed a laboratory promise rather than a deployable system. A team at Northwestern University has just weakened it. In a result published in Optica Quantum on July 20, 2026, the group distributed quantum entanglement across 24.4 kilometers of commercial telecom fiber while that same fiber carried a full load of live classical data.

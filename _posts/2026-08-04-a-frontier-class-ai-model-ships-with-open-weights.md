@@ -3,6 +3,8 @@ layout: post
 title: "A Frontier-Class AI Model Ships With Open Weights"
 date: 2026-08-04
 excerpt: "For most of the past two years, the pattern at the top of the AI industry has been consistent. The largest, most capable models stayed behind an API. You could rent them by the token, but you could..."
+category: "Compute & AI"
+catslug: "compute-ai"
 ---
 
 For most of the past two years, the pattern at the top of the AI industry has been consistent. The largest, most capable models stayed behind an API. You could rent them by the token, but you could not download them, inspect them, or run them on hardware you controlled. Openness was something that happened one tier down, with smaller models, while the flagships stayed closed. On August 3, 2026, Alibaba's Qwen team broke that pattern with the release of Qwen3.8-Max, and said the model weights would be available for public download within a week.

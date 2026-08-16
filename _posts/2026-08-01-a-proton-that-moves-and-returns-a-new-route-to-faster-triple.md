@@ -3,6 +3,8 @@ layout: post
 title: "A Proton That Moves and Returns: A New Route to Faster Triplet Energy Transfer"
 date: 2026-08-01
 excerpt: "Some of the most useful processes in chemistry depend on moving energy from one molecule to another without moving electrons very far. Photocatalysis, photon upconversion, and the long lived excite..."
+category: "Materials"
+catslug: "materials"
 ---
 
 Some of the most useful processes in chemistry depend on moving energy from one molecule to another without moving electrons very far. Photocatalysis, photon upconversion, and the long lived excited states that drive certain solar and lighting technologies all rely on a quiet handoff called triplet energy transfer. It is a slow and finicky step, and for decades researchers have treated its sluggishness as a fact of life. A team in China has now shown that a single proton, borrowed and then returned, can make that handoff dramatically faster.
