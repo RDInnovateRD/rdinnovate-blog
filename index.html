@@ -6,19 +6,41 @@ layout: default
   <h1>Notes from the <span class="grad">cutting edge</span>.</h1>
   <p class="lede">Daily reporting on the research that will reshape how things get built &mdash;
   with an honest read on what each result actually proves, and what it means for R&amp;D investment.</p>
-  <div class="chips">
-    <span class="chip chip-all">All {{ site.posts | size }}</span>
-    {%- assign cats = site.posts | map: "category" | uniq | sort -%}
+  {%- assign cats = site.posts | map: "category" | uniq | sort -%}
+  {%- comment -%}
+    Chips stay while they fit on a line or two. Past the threshold a row of chips becomes a
+    wall, so the same filter renders as a dropdown instead - the switch is automatic, not a
+    future migration to remember. Both controls drive the same filter() in the script below.
+  {%- endcomment -%}
+  {%- if cats.size > 8 -%}
+  <div class="filters">
+    <label class="filter-label" for="cat-filter">Filter by field</label>
+    <select id="cat-filter">
+      <option value="all">All fields ({{ site.posts | size }})</option>
+      {%- for c in cats -%}
+        {%- assign one = site.posts | where: "category", c | first -%}
+        {%- assign n = site.posts | where: "category", c | size -%}
+        <option value="{{ one.catslug }}">{{ c }} ({{ n }})</option>
+      {%- endfor -%}
+    </select>
+    <span class="filter-status" id="filter-status"></span>
+  </div>
+  {%- else -%}
+  <div class="chips" id="chips">
+    <span class="chip chip-all" data-filter="all">All {{ site.posts | size }}</span>
     {%- for c in cats -%}
       {%- assign one = site.posts | where: "category", c | first -%}
-      <span class="chip cat-{{ one.catslug }}">{{ c }}</span>
+      {%- assign n = site.posts | where: "category", c | size -%}
+      <span class="chip cat-{{ one.catslug }}" data-filter="{{ one.catslug }}">{{ c }} {{ n }}</span>
     {%- endfor -%}
+    <span class="filter-status" id="filter-status"></span>
   </div>
+  {%- endif -%}
 </section>
 
 {%- assign latest = site.posts.first -%}
 {%- if latest -%}
-<a class="card feature cat-{{ latest.catslug }}" href="{{ latest.url | relative_url }}">
+<a class="card feature cat-{{ latest.catslug }}" data-cat="{{ latest.catslug }}" href="{{ latest.url | relative_url }}">
   <div class="banner"><span class="motif"></span><span class="cat-label">{{ latest.category }}</span></div>
   <div class="body">
     <span class="tag">Latest</span>
@@ -32,7 +54,7 @@ layout: default
 
 <div class="grid">
 {%- for post in site.posts offset: 1 -%}
-  <a class="card cat-{{ post.catslug }}" href="{{ post.url | relative_url }}"
+  <a class="card cat-{{ post.catslug }}" data-cat="{{ post.catslug }}" href="{{ post.url | relative_url }}"
      style="--i:{{ forloop.index }}">
     <div class="banner"><span class="motif"></span><span class="cat-label">{{ post.category }}</span></div>
     <div class="body">
@@ -44,3 +66,56 @@ layout: default
   </a>
 {%- endfor -%}
 </div>
+
+<p class="empty" id="empty" hidden>No articles in that field yet.</p>
+
+<script>
+/* Category filtering.
+   Progressive enhancement: without JS the chips stay exactly what they were - labels - and
+   every article remains visible. The click behaviour, the ARIA state and the count are all
+   added here, so nothing on the page is a dead control. */
+(function () {
+  var cards  = document.querySelectorAll('[data-cat]');
+  var chips  = document.querySelectorAll('[data-filter]');
+  var select = document.getElementById('cat-filter');
+  var status = document.getElementById('filter-status');
+  var empty  = document.getElementById('empty');
+  if (!cards.length || (!chips.length && !select)) return;
+
+  function filter(cat, remember) {
+    var shown = 0;
+    cards.forEach(function (card) {
+      var match = cat === 'all' || card.getAttribute('data-cat') === cat;
+      card.hidden = !match;
+      if (match) shown++;
+    });
+    chips.forEach(function (chip) {
+      var on = chip.getAttribute('data-filter') === cat;
+      chip.classList.toggle('is-active', on);
+      chip.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    if (select) select.value = cat;
+    if (status) status.textContent = shown + (shown === 1 ? ' article' : ' articles');
+    if (empty) empty.hidden = shown !== 0;
+    // Shareable: /#quantum lands on the filtered view. replaceState, not pushState - the
+    // back button should leave the blog, not step through filter changes.
+    if (remember) history.replaceState(null, '', cat === 'all' ? location.pathname : '#' + cat);
+  }
+
+  chips.forEach(function (chip) {
+    chip.setAttribute('role', 'button');
+    chip.setAttribute('tabindex', '0');
+    chip.classList.add('is-clickable');
+    chip.addEventListener('click', function () { filter(chip.getAttribute('data-filter'), true); });
+    chip.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); chip.click(); }
+    });
+  });
+  if (select) select.addEventListener('change', function () { filter(select.value, true); });
+
+  var known = [];
+  cards.forEach(function (c) { known.push(c.getAttribute('data-cat')); });
+  var initial = location.hash.replace('#', '');
+  filter(known.indexOf(initial) > -1 ? initial : 'all', false);
+})();
+</script>

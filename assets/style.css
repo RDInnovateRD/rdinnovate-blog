@@ -44,10 +44,36 @@ main{max-width:1180px;margin:0 auto;padding:0 5vw}
   -webkit-background-clip:text;background-clip:text;color:transparent}
 .lede{color:var(--mut);font-size:19px;margin:0 0 26px;font-weight:300}
 
-.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chips{display:flex;flex-wrap:wrap;gap:9px;align-items:center}
 .chip{font-size:12px;font-weight:700;letter-spacing:.04em;padding:7px 14px;
   border-radius:100px;color:#fff;background:linear-gradient(120deg,var(--c1),var(--c2))}
 .chip-all{background:var(--maroon-dk)}
+
+/* ── category filtering ─────────────────────────────── */
+/* .card sets display:block, which beats the browser's own [hidden] rule - without this the
+   filter would set the attribute and nothing would visibly happen. */
+[hidden]{display:none!important}
+
+/* Only applied by JS, so the chips look and behave exactly as before when it is unavailable. */
+.chip.is-clickable{cursor:pointer;user-select:none;
+  transition:opacity .18s,transform .18s,box-shadow .18s}
+.chip.is-clickable:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.16)}
+.chip.is-clickable:focus-visible{outline:2px solid var(--maroon);outline-offset:3px}
+/* Unselected chips recede rather than vanish - the full set of fields stays readable. */
+.chips:has(.is-active) .chip:not(.is-active){opacity:.42}
+.chip.is-active{box-shadow:0 0 0 2px #fff,0 0 0 4px var(--maroon-dk)}
+
+.filters{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.filter-label{font-size:12px;font-weight:700;letter-spacing:.04em;
+  text-transform:uppercase;color:var(--maroon)}
+.filters select{font:inherit;font-size:14px;font-weight:500;color:var(--maroon-dk);
+  padding:9px 34px 9px 14px;border:1px solid var(--line);border-radius:100px;
+  background:var(--card) url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath fill='%235F1718' d='M1 1l5 5 5-5'/%3E%3C/svg%3E") no-repeat right 14px center;
+  -webkit-appearance:none;appearance:none;cursor:pointer}
+.filters select:focus-visible{outline:2px solid var(--maroon);outline-offset:2px}
+
+.filter-status{font-size:12px;color:var(--mut);font-weight:500}
+.empty{margin:36px 0;color:var(--mut);font-size:17px}
 
 /* ── cards ──────────────────────────────────────────── */
 .grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fill,minmax(310px,1fr))}
