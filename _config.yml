@@ -21,3 +21,13 @@ exclude:
   - Gemfile.lock
   - vendor
   - .github
+
+# ── RnD Tax Workbench download page ─────────────────────
+workbench:
+  version: "1.1.0"
+  repo: "RDInnovateRD/rnd-tax-workbench"   # change if hosted elsewhere
+  signed: false        # flip to true once notarised — hides the Gatekeeper notice
+  mac_arm: "RnD%20Tax%20Workbench-1.1.0-mac-arm64.dmg"
+  mac_x64: "RnD%20Tax%20Workbench-1.1.0-mac-x64.dmg"
+  windows: ""          # fill in when the Windows build is signed
+  linux: ""            # fill in when the Linux build exists

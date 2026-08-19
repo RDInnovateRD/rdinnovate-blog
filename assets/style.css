@@ -205,3 +205,43 @@ main{max-width:1180px;margin:0 auto;padding:0 5vw}
 .cat-chemistry           {--c1:#581c87; --c2:#c084fc; --c3:#3b0764}
 .cat-space               {--c1:#1e1b4b; --c2:#818cf8; --c3:#0f0d2e}
 .cat-neuroscience        {--c1:#86198f; --c2:#f0abfc; --c3:#4a044e}
+
+/* ── RnD Tax Workbench download page ─────────────────── */
+.wb-hero{padding:70px 0 28px;max-width:720px}
+.wb-hero h1{font-size:clamp(36px,5.4vw,56px);line-height:1.04;margin:0 0 18px;
+  letter-spacing:-.032em;font-weight:900;color:var(--maroon-dk)}
+.wb-meta{margin:18px 0 0;font-size:14px;color:var(--mut);
+  text-transform:uppercase;letter-spacing:.09em;font-weight:700}
+
+.wb-notice{background:#fff8e6;border:1px solid #f0d9a0;border-left:4px solid #d99b1c;
+  border-radius:10px;padding:16px 20px;margin:26px 0 8px;font-size:15.5px;
+  line-height:1.6;color:#5c4413;max-width:820px}
+.wb-notice strong{color:#7a5a12}
+
+.wb-downloads{padding:38px 0 8px}
+.wb-downloads h2,.wb-body h2{font-size:23px;font-weight:700;color:var(--maroon);
+  letter-spacing:-.018em;margin:38px 0 14px}
+.wb-downloads h2{margin-top:0}
+.wb-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  max-width:840px}
+.wb-card{display:flex;flex-direction:column;gap:3px;padding:22px 24px;background:#fff;
+  border:1px solid var(--line);border-radius:13px;text-decoration:none;color:inherit;
+  transition:transform .18s,box-shadow .18s,border-color .18s}
+a.wb-card:hover{transform:translateY(-4px);border-color:var(--maroon);
+  box-shadow:0 14px 30px rgba(95,23,24,.12)}
+.wb-plat{font-size:19px;font-weight:700;letter-spacing:-.012em}
+.wb-arch{font-size:15px;color:var(--ink);font-weight:500}
+.wb-note{font-size:13px;color:var(--mut);margin-bottom:12px}
+.wb-dl{font-size:14px;font-weight:700;color:var(--maroon);margin-top:auto}
+.wb-soon{opacity:.5;cursor:default}
+.wb-soon .wb-dl{color:var(--mut)}
+.wb-size{font-size:14px;color:var(--mut);margin:18px 0 0;max-width:640px}
+
+.wb-body{max-width:760px;padding-bottom:40px}
+.wb-body ul,.wb-body ol{padding-left:22px;margin:0 0 8px}
+.wb-body li{margin-bottom:9px}
+.wb-body p{margin:0 0 18px}
+.wb-body a{color:var(--maroon)}
+.wb-body pre{background:#1b1b21;color:#e9e9ef;border-radius:9px;padding:14px 16px;
+  overflow-x:auto;font-size:14px}
+.wb-body code{font-size:14px}

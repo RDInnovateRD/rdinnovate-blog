@@ -1,0 +1,113 @@
+---
+layout: default
+title: "RnD Tax Workbench — download"
+description: "Desktop application for preparing Australian R&D Tax Incentive claims. Runs locally on your machine."
+permalink: /workbench/
+---
+{%- assign w = site.workbench -%}
+{%- assign base = "https://github.com/" | append: w.repo | append: "/releases/download/v" | append: w.version -%}
+
+<section class="wb-hero">
+  <p class="eyebrow">R&amp;D Innovate</p>
+  <h1>RnD Tax Workbench</h1>
+  <p class="lede">Prepare Australian R&amp;D Tax Incentive claims on your own machine.
+  Import your general ledger, payroll and timesheets, classify expenditure against
+  Division 355, and produce a defensible schedule.</p>
+  <p class="wb-meta">Version {{ w.version }} &middot; macOS</p>
+</section>
+
+{%- unless w.signed %}
+<div class="wb-notice">
+  <strong>Pre-release build.</strong>
+  This version is not yet notarised, so macOS will warn that the developer cannot be
+  verified. If you have been given this link directly, follow the first-run steps below.
+  A signed release is on the way.
+</div>
+{%- endunless %}
+
+<section class="wb-downloads">
+  <h2>Download</h2>
+  <div class="wb-grid">
+    <a class="wb-card" href="{{ base }}/{{ w.mac_arm }}">
+      <span class="wb-plat">macOS</span>
+      <span class="wb-arch">Apple silicon</span>
+      <span class="wb-note">M1, M2, M3, M4</span>
+      <span class="wb-dl">Download .dmg &rarr;</span>
+    </a>
+    <a class="wb-card" href="{{ base }}/{{ w.mac_x64 }}">
+      <span class="wb-plat">macOS</span>
+      <span class="wb-arch">Intel</span>
+      <span class="wb-note">2020 and earlier</span>
+      <span class="wb-dl">Download .dmg &rarr;</span>
+    </a>
+    {%- if w.windows and w.windows != "" %}
+    <a class="wb-card" href="{{ base }}/{{ w.windows }}">
+      <span class="wb-plat">Windows</span>
+      <span class="wb-arch">64-bit</span>
+      <span class="wb-note">Windows 10 and 11</span>
+      <span class="wb-dl">Download .exe &rarr;</span>
+    </a>
+    {%- else %}
+    <span class="wb-card wb-soon">
+      <span class="wb-plat">Windows</span>
+      <span class="wb-arch">64-bit</span>
+      <span class="wb-note">Windows 10 and 11</span>
+      <span class="wb-dl">Coming soon</span>
+    </span>
+    {%- endif %}
+  </div>
+  <p class="wb-size">Around 585 MB. Not sure which Mac you have? Apple menu &rarr;
+  About This Mac. "Apple M1" or later means Apple silicon.</p>
+</section>
+
+<section class="wb-body">
+  <h2>What it does</h2>
+  <ul>
+    <li>Imports general ledger, profit and loss, balance sheet, trial balance,
+        payroll and timesheet files, including PDFs</li>
+    <li>Classifies expenditure across 19 categories and applies R&amp;D percentages
+        with a cascading fallback resolver</li>
+    <li>Applies Division 355 rules, including feedstock adjustments, associate
+        payment timing, and s 355-225 exclusions</li>
+    <li>Calculates the refundable and non-refundable offset positions against
+        aggregated turnover</li>
+    <li>Produces a working-paper schedule with the reasoning recorded for review</li>
+  </ul>
+
+  <h2>Requirements</h2>
+  <ul>
+    <li>macOS 12 Monterey or later</li>
+    <li>Around 2 GB free disk space after installation</li>
+    <li>Internet connection for AI-assisted classification</li>
+  </ul>
+
+  <h2>Installing</h2>
+  <ol>
+    <li>Download the file matching your processor</li>
+    <li>Open the .dmg and drag <strong>RnD Tax Workbench</strong> into Applications</li>
+    {%- unless w.signed %}
+    <li>First launch only: right-click the app in Applications and choose
+        <strong>Open</strong>, then confirm. Double-clicking will be refused until
+        you have done this once. If macOS says the app is damaged, open
+        System Settings &rarr; Privacy &amp; Security, scroll down, and choose
+        <strong>Open Anyway</strong>.</li>
+    {%- endunless %}
+    <li>Launch from Applications as normal thereafter</li>
+  </ol>
+
+  <h2>Your data</h2>
+  <p>Financial data is held in a local database on your own machine. Files you
+  import are not uploaded anywhere. AI-assisted classification sends only the
+  extracted account descriptions needed for the task, and R&amp;D Tax Incentive
+  processing is pinned to Australian regions with no offshore fallback.</p>
+
+  <h2>Verifying your download</h2>
+  <p>Compare the SHA-256 of the file you downloaded against the published value.
+  On macOS:</p>
+  <pre><code>shasum -a 256 ~/Downloads/RnD*.dmg</code></pre>
+  <p><a href="{{ base }}/SHA256SUMS.txt">Published checksums for {{ w.version }}</a></p>
+
+  <h2>Support</h2>
+  <p>Questions, defects, or help with a claim:
+  <a href="mailto:rd@rdinnovate.com">rd@rdinnovate.com</a></p>
+</section>
