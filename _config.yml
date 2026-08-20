@@ -26,7 +26,8 @@ exclude:
 workbench:
   version: "1.1.0"
   repo: "RDInnovateRD/rnd-tax-workbench"   # change if hosted elsewhere
-  signed: false        # flip to true once notarised — hides the Gatekeeper notice
+  signed_mac: true      # notarised, Gatekeeper accepts
+  signed_win: false     # flip once the OV cert is applied
   mac_arm: "RnD-Tax-Workbench-1.1.0-mac-arm64.dmg"
   mac_x64: "RnD-Tax-Workbench-1.1.0-mac-x64.dmg"
   windows: "RnD-Tax-Workbench-1.1.0-win-x64.exe"          # fill in when the Windows build is signed

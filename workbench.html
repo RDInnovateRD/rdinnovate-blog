@@ -16,12 +16,12 @@ permalink: /workbench/
   <p class="wb-meta">Version {{ w.version }} &middot; macOS</p>
 </section>
 
-{%- unless w.signed %}
+{%- unless w.signed_win %}
 <div class="wb-notice">
-  <strong>Pre-release build.</strong>
-  This version is not yet notarised, so macOS will warn that the developer cannot be
-  verified. If you have been given this link directly, follow the first-run steps below.
-  A signed release is on the way.
+  <strong>Windows build is not yet code-signed.</strong>
+  SmartScreen will show a warning on first run. Choose <em>More info</em> then
+  <em>Run anyway</em>. The macOS builds are signed and notarised by Apple and
+  open normally. A signed Windows build is on the way.
 </div>
 {%- endunless %}
 
@@ -85,12 +85,8 @@ permalink: /workbench/
   <ol>
     <li>Download the file matching your processor</li>
     <li>Open the .dmg and drag <strong>RnD Tax Workbench</strong> into Applications</li>
-    {%- unless w.signed %}
-    <li>First launch only: right-click the app in Applications and choose
-        <strong>Open</strong>, then confirm. Double-clicking will be refused until
-        you have done this once. If macOS says the app is damaged, open
-        System Settings &rarr; Privacy &amp; Security, scroll down, and choose
-        <strong>Open Anyway</strong>.</li>
+    {%- unless w.signed_mac %}
+    <li>First launch only: right-click the app and choose <strong>Open</strong>.</li>
     {%- endunless %}
     <li>Launch from Applications as normal thereafter</li>
   </ol>
