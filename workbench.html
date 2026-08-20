@@ -13,17 +13,8 @@ permalink: /workbench/
   <p class="lede">Prepare Australian R&amp;D Tax Incentive claims on your own machine.
   Import your general ledger, payroll and timesheets, classify expenditure against
   Division 355, and produce a defensible schedule.</p>
-  <p class="wb-meta">Version {{ w.version }} &middot; macOS</p>
+  <p class="wb-meta">Version {{ w.version }} &middot; macOS and Windows</p>
 </section>
-
-{%- unless w.signed_win %}
-<div class="wb-notice">
-  <strong>Windows build is not yet code-signed.</strong>
-  SmartScreen will show a warning on first run. Choose <em>More info</em> then
-  <em>Run anyway</em>. The macOS builds are signed and notarised by Apple and
-  open normally. A signed Windows build is on the way.
-</div>
-{%- endunless %}
 
 <section class="wb-downloads">
   <h2>Download</h2>
@@ -32,19 +23,25 @@ permalink: /workbench/
       <span class="wb-plat">macOS</span>
       <span class="wb-arch">Apple silicon</span>
       <span class="wb-note">M1, M2, M3, M4</span>
+      {%- if w.signed_mac %}<span class="wb-flag wb-ok">Signed &amp; notarised</span>{%- endif %}
       <span class="wb-dl">Download .dmg &rarr;</span>
     </a>
+
     <a class="wb-card" href="{{ base }}/{{ w.mac_x64 }}">
       <span class="wb-plat">macOS</span>
       <span class="wb-arch">Intel</span>
       <span class="wb-note">2020 and earlier</span>
+      {%- if w.signed_mac %}<span class="wb-flag wb-ok">Signed &amp; notarised</span>{%- endif %}
       <span class="wb-dl">Download .dmg &rarr;</span>
     </a>
+
     {%- if w.windows and w.windows != "" %}
     <a class="wb-card" href="{{ base }}/{{ w.windows }}">
       <span class="wb-plat">Windows</span>
       <span class="wb-arch">64-bit</span>
       <span class="wb-note">Windows 10 and 11</span>
+      {%- unless w.signed_win %}<span class="wb-flag wb-warn">SmartScreen warning &mdash; see below</span>{%- endunless %}
+      {%- if w.signed_win %}<span class="wb-flag wb-ok">Code-signed</span>{%- endif %}
       <span class="wb-dl">Download .exe &rarr;</span>
     </a>
     {%- else %}
@@ -56,8 +53,8 @@ permalink: /workbench/
     </span>
     {%- endif %}
   </div>
-  <p class="wb-size">Around 585 MB. Not sure which Mac you have? Apple menu &rarr;
-  About This Mac. "Apple M1" or later means Apple silicon.</p>
+  <p class="wb-size">Around 585 MB on macOS, 291 MB on Windows. Not sure which Mac
+  you have? Apple menu &rarr; About This Mac. "Apple M1" or later means Apple silicon.</p>
 </section>
 
 <section class="wb-body">
@@ -76,20 +73,39 @@ permalink: /workbench/
 
   <h2>Requirements</h2>
   <ul>
-    <li>macOS 12 Monterey or later</li>
+    <li>macOS 12 Monterey or later, or Windows 10 / 11 64-bit</li>
     <li>Around 2 GB free disk space after installation</li>
     <li>Internet connection for AI-assisted classification</li>
   </ul>
 
-  <h2>Installing</h2>
+  <h3>Installing on macOS</h3>
   <ol>
     <li>Download the file matching your processor</li>
     <li>Open the .dmg and drag <strong>RnD Tax Workbench</strong> into Applications</li>
     {%- unless w.signed_mac %}
     <li>First launch only: right-click the app and choose <strong>Open</strong>.</li>
     {%- endunless %}
-    <li>Launch from Applications as normal thereafter</li>
+    <li>Launch from Applications</li>
   </ol>
+  {%- if w.signed_mac %}
+  <p class="wb-inline-ok">The macOS builds are signed and notarised by Apple, so
+  they open normally with no security prompt.</p>
+  {%- endif %}
+
+  <h3>Installing on Windows</h3>
+  <ol>
+    <li>Download the .exe</li>
+    {%- unless w.signed_win %}
+    <li>Windows SmartScreen will show a warning on first run, because this build
+        is not yet code-signed. Choose <strong>More info</strong>, then
+        <strong>Run anyway</strong>.</li>
+    {%- endunless %}
+    <li>Follow the installer, then launch from the Start menu</li>
+  </ol>
+  {%- unless w.signed_win %}
+  <p class="wb-inline-warn">A code-signed Windows build is on the way, which will
+  remove the SmartScreen prompt.</p>
+  {%- endunless %}
 
   <h2>Your data</h2>
   <p>Financial data is held in a local database on your own machine. Files you
@@ -99,8 +115,8 @@ permalink: /workbench/
 
   <h2>Verifying your download</h2>
   <p>Compare the SHA-256 of the file you downloaded against the published value.
-  On macOS:</p>
-  <pre><code>shasum -a 256 ~/Downloads/RnD*.dmg</code></pre>
+  On macOS: <code>shasum -a 256 &lt;file&gt;</code>.
+  On Windows: <code>certutil -hashfile &lt;file&gt; SHA256</code>.</p>
   <p><a href="{{ base }}/SHA256SUMS.txt">Published checksums for {{ w.version }}</a></p>
 
   <h2>Support</h2>

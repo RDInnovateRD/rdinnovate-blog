@@ -245,3 +245,15 @@ a.wb-card:hover{transform:translateY(-4px);border-color:var(--maroon);
 .wb-body pre{background:#1b1b21;color:#e9e9ef;border-radius:9px;padding:14px 16px;
   overflow-x:auto;font-size:14px}
 .wb-body code{font-size:14px}
+
+/* per-platform status flags on download cards */
+.wb-flag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.05em;
+  padding:4px 10px;border-radius:100px;margin:2px 0 12px;align-self:flex-start}
+.wb-ok{background:#e7f4ec;color:#1c6b3f;border:1px solid #b9dfc8}
+.wb-warn{background:#fff4e0;color:#8a5a10;border:1px solid #f0d5a3}
+.wb-body h3{font-size:19px;font-weight:700;color:var(--ink);margin:30px 0 10px;
+  letter-spacing:-.012em}
+.wb-inline-ok,.wb-inline-warn{font-size:14.5px;padding:11px 15px;border-radius:9px;
+  margin:0 0 20px}
+.wb-inline-ok{background:#e7f4ec;color:#1c6b3f}
+.wb-inline-warn{background:#fff4e0;color:#8a5a10}
