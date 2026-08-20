@@ -23,7 +23,6 @@ permalink: /workbench/
       <span class="wb-plat">macOS</span>
       <span class="wb-arch">Apple silicon</span>
       <span class="wb-note">M1, M2, M3, M4</span>
-      {%- if w.signed_mac %}<span class="wb-flag wb-ok">Signed &amp; notarised</span>{%- endif %}
       <span class="wb-dl">Download .dmg &rarr;</span>
     </a>
 
@@ -31,7 +30,6 @@ permalink: /workbench/
       <span class="wb-plat">macOS</span>
       <span class="wb-arch">Intel</span>
       <span class="wb-note">2020 and earlier</span>
-      {%- if w.signed_mac %}<span class="wb-flag wb-ok">Signed &amp; notarised</span>{%- endif %}
       <span class="wb-dl">Download .dmg &rarr;</span>
     </a>
 
@@ -40,8 +38,6 @@ permalink: /workbench/
       <span class="wb-plat">Windows</span>
       <span class="wb-arch">64-bit</span>
       <span class="wb-note">Windows 10 and 11</span>
-      {%- unless w.signed_win %}<span class="wb-flag wb-warn">SmartScreen warning &mdash; see below</span>{%- endunless %}
-      {%- if w.signed_win %}<span class="wb-flag wb-ok">Code-signed</span>{%- endif %}
       <span class="wb-dl">Download .exe &rarr;</span>
     </a>
     {%- else %}
@@ -87,25 +83,12 @@ permalink: /workbench/
     {%- endunless %}
     <li>Launch from Applications</li>
   </ol>
-  {%- if w.signed_mac %}
-  <p class="wb-inline-ok">The macOS builds are signed and notarised by Apple, so
-  they open normally with no security prompt.</p>
-  {%- endif %}
 
   <h3>Installing on Windows</h3>
   <ol>
     <li>Download the .exe</li>
-    {%- unless w.signed_win %}
-    <li>Windows SmartScreen will show a warning on first run, because this build
-        is not yet code-signed. Choose <strong>More info</strong>, then
-        <strong>Run anyway</strong>.</li>
-    {%- endunless %}
     <li>Follow the installer, then launch from the Start menu</li>
   </ol>
-  {%- unless w.signed_win %}
-  <p class="wb-inline-warn">A code-signed Windows build is on the way, which will
-  remove the SmartScreen prompt.</p>
-  {%- endunless %}
 
   <h2>Your data</h2>
   <p>Financial data is held in a local database on your own machine. Files you
