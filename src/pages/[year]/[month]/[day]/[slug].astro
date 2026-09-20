@@ -1,0 +1,57 @@
+---
+import { render } from 'astro:content';
+import Base from '../../../../layouts/Base.astro';
+import { publishedPosts, urlOf, dateOf, slugOf, displayDate, isoDate, truncate, type Post } from '../../../../lib/posts';
+import { styleVars } from '../../../../lib/categories.mjs';
+import { site } from '../../../../data/site';
+
+export async function getStaticPaths() {
+  const posts = await publishedPosts(); // newest first
+  return posts.map((post, i) => {
+    const [year, month, day] = dateOf(post).split('-');
+    return {
+      params: { year, month, day, slug: slugOf(post) },
+      // Jekyll semantics: previous = older, next = newer
+      props: { post, previous: posts[i + 1] ?? null, next: posts[i - 1] ?? null },
+    };
+  });
+}
+
+interface Props { post: Post; previous: Post | null; next: Post | null }
+const { post, previous, next } = Astro.props;
+const { Content } = await render(post);
+const d = dateOf(post);
+const published = isoDate(d);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.data.title,
+  description: post.data.excerpt,
+  datePublished: published,
+  dateModified: published,
+  url: new URL(urlOf(post), site.url).href,
+  mainEntityOfPage: new URL(urlOf(post), site.url).href,
+  articleSection: post.data.category,
+  author: { '@type': 'Organization', name: site.name, url: site.mainSite },
+  publisher: { '@type': 'Organization', name: site.name, url: site.mainSite },
+  ...(post.data.source ? { citation: post.data.source.url } : {}),
+};
+---
+<Base title={post.data.title} description={post.data.excerpt} type="article" published={published} jsonLd={jsonLd}>
+<div class={`posthead cat-${post.data.catslug}`} data-cat={post.data.catslug} style={styleVars(post.data.catslug)}>
+  <div class="posthead-inner">
+    <p class="eyebrow"><a href="/">&larr; All articles</a></p>
+    <span class="cat-pill">{post.data.category}</span>
+    <h1>{post.data.title}</h1>
+    <time datetime={published}>{displayDate(d)}</time>
+  </div>
+</div>
+<article class="post">
+  <Content />
+</article>
+<nav class="pagenav">
+  {previous && <a href={urlOf(previous)}>&larr; {truncate(previous.data.title, 46)}</a>}
+  {next && <a class="r" href={urlOf(next)}>{truncate(next.data.title, 46)} &rarr;</a>}
+</nav>
+</Base>

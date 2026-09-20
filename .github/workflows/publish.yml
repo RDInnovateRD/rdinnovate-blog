@@ -1,15 +1,40 @@
-name: Build and deploy blog
+name: Publish blog
+
+# GitHub Actions is the server: nothing here depends on a Mac being awake.
+#
+#   push to main      -> build, check, deploy
+#   pull request      -> build and check only (nothing deploys)
+#   daily schedule    -> write today's article, commit it, then build, check, deploy
+#   manual (Run workflow button) -> same as daily, with optional dry run / category
+#
+# Cron in GitHub Actions is ALWAYS UTC. 20:00 UTC = 06:00 AEST / 07:00 AEDT
+# (Sydney daylight saving starts on the first Sunday of October).
+# Scheduled runs can start 5-30 minutes late at busy times; that is normal.
 
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   schedule:
-    # 20:00 UTC = 06:00 AEST / 07:00 AEDT — releases that day's post
     - cron: '0 20 * * *'
   workflow_dispatch:
+    inputs:
+      generate:
+        description: "Write today's article"
+        type: boolean
+        default: true
+      dry_run:
+        description: 'Dry run: generate and validate, but do not commit'
+        type: boolean
+        default: false
+      category:
+        description: 'Force a category slug (blank = least recently covered)'
+        type: string
+        default: ''
 
 permissions:
-  contents: read
+  contents: write   # the generate job commits the new article
   pages: write
   id-token: write
 
@@ -18,36 +43,106 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  generate:
+    if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.generate)
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      outcome: ${{ steps.gen.outcome }}
     steps:
       - uses: actions/checkout@v4
-
-      # Assign a gradient to any category that doesn't have one yet.
-      # Runs at build time so an article added via the GitHub API or MCP
-      # (no shell, no Python) still renders with a proper colour.
-      - name: Sync category colours
-        run: python3 _source/sync_categories.py
-
-      - uses: ruby/setup-ruby@v1
+      - uses: actions/setup-node@v4
         with:
-          ruby-version: '3.2'
-          bundler-cache: true
-      - uses: actions/configure-pages@v5
-      # baseurl comes from _config.yml — do NOT override it here.
-      # The custom domain serves from the root, so baseurl must stay "".
-      - name: Build with Jekyll
-        run: bundle exec jekyll build
+          node-version: 22
+
+      - name: Write today's article
+        id: gen
+        continue-on-error: true   # a missed day must not block releasing scheduled posts
         env:
-          JEKYLL_ENV: production
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          AI_PROVIDER: ${{ vars.AI_PROVIDER || 'gemini' }}
+          GEMINI_MODELS: ${{ vars.GEMINI_MODELS }}
+          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
+        run: |
+          ARGS=""
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          if [ -n "${{ inputs.category }}" ]; then ARGS="$ARGS --category=${{ inputs.category }}"; fi
+          node scripts/generate-article.mjs $ARGS
+
+      - name: Commit the article
+        if: steps.gen.outcome == 'success' && inputs.dry_run != true
+        run: |
+          # Repo-local identity only (never --global): the business name, not a person's.
+          git config user.name "RDInnovateRD"
+          git config user.email "rd@rdinnovate.com"
+          git add src/content/posts src/data/categories.json
+          if git diff --cached --quiet; then
+            echo "Nothing new to commit."
+          else
+            git commit -m "Article: $(TZ=Australia/Sydney date +%F)"
+            git push
+          fi
+
+  build:
+    needs: generate
+    # Build even when generation was skipped or failed, so future-dated posts
+    # still release on their date.
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Scheduled/manual runs: the branch head, so the article committed above is included.
+          # Pull requests: the default merge ref.
+          ref: ${{ github.event_name != 'pull_request' && github.ref_name || '' }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Compliance check (blocks deploy on any error)
+        run: npm run check:compliance
+      - name: Launch check
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY != '' && 'set' || '' }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY != '' && 'set' || '' }}
+          AI_PROVIDER: ${{ vars.AI_PROVIDER || 'gemini' }}
+        run: npm run check:launch
+      - uses: actions/configure-pages@v5
+        if: github.event_name != 'pull_request'
       - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
+        with:
+          path: dist
 
   deploy:
     needs: build
+    # Explicit status check: with the implicit success(), a skipped `generate`
+    # upstream (every push) would skip the deploy too.
+    if: ${{ !cancelled() && needs.build.result == 'success' && github.event_name != 'pull_request' }}
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # Fail the run (and trigger GitHub's failure email) when no article was
+  # written, AFTER the site has deployed. The run Summary page says why.
+  report:
+    needs: [generate, deploy]
+    if: ${{ always() && needs.generate.result != 'skipped' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Did today's article get written?
+        run: |
+          if [ "${{ needs.generate.outputs.outcome }}" != "success" ]; then
+            echo "::error::No article today. Open this run's Summary for the model, finish reason, token counts and failed checks."
+            exit 1
+          fi
+          echo "Article step succeeded."
