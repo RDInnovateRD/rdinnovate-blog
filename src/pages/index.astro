@@ -1,0 +1,86 @@
+---
+import Base from '../layouts/Base.astro';
+import Card from '../components/Card.astro';
+import { publishedPosts } from '../lib/posts';
+import { loadCategories } from '../lib/categories.mjs';
+import { site } from '../data/site';
+
+const posts = await publishedPosts();
+const known = loadCategories();
+const [latest, ...rest] = posts;
+
+// Dropdown: one option per category, alphabetical by display name, with counts.
+const byCat = new Map<string, { slug: string; n: number }>();
+for (const p of posts) {
+  const e = byCat.get(p.data.category) ?? { slug: p.data.catslug, n: 0 };
+  e.n++;
+  byCat.set(p.data.category, e);
+}
+const cats = [...byCat.entries()].sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0));
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: site.name,
+  url: site.url + '/',
+  description: site.description,
+  publisher: { '@type': 'Organization', name: site.name, url: site.mainSite },
+};
+---
+<Base jsonLd={jsonLd}>
+<section class="hero">
+  <p class="eyebrow">R&amp;D Innovate</p>
+  <h1>Notes from the <span class="grad">cutting edge</span>.</h1>
+  <p class="lede">Daily reporting on the research that will reshape how things get built &mdash;
+  with an honest read on what each result actually proves.</p>
+
+  <div class="filterbar">
+    <label for="catFilter">Browse</label>
+    <div class="selwrap">
+      <select id="catFilter">
+        <option value="all">All categories ({posts.length})</option>
+        {cats.map(([name, c]) => <option value={c.slug}>{name} ({c.n})</option>)}
+      </select>
+    </div>
+    <span id="filterCount" class="fcount"></span>
+  </div>
+</section>
+
+{latest && <Card post={latest} feature known={known} />}
+
+<div class="grid">
+  {rest.map((p, i) => <Card post={p} index={i + 1} known={known} />)}
+</div>
+
+<p id="emptyState" class="empty" hidden>No articles in that category yet.</p>
+
+<script is:inline>
+(function () {
+  var sel = document.getElementById('catFilter');
+  if (!sel) return;
+  var cards = Array.prototype.slice.call(document.querySelectorAll('[data-cat]'));
+  var out   = document.getElementById('filterCount');
+  var empty = document.getElementById('emptyState');
+
+  function apply(val, push) {
+    var n = 0;
+    cards.forEach(function (c) {
+      var show = (val === 'all') || (c.getAttribute('data-cat') === val);
+      c.hidden = !show;
+      if (show) n++;
+    });
+    out.textContent = n + (n === 1 ? ' article' : ' articles');
+    empty.hidden = n > 0;
+    if (push && window.history && history.replaceState) {
+      history.replaceState(null, '', val === 'all' ? location.pathname : '#' + val);
+    }
+  }
+
+  sel.addEventListener('change', function () { apply(this.value, true); });
+
+  var h = (location.hash || '').replace('#', '');
+  if (h && sel.querySelector('option[value="' + h + '"]')) sel.value = h;
+  apply(sel.value, false);
+})();
+</script>
+</Base>
