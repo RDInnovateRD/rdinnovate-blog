@@ -1,0 +1,21 @@
+---
+import type { Post } from '../lib/posts';
+import { urlOf, dateOf, displayDate, isoDate, truncate } from '../lib/posts';
+import { styleVars } from '../lib/categories.mjs';
+
+interface Props { post: Post; index?: number; feature?: boolean; known: Record<string, any> }
+const { post, index = 0, feature = false, known } = Astro.props;
+const d = dateOf(post);
+const style = (feature ? '' : `--i:${index};`) + styleVars(post.data.catslug, known);
+---
+<a class:list={['card', feature && 'feature', `cat-${post.data.catslug}`]}
+   data-cat={post.data.catslug} href={urlOf(post)} style={style}>
+  <div class="banner"><span class="motif"></span><span class="cat-label">{post.data.category}</span></div>
+  <div class="body">
+    {feature && <span class="tag">Latest</span>}
+    <time datetime={isoDate(d)}>{displayDate(d)}</time>
+    <h2>{post.data.title}</h2>
+    <p>{truncate(post.data.excerpt, feature ? 240 : 130)}</p>
+    <span class="more">Read article &rarr;</span>
+  </div>
+</a>
