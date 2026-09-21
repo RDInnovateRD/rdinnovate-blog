@@ -7,9 +7,10 @@ name: Publish blog
 #   daily schedule    -> write today's article, commit it, then build, check, deploy
 #   manual (Run workflow button) -> same as daily, with optional dry run / category
 #
-# Cron in GitHub Actions is ALWAYS UTC. 20:00 UTC = 06:00 AEST / 07:00 AEDT
-# (Sydney daylight saving starts on the first Sunday of October).
-# Scheduled runs can start 5-30 minutes late at busy times; that is normal.
+# Cron in GitHub Actions is ALWAYS UTC. 14:00 UTC = midnight AEST / 1am AEDT
+# (Sydney daylight saving starts on the first Sunday of October), so the article
+# is dated the new Sydney day and is up well before readers wake.
+# GitHub often starts scheduled runs 1-2 hours late; that is normal.
 
 on:
   push:
@@ -17,7 +18,7 @@ on:
   pull_request:
     branches: [main]
   schedule:
-    - cron: '0 20 * * *'
+    - cron: '0 14 * * *'
   workflow_dispatch:
     inputs:
       generate:

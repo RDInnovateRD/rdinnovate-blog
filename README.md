@@ -5,7 +5,7 @@ Nothing depends on a Mac being awake: Actions is the server.
 
 ## How a day works
 
-1. **20:00 UTC** (06:00 AEST / 07:00 AEDT) the `Publish blog` workflow starts.
+1. **14:00 UTC** (midnight AEST / 1am AEDT; GitHub often starts it 1-2 hours late) the `Publish blog` workflow starts.
 2. `scripts/generate-article.mjs` picks the least recently covered category,
    pulls ~12 recent papers with real abstracts (arXiv or Europe PMC, both free,
    no key), and hands them to the model. The model picks one by number and writes
