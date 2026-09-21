@@ -13,7 +13,13 @@
 //      GEMINI_MODELS = comma list to override the ladder
 //      ANTHROPIC_MODEL = override claude-sonnet-5
 //
-// Exit 0 = article written (or nothing needed today). Exit 1 = no article.
+// Exit codes (the workflow decides what to do from these):
+//   0  article written, or today already has one
+//   3  editorial skip: no strong topic today. Recorded in src/data/skipped-days.txt
+//      so later runs the same day stand down. A missed day beats a weak article.
+//   75 try again later: models or paper sources unavailable, or no draft passed
+//      the checks this time. The workflow retries every 2 hours until Sydney midnight.
+//   1  hard failure that retrying will not fix (e.g. a rejected API key)
 // Either way the decisive facts go to $GITHUB_STEP_SUMMARY: which model
 // answered, its finish reason, token counts, which checks passed, and the raw
 // output when parsing or validation failed. That page is readable without
@@ -33,6 +39,13 @@ const args = Object.fromEntries(process.argv.slice(2).map((a) => {
 }));
 const DRY = Boolean(args['dry-run']);
 const MAX_MODEL_CALLS = 4;
+const EXIT = { OK: 0, SKIP: 3, RETRY: 75, FAIL: 1 };
+const SKIPS_FILE = path.resolve('src/data/skipped-days.txt');
+const skippedOn = (date) => {
+  try { return fs.readFileSync(SKIPS_FILE, 'utf8').split('\n').some((l) => l.startsWith(date)); }
+  catch { return false; }
+};
+const recordSkip = (date, why) => { if (!DRY) fs.appendFileSync(SKIPS_FILE, `${date}  ${why}\n`); };
 
 // ── summary ──────────────────────────────────────────────────────────────
 const summary = [];
@@ -196,21 +209,28 @@ async function main() {
 
   const posts = readPosts();
   const today = posts.filter((p) => p.date === date);
-  if (today.length && !args.force) finish(0, `already have an article for ${date} (${today[0].file}); nothing to do.`);
+  if (today.length && !args.force) finish(EXIT.OK, `already have an article for ${date} (${today[0].file}); nothing to do.`);
+  if (skippedOn(date) && !args.force) finish(EXIT.SKIP, `${date} was already skipped earlier today (no strong topic); nothing to do.`);
 
   const exclude = new Set(posts.map((p) => p.sourceId).filter(Boolean));
   const avoidTitles = posts.slice(-30).map((p) => p.title).reverse();
 
   // 1. Retrieval
   let chosen = null;
+  let retrievalErrors = 0;
   for (const catslug of categoryOrder(posts, args.category)) {
     const res = await candidatesFor(catslug, { exclude });
+    retrievalErrors += res.errors.length;
     say(`- Retrieval **${catslug}** via ${res.api}: ${res.candidates.length} candidates` +
       (res.windowDays ? ` (last ${res.windowDays} days)` : '') + (res.errors.length ? ` — ${res.errors.join('; ')}` : ''));
     if (res.candidates.length) { chosen = { catslug, ...res }; break; }
     if (args.category) break;
   }
-  if (!chosen) finish(1, 'no candidate papers retrieved from any source. No article today.');
+  if (!chosen) {
+    if (retrievalErrors) finish(EXIT.RETRY, 'no candidates, and some paper sources returned errors. Nothing written; will try again at the next scheduled run.');
+    recordSkip(date, 'no candidate papers from any source');
+    finish(EXIT.SKIP, 'no candidate papers retrieved from any source. No strong topic today, so the day is skipped.');
+  }
 
   const category = CATEGORY_NAMES[chosen.catslug] ?? chosen.catslug;
   const cands = chosen.candidates;
@@ -228,6 +248,11 @@ async function main() {
   let article = null;
   let reply = null;
   let calls = 0;
+  let answered = false;   // did any model actually reply?
+  let modelSkip = false;  // did a model say no candidate is worth an article?
+  let fatalErr = null;    // an error retrying cannot fix (bad key, etc.)
+  let lastErr = null;
+  let transientSeen = false; // any busy / rate-limit / timeout errors?
 
   for (const step of steps) {
     if (calls >= MAX_MODEL_CALLS) break;
@@ -238,14 +263,17 @@ async function main() {
         : await callWithRetry(step, SYSTEM, user, keys, log);
     } catch (err) {
       say(`- Model **${step.model}** failed: ${err.message.slice(0, 200)}`);
-      if (err.fatal) break;
+      lastErr = err;
+      if (err.transient) transientSeen = true;
+      if (err.fatal) { fatalErr = err; break; }
       continue;
     }
+    answered = true;
     say(`- Model **${reply.model}** answered: finish reason \`${reply.finishReason}\`, tokens in ${reply.tokens.input} / out ${reply.tokens.output} / thinking ${reply.tokens.thinking}, ${reply.text.length} chars`);
 
     if (!reply.text.trim()) { say('  - empty output; trying the next model'); continue; }
     const parsed = parseReply(reply.text);
-    if (parsed.skip) { say('  - model replied SKIP: no candidate worth an honest article'); break; }
+    if (parsed.skip) { say('  - model replied SKIP: no candidate worth an honest article'); modelSkip = true; break; }
     if (parsed.error) {
       say(`  - could not parse reply (${parsed.error})`);
       say('<details><summary>Raw model output</summary>\n\n' + fence(reply.text.slice(0, 20000)) + '\n</details>');
@@ -270,12 +298,25 @@ async function main() {
   if (log.length) {
     say('\n<details><summary>Every model attempt</summary>\n\n' + fence(log.map((l) => JSON.stringify(l)).join('\n')) + '\n</details>');
   }
-  if (!article) finish(1, 'no article passed validation. Nothing was written. A missed day is better than a weak article.');
+  if (!article) {
+    if (modelSkip) {
+      recordSkip(date, 'model found no candidate worth an honest article');
+      finish(EXIT.SKIP, 'the model found no candidate worth an honest article. No strong topic today, so the day is skipped.');
+    }
+    // No model answered and none of the failures were temporary (e.g. a rejected
+    // key returns HTTP 400 on every model): retrying later will not help.
+    if (fatalErr || (!answered && !transientSeen && lastErr)) {
+      finish(EXIT.FAIL, `model calls failed in a way retrying will not fix: ${(fatalErr || lastErr).message.slice(0, 200)}`);
+    }
+    finish(EXIT.RETRY, answered
+      ? 'no draft passed validation this time. Nothing written; will try again at the next scheduled run.'
+      : 'every model was unavailable (busy, rate-limited or timing out). Nothing written; will try again at the next scheduled run.');
+  }
 
   // 3. The citation must resolve. Only 404/410 count as dead.
   const link = await checkUrl(article.src.url);
   say(`- Source link ${article.src.url}: **${link}**`);
-  if (link === 'dead') finish(1, `source URL is dead (404/410): ${article.src.url}. Nothing written.`);
+  if (link === 'dead') finish(EXIT.RETRY, `source URL is dead (404/410): ${article.src.url}. Nothing written; will try again at the next scheduled run.`);
 
   // 4. Write
   const md = assemble(article, article.src, date, category, chosen.catslug, reply);
@@ -298,6 +339,7 @@ async function main() {
 
 main().catch((err) => {
   say(`\n**Crashed:** ${err.stack || err.message}`);
+  say('Will try again at the next scheduled run.');
   flushSummary();
-  process.exit(1);
+  process.exit(EXIT.RETRY);
 });
