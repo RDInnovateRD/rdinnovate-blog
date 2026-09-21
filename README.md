@@ -5,7 +5,7 @@ Nothing depends on a Mac being awake: Actions is the server.
 
 ## How a day works
 
-1. **14:00 UTC** (midnight AEST / 1am AEDT; GitHub often starts it 1-2 hours late) the `Publish blog` workflow starts.
+1. **14:00 UTC** (midnight AEST / 1am AEDT; GitHub often starts it 1-2 hours late) the `Publish blog` workflow starts. Retry runs follow every 2 hours; they exit in seconds once today's article exists.
 2. `scripts/generate-article.mjs` picks the least recently covered category,
    pulls ~12 recent papers with real abstracts (arXiv or Europe PMC, both free,
    no key), and hands them to the model. The model picks one by number and writes
@@ -15,7 +15,13 @@ Nothing depends on a Mac being awake: Actions is the server.
    structure, no links/HTML, no hype, no R&D-tax eligibility claims, figures must
    appear in the abstract, no 12-word run copied from it, preprints disclosed).
    If a model fails, the next one on the ladder tries. If none passes, **nothing
-   is written**. A missed day is better than a weak article.
+   is written** and the workflow **tries again every 2 hours** (until about
+   10-11pm Sydney) so a busy or rate-limited model does not cost the day. Only if
+   every attempt that day fails does the run go red and send one failure email.
+   If there is genuinely **no strong topic** (the model answers SKIP, or no
+   candidate papers exist) the day is skipped on purpose, noted in
+   `src/data/skipped-days.txt`, and the day's remaining runs stand down.
+   A missed day is better than a weak article.
 4. The article is committed as `RDInnovateRD`, then the site is built,
    `check-compliance.mjs` runs (any error blocks the deploy), and it deploys.
 5. If no article was written, the run is marked failed **after** deploying, so

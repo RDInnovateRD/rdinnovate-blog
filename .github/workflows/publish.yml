@@ -5,12 +5,24 @@ name: Publish blog
 #   push to main      -> build, check, deploy
 #   pull request      -> build and check only (nothing deploys)
 #   daily schedule    -> write today's article, commit it, then build, check, deploy
+#   retry schedule    -> if today still has no article, try again (every 2 hours)
 #   manual (Run workflow button) -> same as daily, with optional dry run / category
 #
 # Cron in GitHub Actions is ALWAYS UTC. 14:00 UTC = midnight AEST / 1am AEDT
 # (Sydney daylight saving starts on the first Sunday of October), so the article
 # is dated the new Sydney day and is up well before readers wake.
 # GitHub often starts scheduled runs 1-2 hours late; that is normal.
+#
+# Every day gets an article unless there is no strong topic:
+#   - model busy / rate-limited / timing out, sources down, or no draft passed
+#     the checks -> nothing written, and the next 2-hourly run tries again,
+#     up to about 10-11pm Sydney. Only if the whole day fails does the run go
+#     red (one failure email).
+#   - no strong topic (the model says SKIP, or no candidate papers at all)
+#     -> the day is skipped on purpose, noted in src/data/skipped-days.txt,
+#     and the remaining runs that day stand down.
+# Retry runs that find today's article already published exit in seconds and
+# do not redeploy.
 
 on:
   push:
@@ -18,7 +30,8 @@ on:
   pull_request:
     branches: [main]
   schedule:
-    - cron: '0 14 * * *'
+    - cron: '0 14 * * *'                             # daily run: midnight AEST / 1am AEDT
+    - cron: '0 0,2,4,6,8,10,12,16,18,20,22 * * *'    # retries through the Sydney day
   workflow_dispatch:
     inputs:
       generate:
@@ -47,9 +60,10 @@ jobs:
   generate:
     if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.generate)
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     outputs:
-      outcome: ${{ steps.gen.outcome }}
+      result: ${{ steps.gen.outputs.result }}   # written | skip | retry | error
+      wrote: ${{ steps.commit.outputs.wrote }}  # 'true' when a new article was pushed
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -58,7 +72,6 @@ jobs:
 
       - name: Write today's article
         id: gen
-        continue-on-error: true   # a missed day must not block releasing scheduled posts
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -69,27 +82,51 @@ jobs:
           ARGS=""
           if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
           if [ -n "${{ inputs.category }}" ]; then ARGS="$ARGS --category=${{ inputs.category }}"; fi
+          # Never fail this step: a missed day must not block releasing scheduled
+          # posts. The exit code says what happened (see scripts/generate-article.mjs).
+          set +e
           node scripts/generate-article.mjs $ARGS
+          code=$?
+          set -e
+          case "$code" in
+            0)  result=written ;;
+            3)  result=skip ;;
+            75) result=retry ;;
+            *)  result=error ;;
+          esac
+          echo "Generator exit code $code -> $result"
+          echo "result=$result" >> "$GITHUB_OUTPUT"
 
-      - name: Commit the article
-        if: steps.gen.outcome == 'success' && inputs.dry_run != true
+      - name: Commit the article (or today's skip note)
+        id: commit
+        if: (steps.gen.outputs.result == 'written' || steps.gen.outputs.result == 'skip') && inputs.dry_run != true
         run: |
           # Repo-local identity only (never --global): the business name, not a person's.
           git config user.name "RDInnovateRD"
           git config user.email "rd@rdinnovate.com"
           git add src/content/posts src/data/categories.json
+          if [ -f src/data/skipped-days.txt ]; then git add src/data/skipped-days.txt; fi
           if git diff --cached --quiet; then
             echo "Nothing new to commit."
+            echo "wrote=false" >> "$GITHUB_OUTPUT"
           else
-            git commit -m "Article: $(TZ=Australia/Sydney date +%F)"
+            day=$(TZ=Australia/Sydney date +%F)
+            if [ "${{ steps.gen.outputs.result }}" = "written" ]; then
+              git commit -m "Article: $day"
+            else
+              git commit -m "No article for $day: no strong topic (skipped)"
+            fi
+            git pull --rebase --quiet
             git push
+            echo "wrote=${{ steps.gen.outputs.result == 'written' }}" >> "$GITHUB_OUTPUT"
           fi
 
   build:
     needs: generate
-    # Build even when generation was skipped or failed, so future-dated posts
-    # still release on their date.
-    if: ${{ !cancelled() }}
+    # Push, PR and manual runs always build. Scheduled runs build at the daily
+    # slot even when no article was written (so future-dated posts still release
+    # on their date), and at a retry slot only when it wrote the article.
+    if: ${{ !cancelled() && (github.event_name != 'schedule' || github.event.schedule == '0 14 * * *' || needs.generate.outputs.wrote == 'true') }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -133,17 +170,34 @@ jobs:
       - id: deployment
         uses: actions/deploy-pages@v4
 
-  # Fail the run (and trigger GitHub's failure email) when no article was
-  # written, AFTER the site has deployed. The run Summary page says why.
+  # Goes red (and triggers GitHub's failure email) only when the day is really
+  # lost: the last retry of the Sydney day still could not write an article, or
+  # something is broken that retrying will not fix. The run Summary says why.
   report:
     needs: [generate, deploy]
     if: ${{ always() && needs.generate.result != 'skipped' }}
     runs-on: ubuntu-latest
     steps:
       - name: Did today's article get written?
+        env:
+          RESULT: ${{ needs.generate.outputs.result }}
+          JOB: ${{ needs.generate.result }}
         run: |
-          if [ "${{ needs.generate.outputs.outcome }}" != "success" ]; then
-            echo "::error::No article today. Open this run's Summary for the model, finish reason, token counts and failed checks."
+          hour=$(TZ=Australia/Sydney date +%-H)
+          if [ "$JOB" != "success" ]; then
+            echo "::error::The article job itself failed ($JOB). Open this run's logs."
             exit 1
           fi
-          echo "Article step succeeded."
+          case "$RESULT" in
+            written) echo "Article step succeeded (or today already had one)." ;;
+            skip)    echo "::notice::No strong topic today, so the day is skipped on purpose." ;;
+            retry)
+              if [ "$hour" -ge 22 ]; then
+                echo "::error::No article today: models were unavailable (or no draft passed the checks) at every attempt through the day. Open this run's Summary."
+                exit 1
+              fi
+              echo "::warning::No article yet: models unavailable or no draft passed the checks. The next run (every 2 hours until Sydney midnight) tries again." ;;
+            *)
+              echo "::error::Article generation hit an error that retrying will not fix. Open this run's Summary."
+              exit 1 ;;
+          esac
