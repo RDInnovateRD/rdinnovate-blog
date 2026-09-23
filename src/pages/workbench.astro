@@ -12,6 +12,10 @@ const base = `https://github.com/${w.repo}/releases/download/v${w.version}`;
   Import your general ledger, payroll and timesheets, classify expenditure against
   Division 355, and produce a defensible schedule.</p>
   <p class="wb-meta">Version {w.version} &middot; macOS and Windows</p>
+  {w.upcoming && (
+    <p class="wb-next">Try out version {w.version} today. Version {w.upcoming} is
+    coming shortly with some major updates, so look out for it.</p>
+  )}
 </section>
 
 <section class="wb-downloads">
