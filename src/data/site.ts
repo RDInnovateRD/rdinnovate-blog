@@ -22,4 +22,5 @@ export const workbench = {
   macX64: 'RnD-Tax-Workbench-1.1.0-mac-x64.dmg',
   windows: 'RnD-Tax-Workbench-1.1.0-win-x64.exe',
   linux: '', // leave empty until a Linux build exists
+  upcoming: '1.2.0', // shows the "coming shortly" note; set to '' to hide it
 };
