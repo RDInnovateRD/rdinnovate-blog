@@ -88,8 +88,7 @@ const base = `https://github.com/${w.repo}/releases/download/v${w.version}`;
   <ol>
     <li>Download the .exe</li>
     {!w.signedWin && (
-      <li>Windows SmartScreen will show a warning on first run. Choose
-          <strong>More info</strong>, then <strong>Run anyway</strong>.</li>
+      <li>Windows SmartScreen will show a warning on first run. Choose <strong>More info</strong>, then <strong>Run anyway</strong>.</li>
     )}
     <li>Follow the installer, then launch from the Start menu</li>
   </ol>
@@ -107,7 +106,6 @@ const base = `https://github.com/${w.repo}/releases/download/v${w.version}`;
   <p><a href={`${base}/SHA256SUMS.txt`}>Published checksums for {w.version}</a></p>
 
   <h2>Support</h2>
-  <p>Questions, defects, or help with the software:
-  <a href="mailto:rd@rdinnovate.com">rd@rdinnovate.com</a></p>
+  <p>Questions, defects, or help with the software: <a href="mailto:rd@rdinnovate.com">rd@rdinnovate.com</a></p>
 </section>
 </Base>
