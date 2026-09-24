@@ -2,6 +2,8 @@
 import Base from '../layouts/Base.astro';
 import { workbench as w } from '../data/site';
 const base = `https://github.com/${w.repo}/releases/download/v${w.version}`;
+const winBase = `https://github.com/${w.repo}/releases/download/v${w.winVersion}`;
+const winBehind = w.winVersion !== w.version;
 ---
 <Base title="RnD Tax Workbench — download"
       description="Desktop application for preparing Australian R&D Tax Incentive claims. Runs locally on your machine.">
@@ -36,10 +38,12 @@ const base = `https://github.com/${w.repo}/releases/download/v${w.version}`;
     </a>
 
     {w.windows ? (
-      <a class="wb-card" href={`${base}/${w.windows}`}>
+      <a class="wb-card" href={`${winBase}/${w.windows}`}>
         <span class="wb-plat">Windows</span>
         <span class="wb-arch">64-bit</span>
-        <span class="wb-note">Windows 10 and 11</span>
+        <span class="wb-note">{winBehind
+          ? `Version ${w.winVersion}; ${w.version} coming shortly`
+          : 'Windows 10 and 11'}</span>
         <span class="wb-dl">Download .exe &rarr;</span>
       </a>
     ) : (
@@ -51,7 +55,7 @@ const base = `https://github.com/${w.repo}/releases/download/v${w.version}`;
       </span>
     )}
   </div>
-  <p class="wb-size">Around 585 MB on macOS, 291 MB on Windows. Not sure which Mac
+  <p class="wb-size">Around 425 MB on macOS, 291 MB on Windows. Not sure which Mac
   you have? Apple menu &rarr; About This Mac. "Apple M1" or later means Apple silicon.</p>
 </section>
 
@@ -104,6 +108,9 @@ const base = `https://github.com/${w.repo}/releases/download/v${w.version}`;
   On macOS: <code>shasum -a 256 &lt;file&gt;</code>.
   On Windows: <code>certutil -hashfile &lt;file&gt; SHA256</code>.</p>
   <p><a href={`${base}/SHA256SUMS.txt`}>Published checksums for {w.version}</a></p>
+  {winBehind && (
+    <p><a href={`${winBase}/SHA256SUMS.txt`}>Published checksums for Windows {w.winVersion}</a></p>
+  )}
 
   <h2>Support</h2>
   <p>Questions, defects, or help with the software: <a href="mailto:rd@rdinnovate.com">rd@rdinnovate.com</a></p>
