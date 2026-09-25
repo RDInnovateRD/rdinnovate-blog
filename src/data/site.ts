@@ -17,13 +17,13 @@ export const workbench = {
   version: '1.2.0',
   // Windows can trail macOS by a release: its link and checksums come from winVersion.
   // Set winVersion equal to version once the Windows build is published.
-  winVersion: '1.1.0',
+  winVersion: '1.2.0',
   repo: 'RDInnovateRD/rnd-tax-workbench',
   signedMac: true, // notarised; Gatekeeper accepts
   signedWin: false, // flip once the OV certificate is applied
   macArm: 'RnD-Tax-Workbench-1.2.0-mac-arm64.dmg',
   macX64: 'RnD-Tax-Workbench-1.2.0-mac-x64.dmg',
-  windows: 'RnD-Tax-Workbench-1.1.0-win-x64.exe',
+  windows: 'RnD-Tax-Workbench-1.2.0-win-x64.exe',
   linux: '', // leave empty until a Linux build exists
   upcoming: '', // shows the "coming shortly" note; set to '' to hide it
 };
