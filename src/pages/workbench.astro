@@ -107,7 +107,7 @@ const winBehind = w.winVersion !== w.version;
   <p>Compare the SHA-256 of the file you downloaded against the published value.
   On macOS: <code>shasum -a 256 &lt;file&gt;</code>.
   On Windows: <code>certutil -hashfile &lt;file&gt; SHA256</code>.</p>
-  <p><a href={`${base}/SHA256SUMS.txt`}>Published checksums for {w.version}</a></p>
+  <p><a href={`${base}/SHA256SUMS.txt`}>Published checksums for version {w.version}</a></p>
   {winBehind && (
     <p><a href={`${winBase}/SHA256SUMS.txt`}>Published checksums for Windows {w.winVersion}</a></p>
   )}
