@@ -260,3 +260,6 @@ a.wb-card:hover{transform:translateY(-4px);border-color:var(--maroon);
   margin:0 0 20px}
 .wb-inline-ok{background:#e7f4ec;color:#1c6b3f}
 .wb-inline-warn{background:#fff4e0;color:#8a5a10}
+.wb-video{margin:44px 0 0}
+.wb-video-lede{color:var(--mut);max-width:640px;margin:0 0 16px}
+.wb-video video{display:block;width:100%;max-width:960px;height:auto;border-radius:10px;background:#0f172a;box-shadow:0 8px 30px rgba(0,0,0,.18)}

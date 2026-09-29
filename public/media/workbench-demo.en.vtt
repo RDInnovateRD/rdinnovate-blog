@@ -1,0 +1,340 @@
+WEBVTT
+
+00:00:00.600 --> 00:00:04.177
+Welcome to R&D Tax Workbench! In this full walkthrough, we'll prepare a complete R&D Tax
+
+00:00:04.177 --> 00:00:07.753
+Incentive claim for a fictional company, Kestrel Bioplastics, all the way from sign-up
+
+00:00:07.753 --> 00:00:11.330
+to the final schedule.
+
+00:00:13.133 --> 00:00:17.698
+So why R&D Tax Workbench? First, speed. Upload your ledgers, payroll and timesheets, and
+
+00:00:17.698 --> 00:00:22.263
+go from raw data to a finished claim schedule, without weeks of back-and-forth.
+
+00:00:22.713 --> 00:00:25.563
+Second, cost. You pay as you go with credits, not thousands of dollars taken as a percentage
+
+00:00:25.563 --> 00:00:28.413
+of your refund.
+
+00:00:28.863 --> 00:00:33.668
+Third, it's built to stand up to review. The Division 355 rules, from feedstock and grant
+
+00:00:33.668 --> 00:00:38.473
+clawbacks to associates and overseas work, are built into every calculation.
+
+00:00:38.923 --> 00:00:42.053
+Fourth, your data stays yours. Your claim data is stored on your own computer, and AI
+
+00:00:42.053 --> 00:00:45.183
+processing stays in Australia.
+
+00:00:45.633 --> 00:00:48.973
+And fifth, it's made for accountants as well as businesses. One tool for every client's
+
+00:00:48.973 --> 00:00:52.313
+claim, year after year. Let's dive in!
+
+00:00:54.767 --> 00:00:57.312
+Getting started takes seconds. Create your account with a name, an email address and a
+
+00:00:57.312 --> 00:00:59.857
+password.
+
+00:01:00.357 --> 00:01:04.267
+Your claim data is stored in a database on your own computer, not on a third-party server.
+
+00:01:04.267 --> 00:01:08.177
+Only the text an AI feature needs is sent for processing.
+
+00:01:28.647 --> 00:01:31.847
+And we're in. The dashboard is ready for your first claim.
+
+00:01:33.600 --> 00:01:37.760
+The AI features, like narratives and account classification, run on credits. Open the
+
+00:01:37.760 --> 00:01:41.920
+credit meter, pick a top-up amount, and pay securely through Stripe.
+
+00:01:46.066 --> 00:01:48.846
+Payment done, and the balance updates instantly.
+
+00:01:50.866 --> 00:01:54.136
+Let's create the claim for our fictional company, Kestrel Bioplastics. Enter the company
+
+00:01:54.136 --> 00:01:57.406
+name, the ABN and the income year.
+
+00:01:58.766 --> 00:02:02.841
+Next comes aggregated turnover. Kestrel's is just over $12 million, under the $20 million
+
+00:02:02.841 --> 00:02:06.916
+threshold for the refundable offset.
+
+00:02:09.206 --> 00:02:13.969
+The claim is created. On the company details page we add the address and the tax rate,
+
+00:02:13.969 --> 00:02:18.732
+and complete the base rate entity test. Passive income is well under the 80% limit, confirming
+
+00:02:18.732 --> 00:02:23.496
+a 25% tax rate and a 43.5% offset.
+
+00:02:29.532 --> 00:02:32.742
+Every claim is built around projects. Instead of filling in long forms, paste your R&D
+
+00:02:32.742 --> 00:02:35.952
+notes, or upload your documents.
+
+00:02:37.152 --> 00:02:42.032
+The AI structures the project and proposes core and supporting activities. It also flags
+
+00:02:42.032 --> 00:02:46.912
+what to check: the overseas finding needed for the New Zealand trials, the feedstock adjustment
+
+00:02:46.912 --> 00:02:51.792
+for the pellets that were sold, the associate rule, and how the government grant is treated.
+
+00:02:52.192 --> 00:02:54.912
+You stay in control: review the suggestions, then create the project and its activities
+
+00:02:54.912 --> 00:02:57.632
+in one step.
+
+00:02:58.032 --> 00:03:01.462
+The narrative builder drafts every section, in the structure AusIndustry expects, using
+
+00:03:01.462 --> 00:03:04.892
+the facts and figures from your notes.
+
+00:03:05.292 --> 00:03:09.857
+Each activity gets a complete, section-by-section narrative, within the character limits.
+
+00:03:09.857 --> 00:03:14.422
+Values the AI had to infer are highlighted, so you know exactly what to verify.
+
+00:03:14.922 --> 00:03:17.852
+No more blank pages. Every narrative follows the structure AusIndustry expects, built
+
+00:03:17.852 --> 00:03:20.782
+from your own notes.
+
+00:03:36.692 --> 00:03:40.432
+Supporting activities are linked to the core activities they support.
+
+00:03:40.932 --> 00:03:43.892
+And the AI works within built-in Division 355 rules, like overseas findings and associate
+
+00:03:43.892 --> 00:03:46.852
+timing.
+
+00:03:52.332 --> 00:03:56.252
+If an activity pauses this year, you can discontinue it, with its history kept. And every
+
+00:03:56.252 --> 00:04:00.172
+narrative exports to a single Word document for review.
+
+00:04:00.672 --> 00:04:03.577
+Every narrative stays editable, with a full version history, so your technical team can
+
+00:04:03.577 --> 00:04:06.482
+review and sign off.
+
+00:04:23.931 --> 00:04:27.756
+Now for payroll. Upload the payroll spreadsheet, and the AI maps the columns, checks the
+
+00:04:27.756 --> 00:04:31.581
+data, and confirms super against the guarantee rate.
+
+00:04:32.081 --> 00:04:36.481
+Payroll in any layout. The AI maps the columns, and remembers them for next time.
+
+00:04:43.331 --> 00:04:48.591
+Seven employees and $985,000 of payroll, imported in one step.
+
+00:04:49.491 --> 00:04:53.867
+Next, the timesheet. Hours are matched to each activity straight from the activity column,
+
+00:04:53.867 --> 00:04:58.244
+and part-timers are measured against their own hours. Sam works three days a week, so
+
+00:04:58.244 --> 00:05:02.621
+950 hours is 80.1% of his time.
+
+00:05:04.484 --> 00:05:07.994
+The combined view shows salary and super flowing to each activity. Anyone above 95% is
+
+00:05:07.994 --> 00:05:11.504
+named, so you can make sure the records support it, and anyone with no R&D time is listed
+
+00:05:11.504 --> 00:05:15.014
+too.
+
+00:05:16.931 --> 00:05:20.981
+Now the financials. First, a deliberately broken ledger. Bad rows are rejected, with the
+
+00:05:20.981 --> 00:05:25.031
+reason for each one, and nothing is imported until you confirm.
+
+00:05:28.884 --> 00:05:32.344
+Then the real general ledger. The hybrid parser reads every account and every transaction,
+
+00:05:32.344 --> 00:05:35.804
+and the AI classifies each account.
+
+00:05:42.287 --> 00:05:46.542
+Add the trial balance. Each source is stored separately, and reconciled against the others.
+
+00:05:46.542 --> 00:05:50.797
+This ledger is an expenses-only extract, so we mark it as partial.
+
+00:05:51.197 --> 00:05:55.137
+Then the profit and loss, saved with a single click, and the balance sheet.
+
+00:05:55.637 --> 00:05:59.637
+Load ledgers straight from your accounting export, as CSV, Excel or PDF.
+
+00:06:15.664 --> 00:06:20.239
+Every source now ties out, and the classification view shows what's in the claim. The
+
+00:06:20.239 --> 00:06:24.814
+New Zealand lab is shown, but kept out of the total until an overseas finding covers it.
+
+00:06:29.904 --> 00:06:33.270
+Patent filing costs are kept out, and anything excluded by law, such as interest, buildings
+
+00:06:33.270 --> 00:06:36.637
+and core technology, is flagged with guidance on the rules. Every line stays under your
+
+00:06:36.637 --> 00:06:40.004
+control.
+
+00:06:41.964 --> 00:06:46.404
+Apportionment is where claims are often challenged. Salaries follow the timesheets to
+
+00:06:46.404 --> 00:06:50.844
+the dollar, and shared costs use the full-time equivalent ratio. Choose a method for each
+
+00:06:50.844 --> 00:06:55.284
+cost type, like floor space for rent, and machine hours for equipment.
+
+00:06:55.784 --> 00:06:58.149
+Change a method or a floor area, and every figure that depends on it updates straight
+
+00:06:58.149 --> 00:07:00.514
+away.
+
+00:07:06.964 --> 00:07:10.209
+Your reasoning goes in the notes column, and becomes your audit defence. There's also
+
+00:07:10.209 --> 00:07:13.454
+a built-in decline in value calculator.
+
+00:07:17.964 --> 00:07:20.999
+Contractors next. Add each one with its claimable percentage, and flag registered research
+
+00:07:20.999 --> 00:07:24.034
+service providers.
+
+00:07:24.534 --> 00:07:29.174
+Each contractor's claimable amount is worked out as you type, before anything is saved.
+
+00:07:38.044 --> 00:07:43.304
+Raman Advisory is owned by the chief scientist, so it's an associate. Only the amount
+
+00:07:43.304 --> 00:07:48.564
+actually paid during the year counts, so we record the $60,000 paid of the $90,000 invoiced.
+
+00:07:49.064 --> 00:07:53.654
+Timing rules like this are easy to get wrong in a spreadsheet. Here, they're built in.
+
+00:08:00.084 --> 00:08:03.049
+Overseas work stays at zero until an overseas finding covers it, with a clear warning
+
+00:08:03.049 --> 00:08:06.014
+so nothing slips through.
+
+00:08:14.164 --> 00:08:18.639
+The associate compliance check then maps every contractor to the right line of the schedule,
+
+00:08:18.639 --> 00:08:23.114
+and carries the unpaid $30,000 forward to the year it's paid.
+
+00:08:30.364 --> 00:08:33.509
+Other expenses follow the apportionment you set, with materials, overheads, feedstock
+
+00:08:33.509 --> 00:08:36.654
+and depreciation in one place.
+
+00:08:37.154 --> 00:08:40.424
+And every amount traces back to the ledger account it came from.
+
+00:08:47.164 --> 00:08:50.559
+Kestrel sold pellets from its pilot batches, so the feedstock analysis checks the current
+
+00:08:50.559 --> 00:08:53.954
+rules and works out the adjustment.
+
+00:08:54.354 --> 00:09:01.534
+$75,000 of feedstock inputs against $180,000 of sales gives a Part B feedstock adjustment
+
+00:09:01.534 --> 00:09:08.714
+of $55,500. The analysis also flags the energy used on the pilot line for you to review.
+
+00:09:10.514 --> 00:09:16.774
+Kestrel also received a $150,000 state grant. Record it, add this year's claim with one
+
+00:09:16.774 --> 00:09:23.034
+click, and the recoupment clawback is calculated: $111,000 of extra assessable income.
+
+00:09:23.534 --> 00:09:26.064
+Feedstock and grant clawbacks are easy to miss. Here, they're calculated and reported
+
+00:09:26.064 --> 00:09:28.594
+in Part B.
+
+00:09:45.697 --> 00:09:50.273
+Finally, the summary. Every Part A line shows exactly where it came from, and every source
+
+00:09:50.273 --> 00:09:54.850
+now reconciles. Kestrel's notional R&D deductions come to $1.3 million, for a refundable
+
+00:09:54.850 --> 00:09:59.427
+offset of $566,000.
+
+00:10:02.330 --> 00:10:06.626
+The Division 355 review checks the at-risk rule, overseas activities, exempt entity control
+
+00:10:06.626 --> 00:10:10.923
+and balancing adjustments. It asks you to confirm how the grant is treated, and confirms
+
+00:10:10.923 --> 00:10:15.220
+the New Zealand work needs an overseas finding.
+
+00:10:15.720 --> 00:10:18.015
+Each finding comes with the section of the law behind it, so you know exactly what to
+
+00:10:18.015 --> 00:10:20.310
+check.
+
+00:10:28.110 --> 00:10:32.185
+The schedule is laid out like the ATO form. Part B brings the feedstock and grant clawbacks
+
+00:10:32.185 --> 00:10:36.260
+together, and the net cash benefit allows for the tax on them.
+
+00:10:38.590 --> 00:10:41.390
+And the same figures flow through to the export page, the Excel workbook and the PDF for
+
+00:10:41.390 --> 00:10:44.190
+your tax agent.
+
+00:10:45.730 --> 00:10:49.800
+That's the full workflow, from raw ledgers and timesheets to an R&D tax schedule. Thanks
+
+00:10:49.800 --> 00:10:53.870
+so much for watching, and find out more at rdinnovate.com.
