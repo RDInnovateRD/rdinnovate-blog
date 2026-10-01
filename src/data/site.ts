@@ -4,6 +4,7 @@ export const site = {
   name: 'R&D Innovate',
   url: 'https://blog.rdinnovate.com',
   mainSite: 'https://rdinnovate.com',
+  linkedin: 'https://www.linkedin.com/company/rdinnovate/',
   description: 'Daily signal from the cutting edge of research and development.',
   email: 'rd@rdinnovate.com',
   timezone: 'Australia/Sydney',

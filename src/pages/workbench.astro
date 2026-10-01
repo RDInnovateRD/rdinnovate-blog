@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { workbench as w } from '../data/site';
+import { site, workbench as w } from '../data/site';
 const base = `https://github.com/${w.repo}/releases/download/v${w.version}`;
 const winBase = `https://github.com/${w.repo}/releases/download/v${w.winVersion}`;
 const winBehind = w.winVersion !== w.version;
@@ -126,5 +126,6 @@ const winBehind = w.winVersion !== w.version;
 
   <h2>Support</h2>
   <p>Questions, defects, or help with the software: <a href="mailto:rd@rdinnovate.com">rd@rdinnovate.com</a></p>
+  <p>News and product updates: <a href={site.linkedin} rel="noopener">follow R&amp;D Innovate on LinkedIn</a>.</p>
 </section>
 </Base>
