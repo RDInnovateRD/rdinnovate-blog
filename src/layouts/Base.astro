@@ -34,6 +34,8 @@ const year = new Date().getFullYear();
 <link rel="alternate" type="application/atom+xml" title={site.name} href="/feed.xml">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+<!-- Cloudflare Web Analytics -->
+<script is:inline type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "9ec6686bf5494ef595ae758329fb3e5c"}'></script>
 </head>
 <body>
 <header class="site">
