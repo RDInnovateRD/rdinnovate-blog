@@ -58,7 +58,6 @@ Third, while library-boundary compartmentalisation effectively stops lateral tra
 ## Sources
 
 - [Efficient Linkage-Based Compartmentalization on CHERI](https://arxiv.org/abs/2609.36731), Dapeng Gao et al., arXiv preprint, not yet peer reviewed, 2026-09-29
-- [Publisher record (DOI)](https://doi.org/10.1145/3830454.3846528)
 
 ## The R&D takeaway
 

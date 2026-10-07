@@ -318,6 +318,15 @@ async function main() {
   say(`- Source link ${article.src.url}: **${link}**`);
   if (link === 'dead') finish(EXIT.RETRY, `source URL is dead (404/410): ${article.src.url}. Nothing written; will try again at the next scheduled run.`);
 
+  // 3b. A DOI listed on arXiv can still be "pending registration" (doi.org returns 404).
+  //     Ask the DOI handle API directly; drop the DOI line unless it is registered.
+  if (article.src.doiUrl) {
+    const handle = article.src.doiUrl.replace(/^https?:\/\/doi\.org\//, 'https://doi.org/api/handles/');
+    const doiState = await checkUrl(handle);
+    say(`- DOI ${article.src.doiUrl}: **${doiState}**`);
+    if (doiState !== 'live') article.src = { ...article.src, doiUrl: '' };
+  }
+
   // 4. Write
   const md = assemble(article, article.src, date, category, chosen.catslug, reply);
   const file = path.join(POSTS_DIR, `${date}-${slugify(article.title)}.md`);
