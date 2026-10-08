@@ -191,3 +191,34 @@ body.light footer.site .brand{color:#1d1d1f}
 body.light footer.site nav a:hover{color:#1d1d1f;text-decoration:underline}
 body.light footer.site small{color:#6e6e73;opacity:1}
 body.light .hero .grad{background:linear-gradient(92deg,#2dd4bf 0%,#3b82f6 55%,#a78bfa 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ── v2 (majestic): no pastel tints. Graphite banners with the category set
+   in large white type, like Apple product tiles; plain black headline. ── */
+body.light .hero .eyebrow{background:none;color:#6e6e73}
+body.light .hero .grad{background:none;color:#1d1d1f}
+body.light .banner{height:150px;background:#1d1d1f;
+  background:radial-gradient(120% 140% at 85% 0%,#4a4a4f 0%,#2c2c2e 38%,#1d1d1f 70%,#111 100%)}
+body.light .feature .banner{height:260px}
+body.light .motif{opacity:1;background-image:linear-gradient(180deg,rgba(255,255,255,.06),transparent 40%)}
+body.light .card:hover .motif{transform:none}
+body.light .cat-label{left:24px;right:24px;bottom:20px;color:#f5f5f7;text-transform:none;letter-spacing:-.02em;
+  font:600 24px/1.1 Inter,Roboto,sans-serif;text-shadow:none}
+body.light .feature .cat-label{left:34px;bottom:28px;font-size:44px;letter-spacing:-.035em}
+body.light .card{border-color:#e8e8ed;border-radius:24px}
+body.light .card:hover{transform:translateY(-3px);box-shadow:0 24px 48px -22px rgba(0,0,0,.25)}
+body.light .tag{background:#f5f5f7;color:#1d1d1f;border:1px solid #d2d2d7}
+
+/* article header: white, editorial */
+body.light .posthead{background:#fff;border-radius:0;padding:76px 5vw 10px;border-bottom:0}
+body.light .posthead-inner{max-width:760px}
+body.light .cat-pill{background:none;border:0;padding:0;color:#6e6e73;font:600 15px/1.3 Inter,Roboto,sans-serif;
+  letter-spacing:0;text-transform:none;margin-bottom:10px}
+body.light .posthead h1{font-size:clamp(36px,5.4vw,60px);letter-spacing:-.045em;line-height:1.04}
+body.light .posthead time{display:block;margin-top:6px;padding-bottom:34px;border-bottom:1px solid #e5e5ea}
+body.light .post{max-width:760px;padding-top:34px}
+@media (max-width:700px){
+  body.light .banner{height:120px}
+  body.light .feature .banner{height:180px}
+  body.light .feature .cat-label{font-size:32px;left:24px;bottom:20px}
+  body.light .posthead{padding:44px 6vw 6px}
+}
