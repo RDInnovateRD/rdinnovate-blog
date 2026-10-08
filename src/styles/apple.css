@@ -1,0 +1,131 @@
+/* Apple-style dark theme, matching the rdinnovate.com home page (Oct 2026).
+   Loaded after global.css and overrides it: maroon header, black page,
+   Inter headings, rounded dark tiles, blue accents. */
+:root{
+  --bg:#000; --card:#111113; --ink:#f5f5f7; --mut:#a1a1a6; --line:#26262b;
+  --blue:#3b82f6; --blue-lt:#60a5fa; --tile-line:#1f1f23;
+  --a-grad:linear-gradient(92deg,#2dd4bf 0%,#3b82f6 55%,#a78bfa 100%);
+  --r:22px;
+}
+html{background:#000}
+body{background:#000;color:var(--ink)}
+main{max-width:1120px;padding:0 22px}
+::selection{background:rgba(59,130,246,.45);color:#fff}
+
+/* ── header (same as rdinnovate.com) ─────────────────── */
+header.site{display:block;padding:0;position:sticky;top:0;z-index:50;background:#5f1718;
+  box-shadow:none;border-bottom:1px solid rgba(255,255,255,.12)}
+header.site .wrap,footer.site .wrap{max-width:1062px;margin:0 auto;padding:0 16px;display:flex;
+  justify-content:space-between;align-items:center;gap:20px}
+header.site .wrap{min-height:64px}
+.brand{font:400 26px/1.2 Inter,Roboto,sans-serif;color:#f6f8f7;white-space:nowrap;letter-spacing:0}
+header.site nav{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:0 30px}
+header.site nav a{margin:0;font:400 14px/1 Roboto,sans-serif;color:#f1dedd;padding:10px 0}
+header.site nav a:hover{color:#fff}
+header.site nav a[aria-current="page"]:not(.nav-pill){box-shadow:inset 0 -2px 0 currentColor}
+header.site nav a.nav-pill{padding:8px 16px;border-radius:999px;background:#fff;color:#5f1718;font-weight:600}
+header.site nav a.nav-pill:hover{background:#f6e8e6}
+
+/* ── footer ─────────────────────────────────────────── */
+footer.site{display:block;padding:0;margin-top:90px;background:#111;border-top:1px solid #222;color:#fff;font-size:14px}
+footer.site .wrap{flex-wrap:wrap;gap:10px 28px;min-height:110px;padding-top:20px;padding-bottom:20px}
+footer.site nav{display:flex;flex-wrap:wrap;gap:0 24px}
+footer.site a{color:#fff}
+footer.site nav a:hover{color:#d2d2d7}
+footer.site small{width:100%;font-size:13px;opacity:.8}
+
+/* ── blog home hero ─────────────────────────────────── */
+.hero{max-width:900px;margin:0 auto;padding:96px 0 46px;text-align:center}
+.hero .eyebrow{font:600 19px/1.3 Inter,sans-serif;letter-spacing:-.01em;text-transform:none;
+  background:var(--a-grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+.hero h1{font-size:clamp(44px,7.4vw,88px);line-height:1.03;letter-spacing:-.045em;color:#fff;margin:0 0 22px}
+.hero .lede{color:var(--mut);font:400 clamp(19px,2.2vw,24px)/1.45 Inter,sans-serif;letter-spacing:-.01em;
+  max-width:720px;margin:0 auto 34px}
+.filterbar{justify-content:center}
+.filterbar label{color:var(--mut)}
+#catFilter{background:#1d1d1f;color:#fff;box-shadow:0 0 0 1px #333 inset;font-family:Roboto,sans-serif}
+#catFilter:hover{box-shadow:0 0 0 1px #555 inset;transform:none}
+#catFilter:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+#catFilter option{background:#1d1d1f;color:#fff}
+.fcount{color:var(--mut)}
+.empty{color:var(--mut)}
+
+/* ── cards ──────────────────────────────────────────── */
+.grid{gap:18px}
+.card{background:var(--card);border:1px solid var(--tile-line);border-radius:var(--r)}
+.card:hover{transform:translateY(-6px);box-shadow:0 30px 60px -30px rgba(59,130,246,.45)}
+.card time{color:var(--mut)}
+.card h2{color:#fff;letter-spacing:-.025em}
+.card:hover h2{color:#fff}
+.card p{color:var(--mut);font-weight:400}
+.feature{margin-bottom:18px}
+.feature .banner{height:220px}
+.feature .body{padding:30px 34px 34px}
+.feature h2{font-size:clamp(26px,3.4vw,40px);letter-spacing:-.035em}
+.feature p{font-size:17px}
+.tag{background:var(--blue);color:#fff}
+
+/* ── article page ───────────────────────────────────── */
+.posthead{border-radius:0 0 28px 28px;padding:70px 5vw 84px}
+.posthead h1{font-size:clamp(32px,4.8vw,54px);letter-spacing:-.04em;line-height:1.06}
+.post{background:transparent;box-shadow:none;margin-top:0;padding:54px 0 30px;max-width:700px;
+  color:#e8e8ed;font-size:18px;line-height:1.7}
+.post h2{color:#fff;font-size:28px;letter-spacing:-.03em;margin:52px 0 14px}
+.post h3{color:#fff}
+.post a{color:var(--blue-lt);border-bottom:1px solid rgba(96,165,250,.35)}
+.post a:hover{color:#93c5fd}
+.post blockquote{background:#111113;border-left:4px solid var(--blue);color:#d2d2d7;border-radius:0 14px 14px 0}
+.post code{background:#1d1d1f;color:#f5f5f7}
+.post pre{background:#111113;border:1px solid var(--tile-line);border-radius:14px}
+.post hr{border-top-color:var(--line)}
+.post th,.post td{border-color:var(--line)}
+.post th{background:#1d1d1f;color:#fff}
+.post strong{color:#fff}
+.pagenav{max-width:700px;padding:30px 0 20px;border-top:1px solid var(--line)}
+.pagenav a{color:var(--blue-lt)}
+
+/* ── RnD Tax Workbench download page ─────────────────── */
+.wb-hero{max-width:860px;margin:0 auto;padding:90px 0 30px;text-align:center}
+.wb-icon{display:block;width:112px;height:112px;margin:0 auto 22px;border-radius:26px;
+  box-shadow:0 18px 50px -16px rgba(59,130,246,.55)}
+.wb-hero .eyebrow{font:600 19px/1.3 Inter,sans-serif;letter-spacing:-.01em;text-transform:none;
+  background:var(--a-grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block;margin-bottom:8px}
+.wb-hero h1{font-size:clamp(46px,8vw,96px);line-height:1.02;letter-spacing:-.045em;color:#fff}
+.wb-hero .lede{color:var(--mut);font:400 clamp(19px,2.2vw,23px)/1.5 Inter,sans-serif;letter-spacing:-.01em;margin:0 auto;max-width:720px}
+.wb-meta{color:var(--mut);letter-spacing:.04em}
+.wb-next{background:#111113;border-left-color:var(--blue);color:#d2d2d7;text-align:left}
+.wb-notice{background:#1a1407;border-color:#3d2f0c;color:#f3dfb0}
+.wb-downloads{padding:40px 0 8px;text-align:center}
+.wb-downloads h2,.wb-body h2,.wb-video h2{color:#fff;font-size:clamp(30px,4vw,44px);letter-spacing:-.035em;line-height:1.1}
+.wb-grid{max-width:960px;margin:26px auto 0;gap:18px;text-align:left}
+.wb-card{background:var(--card);border:1px solid var(--tile-line);border-radius:var(--r);padding:28px 28px 26px;color:#fff}
+a.wb-card:hover{border-color:#2f2f35;box-shadow:0 30px 60px -30px rgba(59,130,246,.5)}
+.wb-plat{font-size:24px;letter-spacing:-.03em}
+.wb-arch{color:#f5f5f7}
+.wb-note{color:var(--mut)}
+.wb-dl{display:inline-flex;align-self:flex-start;margin-top:auto;padding:9px 18px;border-radius:999px;
+  background:var(--blue);color:#fff;font:600 14px/1 Inter,sans-serif}
+a.wb-card:hover .wb-dl{background:#2563eb}
+.wb-soon .wb-dl{background:#2a2a2e;color:var(--mut)}
+.wb-size{color:var(--mut);margin:20px auto 0}
+.wb-video{max-width:1000px;margin:90px auto 0;text-align:center}
+.wb-video-lede{color:var(--mut);margin:0 auto 26px;font-size:19px}
+.wb-video video{max-width:100%;border-radius:24px;box-shadow:0 0 0 1px #222,0 40px 120px -40px rgba(59,130,246,.55);margin:0 auto}
+.wb-body{max-width:760px;margin:70px auto 0;color:#e8e8ed}
+.wb-body h2{font-size:30px;margin:52px 0 14px}
+.wb-body h3{color:#fff}
+.wb-body a{color:var(--blue-lt)}
+.wb-body pre{background:#111113;border:1px solid var(--tile-line)}
+.wb-body code{background:#1d1d1f;color:#f5f5f7;padding:2px 6px;border-radius:5px}
+.wb-ok,.wb-inline-ok{background:#0f2a1b;color:#9be3b8;border-color:#1e4d33}
+.wb-warn,.wb-inline-warn{background:#2a1f0a;color:#f3cf8a;border-color:#4d3912}
+
+@media (max-width:700px){
+  header.site .wrap{flex-wrap:wrap;justify-content:center;padding-top:10px;padding-bottom:8px;gap:4px}
+  header.site nav{justify-content:center;gap:0 16px}
+  main{padding:0 16px}
+  .hero{padding:56px 0 30px}
+  .wb-hero{padding:56px 0 20px}
+  .post{padding:36px 0 24px;font-size:17px}
+  .posthead{padding:48px 6vw 56px}
+}

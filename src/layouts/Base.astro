@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import '../styles/apple.css';
 import { site } from '../data/site';
 
 interface Props {
@@ -13,12 +14,15 @@ const { title, description = site.description, type = 'website', published, json
 const fullTitle = title ? `${title} | ${site.name}` : `${site.name} | ${site.description}`;
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const year = new Date().getFullYear();
+const onDownload = Astro.url.pathname.startsWith('/workbench');
+const onNews = !onDownload;
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#5f1718">
 <title>{fullTitle}</title>
 <meta name="description" content={description}>
 <link rel="canonical" href={canonical}>
@@ -39,17 +43,30 @@ const year = new Date().getFullYear();
 </head>
 <body>
 <header class="site">
-  <a class="brand" href="/">R&amp;D Innovate</a>
-  <nav>
-    <a href="/workbench/">Software</a>
-    <a href={site.mainSite}>Home &rarr;</a>
-  </nav>
+  <div class="wrap">
+    <a class="brand" href={`${site.mainSite}/`}>R&amp;D Innovate</a>
+    <nav aria-label="Main">
+      <a href={`${site.mainSite}/`}>Workbench</a>
+      <a href="/" aria-current={onNews ? 'page' : undefined}>Breaking R&amp;D News</a>
+      <a href={site.linkedin} rel="noopener">LinkedIn</a>
+      <a class="nav-pill" href="/workbench/" aria-current={onDownload ? 'page' : undefined}>Download</a>
+    </nav>
+  </div>
 </header>
 <main><slot /></main>
 <footer class="site">
-  <span>&copy; {year} R&amp;D Innovate</span>
-  <a href="/feed.xml">RSS</a>
-  <a href={site.linkedin} rel="noopener">Follow us on LinkedIn</a>
+  <div class="wrap">
+    <a class="brand" href={`${site.mainSite}/`}>R&amp;D Innovate</a>
+    <nav aria-label="Footer">
+      <a href={`${site.mainSite}/`}>RnD Tax Workbench</a>
+      <a href="/">Breaking R&amp;D News</a>
+      <a href={`mailto:${site.email}`}>{site.email}</a>
+      <a href="/feed.xml">RSS</a>
+      <a href={site.linkedin} rel="noopener">LinkedIn</a>
+      <a href={`${site.mainSite}/privacy/`}>Privacy</a>
+    </nav>
+    <small>&copy; {year} R&amp;D Innovate</small>
+  </div>
 </footer>
 </body>
 </html>
