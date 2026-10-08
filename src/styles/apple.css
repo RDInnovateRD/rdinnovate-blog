@@ -259,3 +259,10 @@ body.light .feature .cat-label{font-size:34px;bottom:auto}
   body.light .feature .banner{height:76px}
   body.light .feature .cat-label{font-size:27px}
 }
+/* v5: lead story banner twice as tall */
+body.light .feature .banner{height:192px}
+body.light .feature .cat-label{font-size:44px}
+@media (max-width:700px){
+  body.light .feature .banner{height:152px}
+  body.light .feature .cat-label{font-size:34px}
+}
