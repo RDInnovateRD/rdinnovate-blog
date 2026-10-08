@@ -27,7 +27,7 @@ h1,h2,h3,h4,.brand,.wb-plat{font-family:Inter,Roboto,-apple-system,BlinkMacSyste
 header.site{display:flex;justify-content:space-between;align-items:center;
   padding:20px 6vw;background:linear-gradient(110deg,var(--maroon-dk),var(--maroon) 55%,#7a2224);
   position:sticky;top:0;z-index:50;box-shadow:0 2px 18px rgba(0,0,0,.16)}
-.brand{font-weight:400;font-size:26px;color:#fff;letter-spacing:0}
+.brand{font-weight:400;font-size:26px;line-height:1.2;color:#f6f8f7;letter-spacing:0;white-space:nowrap}
 header.site nav a{color:rgba(255,255,255,.82);font-size:15px;margin-left:22px;transition:.15s}
 header.site nav a:hover{color:#fff}
 footer.site{display:flex;justify-content:space-between;padding:28px 6vw;margin-top:64px;
