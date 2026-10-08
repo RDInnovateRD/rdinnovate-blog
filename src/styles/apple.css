@@ -129,3 +129,65 @@ a.wb-card:hover .wb-dl{background:#2563eb}
   .post{padding:36px 0 24px;font-size:17px}
   .posthead{padding:48px 6vw 56px}
 }
+
+/* ── Breaking R&D News: Apple white (body.light) ─────────
+   Classy, quiet banners: a soft tint of each category's colour on white
+   instead of the saturated gradients. The download page stays black. */
+body.light{--card:#fff;--ink:#1d1d1f;--mut:#6e6e73;--line:#e5e5ea;--tile-line:#e5e5ea;
+  --link:#0066cc;background:#fff;color:#1d1d1f}
+html:has(body.light){background:#fff}
+body.light ::selection{background:rgba(0,113,227,.2);color:inherit}
+body.light .hero h1{color:#1d1d1f}
+body.light .hero .lede{color:#6e6e73}
+body.light .filterbar label,body.light .fcount,body.light .empty{color:#6e6e73}
+body.light #catFilter{background:#f5f5f7;color:#1d1d1f;box-shadow:0 0 0 1px #d2d2d7 inset}
+body.light #catFilter:hover{box-shadow:0 0 0 1px #86868b inset}
+body.light #catFilter option{background:#fff;color:#1d1d1f}
+body.light .selwrap::after{border-color:#1d1d1f}
+
+body.light .card{background:#fff;border:1px solid #e5e5ea}
+body.light .card:hover{transform:translateY(-4px);box-shadow:0 22px 44px -18px rgba(0,0,0,.18)}
+body.light .banner{background:#f5f5f7;
+  background:linear-gradient(135deg,color-mix(in srgb,var(--c1) 13%,#fff),color-mix(in srgb,var(--c2) 7%,#f5f5f7))}
+body.light .motif{opacity:1;background-image:
+  radial-gradient(circle at 82% 40%,color-mix(in srgb,var(--c2) 22%,transparent) 0 46px,transparent 47px),
+  radial-gradient(circle at 92% 92%,color-mix(in srgb,var(--c1) 14%,transparent) 0 70px,transparent 71px)}
+body.light .card:hover .motif{transform:scale(1.04)}
+body.light .cat-label{color:color-mix(in srgb,var(--c1) 85%,#000);text-shadow:none;letter-spacing:.09em}
+body.light .card time{color:#6e6e73}
+body.light .card h2{color:#1d1d1f}
+body.light .card:hover h2{color:#1d1d1f}
+body.light .card p{color:#6e6e73}
+body.light .more{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:var(--link);font-weight:600}
+body.light .card:hover .more{text-decoration:underline}
+body.light .tag{background:#1d1d1f;color:#fff}
+
+/* article header */
+body.light .posthead{background:#f5f5f7;
+  background:linear-gradient(135deg,color-mix(in srgb,var(--c1) 12%,#fff),color-mix(in srgb,var(--c2) 6%,#f5f5f7))}
+body.light .posthead::after{display:none}
+body.light .posthead .eyebrow a{color:var(--link)}
+body.light .cat-pill{background:#fff;color:color-mix(in srgb,var(--c1) 85%,#000);
+  border:1px solid color-mix(in srgb,var(--c1) 30%,#fff)}
+body.light .posthead h1{color:#1d1d1f;text-shadow:none}
+body.light .posthead time{color:#6e6e73}
+
+/* article body */
+body.light .post{color:#333336}
+body.light .post h2,body.light .post h3,body.light .post strong{color:#1d1d1f}
+body.light .post a{color:var(--link);border-bottom-color:rgba(0,102,204,.3)}
+body.light .post a:hover{color:#0071e3}
+body.light .post blockquote{background:#f5f5f7;border-left-color:#1d1d1f;color:#424245}
+body.light .post code{background:#f5f5f7;color:#1d1d1f}
+body.light .post pre{background:#f5f5f7;color:#1d1d1f;border-color:#e5e5ea}
+body.light .post th{background:#f5f5f7;color:#1d1d1f}
+body.light .pagenav{border-top-color:#e5e5ea}
+body.light .pagenav a{color:var(--link)}
+
+/* light footer, as on apple.com */
+body.light footer.site{background:#f5f5f7;border-top:1px solid #e5e5ea;color:#1d1d1f}
+body.light footer.site a{color:#424245}
+body.light footer.site .brand{color:#1d1d1f}
+body.light footer.site nav a:hover{color:#1d1d1f;text-decoration:underline}
+body.light footer.site small{color:#6e6e73;opacity:1}
+body.light .hero .grad{background:linear-gradient(92deg,#2dd4bf 0%,#3b82f6 55%,#a78bfa 100%);-webkit-background-clip:text;background-clip:text;color:transparent}

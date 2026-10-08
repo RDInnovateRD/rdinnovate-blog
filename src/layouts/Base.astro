@@ -41,7 +41,7 @@ const onNews = !onDownload;
 <!-- Cloudflare Web Analytics -->
 <script is:inline type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "9ec6686bf5494ef595ae758329fb3e5c"}'></script>
 </head>
-<body>
+<body class={onDownload ? 'dark' : 'light'}>
 <header class="site">
   <div class="wrap">
     <a class="brand" href={`${site.mainSite}/`}>R&amp;D Innovate</a>
