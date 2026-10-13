@@ -15,16 +15,16 @@ export const site = {
 // RnD Tax Workbench download page (/workbench/).
 // To ship a new release: bump `version` and the filenames, commit, push.
 export const workbench = {
-  version: '1.2.3',
+  version: '1.2.4',
   // Windows can trail macOS by a release: its link and checksums come from winVersion.
   // Set winVersion equal to version once the Windows build is published.
-  winVersion: '1.2.3',
+  winVersion: '1.2.4',
   repo: 'RDInnovateRD/rnd-tax-workbench',
   signedMac: true, // notarised; Gatekeeper accepts
   signedWin: false, // flip once the OV certificate is applied
-  macArm: 'RnD-Tax-Workbench-1.2.3-mac-arm64.dmg',
-  macX64: 'RnD-Tax-Workbench-1.2.3-mac-x64.dmg',
-  windows: 'RnD-Tax-Workbench-1.2.3-win-x64.exe',
+  macArm: 'RnD-Tax-Workbench-1.2.4-mac-arm64.dmg',
+  macX64: 'RnD-Tax-Workbench-1.2.4-mac-x64.dmg',
+  windows: 'RnD-Tax-Workbench-1.2.4-win-x64.exe',
   linux: '', // leave empty until a Linux build exists
   upcoming: '', // shows the "coming shortly" note; set to '' to hide it
 };
