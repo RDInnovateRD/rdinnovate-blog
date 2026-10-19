@@ -265,3 +265,15 @@ a.wb-card:hover{transform:translateY(-4px);border-color:var(--maroon);
 .wb-video{margin:44px 0 0}
 .wb-video-lede{color:var(--mut);max-width:640px;margin:0 0 16px}
 .wb-video video{display:block;width:100%;max-width:960px;height:auto;border-radius:10px;background:#0f172a;box-shadow:0 8px 30px rgba(0,0,0,.18)}
+
+/* release notes on /workbench/ */
+.wb-meta a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.wb-release{border:1px solid var(--line);border-radius:12px;background:transparent;padding:4px 20px;margin:0 0 14px}
+.wb-release summary{cursor:pointer;padding:14px 0;font-size:17px;font-weight:700;list-style-position:outside}
+.wb-release[open] summary{border-bottom:1px solid var(--line);margin-bottom:12px}
+.wb-rel-date{font-weight:500;color:var(--mut);font-size:14px;margin-left:8px}
+.wb-rel-sum{font-weight:500}
+.wb-release h3{font-size:16.5px;margin:20px 0 8px;color:inherit}
+.wb-rel-actions{background:rgba(255,255,255,.04);border-left:4px solid var(--maroon);border-radius:0 9px 9px 0;padding:12px 16px;margin:18px 0 16px}
+.wb-rel-actions p{margin:0 0 6px}
+.wb-rel-actions ol{margin:0}

@@ -1,6 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
 import { site, workbench as w } from '../data/site';
+import { releases } from '../data/releases';
+const shown = releases.filter((r) => r.published);
+const fmt = (d: string) => new Date(`${d}T12:00:00Z`).toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Australia/Sydney' });
 const base = `https://github.com/${w.repo}/releases/download/v${w.version}`;
 const winBase = `https://github.com/${w.repo}/releases/download/v${w.winVersion}`;
 const winBehind = w.winVersion !== w.version;
@@ -14,7 +17,7 @@ const winBehind = w.winVersion !== w.version;
   <p class="lede">Prepare Australian R&amp;D Tax Incentive claims on your own machine.
   Import your general ledger, payroll and timesheets, classify expenditure against
   Division 355, and produce a defensible schedule.</p>
-  <p class="wb-meta">Version {w.version} &middot; macOS and Windows</p>
+  <p class="wb-meta">Version {w.version} &middot; macOS and Windows &middot; <a href="#release-notes">Release notes</a></p>
   {w.upcoming && (
     <p class="wb-next">Test out this Early Preview, version {w.version}.
     Version {w.upcoming} is coming shortly. Look out for it here.</p>
@@ -111,6 +114,26 @@ const winBehind = w.winVersion !== w.version;
   {winBehind && (
     <p><a href={`${winBase}/SHA256SUMS.txt`}>Published checksums for Windows {w.winVersion}</a></p>
   )}
+
+  <h2 id="release-notes">Release notes</h2>
+  {shown.map((r, i) => (
+    <details class="wb-release" open={i === 0}>
+      <summary><span class="wb-rel-ver">Version {r.version}</span> <span class="wb-rel-date">{fmt(r.date)}</span></summary>
+      <p class="wb-rel-sum">{r.summary}</p>
+      {r.sections.map((sec) => (
+        <>
+          <h3>{sec.heading}</h3>
+          <ul>{sec.items.map((it) => <li>{it}</li>)}</ul>
+        </>
+      ))}
+      {r.actions && r.actions.length > 0 && (
+        <div class="wb-rel-actions">
+          <p><strong>Claims started in an earlier version</strong></p>
+          <ol>{r.actions.map((a) => <li>{a}</li>)}</ol>
+        </div>
+      )}
+    </details>
+  ))}
 
   <h2>Support</h2>
   <p>Questions, defects, or help with the software: <a href="mailto:rd@rdinnovate.com">rd@rdinnovate.com</a></p>
