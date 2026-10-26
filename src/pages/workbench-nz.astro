@@ -1,0 +1,85 @@
+---
+import Base from '../layouts/Base.astro';
+import { site, workbenchNz as w } from '../data/site';
+const base = `https://github.com/${w.repo}/releases/download/v${w.version}`;
+---
+<Base title="RnD Tax Workbench NZ — download"
+      description="Desktop application for preparing New Zealand R&D Tax Incentive claims. Runs locally on your machine."
+      noindex={!w.live}>
+<section class="wb-hero">
+  <img class="wb-icon" src="/media/rnd-tax-workbench-icon.png" width="112" height="112" alt="">
+  <p class="eyebrow">R&amp;D Innovate</p>
+  <h1>RnD Tax Workbench NZ</h1>
+  <p class="lede">Prepare New Zealand Research and Development Tax Incentive claims on your own
+  machine. Import your general ledger, payroll and timesheets, test eligibility under subpart LY of
+  the Income Tax Act 2007, and produce the supplementary return figures and General Approval
+  documents.</p>
+  <p class="wb-meta">Version {w.version} &middot; macOS, Windows and Linux</p>
+</section>
+
+<section class="wb-downloads">
+  <h2>Download</h2>
+  <div class="wb-grid">
+    <a class="wb-card" href={`${base}/${w.macArm}`}>
+      <span class="wb-plat">macOS</span>
+      <span class="wb-arch">Apple silicon</span>
+      <span class="wb-note">M1, M2, M3, M4</span>
+      <span class="wb-dl">Download .dmg &rarr;</span>
+    </a>
+    <a class="wb-card" href={`${base}/${w.macX64}`}>
+      <span class="wb-plat">macOS</span>
+      <span class="wb-arch">Intel</span>
+      <span class="wb-note">2020 and earlier</span>
+      <span class="wb-dl">Download .dmg &rarr;</span>
+    </a>
+    <a class="wb-card" href={`${base}/${w.windows}`}>
+      <span class="wb-plat">Windows</span>
+      <span class="wb-arch">64-bit</span>
+      <span class="wb-note">Windows 10 and 11</span>
+      <span class="wb-dl">Download .exe &rarr;</span>
+    </a>
+    <a class="wb-card" href={`${base}/${w.linuxAppImage}`}>
+      <span class="wb-plat">Linux</span>
+      <span class="wb-arch">64-bit AppImage</span>
+      <span class="wb-note">Or the <a href={`${base}/${w.linuxDeb}`}>.deb</a> for Debian and Ubuntu</span>
+      <span class="wb-dl">Download .AppImage &rarr;</span>
+    </a>
+  </div>
+  <p class="wb-size">Not sure which Mac you have? Apple menu &rarr; About This Mac. "Apple M1" or
+  later means Apple silicon.</p>
+</section>
+<section class="wb-body">
+  <h2>Requirements</h2>
+  <ul>
+    <li>macOS 10.15 or later, Windows 10 / 11 64-bit, or a 64-bit Linux desktop</li>
+    <li>Around 2 GB free disk space after installation</li>
+    <li>Internet connection for AI-assisted steps</li>
+  </ul>
+
+  <h3>Installing on Windows</h3>
+  <ol>
+    <li>Download the .exe</li>
+    {!w.signedWin && (
+      <li>Windows SmartScreen will show a warning on first run. Choose <strong>More info</strong>, then <strong>Run anyway</strong>.</li>
+    )}
+    <li>Follow the installer, then launch from the Start menu</li>
+  </ol>
+
+  <h3>Installing on Linux</h3>
+  <ol>
+    <li>AppImage: make it executable (<code>chmod +x</code>) and run it</li>
+    <li>Debian or Ubuntu: <code>sudo apt install ./&lt;file&gt;.deb</code></li>
+  </ol>
+
+  <h2>Your data</h2>
+  <p>Financial data is held in a local database on your own machine. Files you import are not
+  uploaded anywhere.</p>
+
+  <h2>Verifying your download</h2>
+  <p><a href={`${base}/SHA256SUMS.txt`}>Published checksums for version {w.version}</a></p>
+
+  <h2>Support</h2>
+  <p><a href="mailto:rd@rdinnovate.com">rd@rdinnovate.com</a></p>
+  <p><a href={site.linkedin} rel="noopener">Follow R&amp;D Innovate on LinkedIn</a>.</p>
+</section>
+</Base>

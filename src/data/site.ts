@@ -28,3 +28,18 @@ export const workbench = {
   linux: '', // leave empty until a Linux build exists
   upcoming: '', // shows the "coming shortly" note; set to '' to hide it
 };
+
+// RnD Tax Workbench NZ download page (/workbench-nz/). Hidden from navigation and search until
+// `live` is true; set it in the same commit that publishes the first release.
+export const workbenchNz = {
+  live: false,
+  version: '1.0.0',
+  repo: 'RDInnovateRD/rnd-tax-workbench-nz-releases',
+  signedMac: true,
+  signedWin: false,
+  macArm: 'RnD-Tax-Workbench-NZ-1.0.0-mac-arm64.dmg',
+  macX64: 'RnD-Tax-Workbench-NZ-1.0.0-mac-x64.dmg',
+  windows: 'RnD-Tax-Workbench-NZ-1.0.0-win-x64.exe',
+  linuxAppImage: 'RnD-Tax-Workbench-NZ-1.0.0-x86_64.AppImage',
+  linuxDeb: 'RnD-Tax-Workbench-NZ-1.0.0-linux-amd64.deb',
+};

@@ -9,8 +9,9 @@ interface Props {
   type?: 'website' | 'article';
   published?: string;      // ISO timestamp, articles only
   jsonLd?: Record<string, unknown>;
+  noindex?: boolean;       // keep a draft page out of search engines
 }
-const { title, description = site.description, type = 'website', published, jsonLd } = Astro.props;
+const { title, description = site.description, type = 'website', published, jsonLd, noindex = false } = Astro.props;
 const fullTitle = title ? `${title} | ${site.name}` : `${site.name} | ${site.description}`;
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const year = new Date().getFullYear();
@@ -25,6 +26,7 @@ const onNews = !onDownload;
 <meta name="theme-color" content="#5f1718">
 <title>{fullTitle}</title>
 <meta name="description" content={description}>
+{noindex && <meta name="robots" content="noindex">}
 <link rel="canonical" href={canonical}>
 <meta property="og:site_name" content={site.name}>
 <meta property="og:title" content={title ?? site.name}>
