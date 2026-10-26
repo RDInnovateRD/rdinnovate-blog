@@ -37,6 +37,8 @@ export const releases: Release[] = [
           'Fees for preparing the R&D registration, claim or tax return are never claimed.',
           'R&D intensity, grant clawbacks and feedstock follow the ATO\'s published formulas; hours worked come from payroll, never an assumed full-time year.',
           'A per-employee check of each person\'s R&D share, with an audit trail.',
+          'Feedstock (s 355-445) is worked out per output: the lesser of the feedstock expenditure and the feedstock revenue. An output processed further before sale uses the market value of the marketable product times the ratio of the two production costs, and outputs from inputs claimed in earlier years are split across those years.',
+          'Part-time staff: hours worked come from the timesheet when payroll has none.',
         ],
       },
       {
@@ -63,6 +65,9 @@ export const releases: Release[] = [
       {
         heading: 'Fixes',
         items: [
+          'Every tab saves as you type, including the Feedstock and Grants wizards.',
+          'Creating a project with AI can also write its activity narratives, with the credit cost shown first.',
+          'Confirmations and errors appear inside the app instead of system pop-ups.',
           'The top-up amount no longer jumps back to $29.',
           'The new-claim wizard no longer skips the Address step.',
           'Apportionment opens without an error on a new claim.',
@@ -73,6 +78,7 @@ export const releases: Release[] = [
       '2025-26 and later claims: answer the gambling and tobacco question for every activity on the Summary. The "Not ready to lodge" notice clears once every activity is answered (and, for an excluded activity, once its other costs are entered and confirmed).',
       'Capitalised amounts entered before 1.3.0: choose what each was capitalised into on Company details. Until then it is not added to the claim.',
       'Check any figure that moved: item 7 no longer includes amortisation of intangibles, and lease and interest lines are treated as above.',
+      'Feedstock: open each product on Feedstock & Grants and check the recalculated adjustment. For an output processed further before sale, enter the market value of the marketable product and the two production costs.',
     ],
   },
   {
