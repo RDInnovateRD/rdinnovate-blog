@@ -55,10 +55,26 @@ export const releases: Release[] = [
         ],
       },
       {
+        heading: 'AI never overwrites your work',
+        items: [
+          'Accounts you classified yourself are kept when the AI runs again; where it disagrees you see "AI suggests" with its reasons, and can click Keep mine.',
+          'An "AI changes" panel lists what each run changed, and a run keeps the cost category you chose.',
+          'Accounts the AI gave no answer for go to Review Required instead of quietly becoming Non-R&D.',
+          'Timesheet rows that do not clearly match one activity wait for you to choose, instead of being filed under a guess.',
+        ],
+      },
+      {
+        heading: 'Overseas contractors',
+        items: [
+          'Contractors whose R&D was done overseas need the AusIndustry overseas finding number on the contractor record, or they are not claimed. Likely overseas contractors are flagged.',
+        ],
+      },
+      {
         heading: 'AI and credits',
         items: [
           'Accounting and tax judgement goes to Claude Opus with extended thinking once it is available to us on AWS in Australia; writing and reading files use Claude Sonnet. Processing stays in Australia.',
           'Ledger classification was rebuilt for accuracy and repeatability and tested on accounts it had never seen: 100% correct, no over-claims, on the latest test set.',
+          'Top up any amount from A$14.99, or pick A$29, A$49 or A$99.',
           'Credit packs and Sonnet prices are unchanged. A step answered by Opus costs 3.5 times the Sonnet price; you are charged for the model that actually answered.',
         ],
       },
@@ -69,6 +85,7 @@ export const releases: Release[] = [
           'Creating a project with AI can also write its activity narratives, with the credit cost shown first.',
           'Confirmations and errors appear inside the app instead of system pop-ups.',
           'The top-up amount no longer jumps back to $29.',
+          'Redo re-applies the edit you just undid.',
           'The new-claim wizard no longer skips the Address step.',
           'Apportionment opens without an error on a new claim.',
         ],
@@ -78,6 +95,8 @@ export const releases: Release[] = [
       '2025-26 and later claims: answer the gambling and tobacco question for every activity on the Summary. The "Not ready to lodge" notice clears once every activity is answered (and, for an excluded activity, once its other costs are entered and confirmed).',
       'Capitalised amounts entered before 1.3.0: choose what each was capitalised into on Company details. Until then it is not added to the claim.',
       'Check any figure that moved: item 7 no longer includes amortisation of intangibles, and lease and interest lines are treated as above.',
+      'Overseas contractors: enter the overseas finding number on each flagged contractor, or mark it "In Australia".',
+      'Timesheets imported with 1.2.x: re-check rows whose task did not name an activity.',
       'Feedstock: open each product on Feedstock & Grants and check the recalculated adjustment. For an output processed further before sale, enter the market value of the marketable product and the two production costs.',
     ],
   },
