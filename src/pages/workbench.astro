@@ -17,7 +17,7 @@ const winBehind = w.winVersion !== w.version;
   <p class="lede">Prepare Australian R&amp;D Tax Incentive claims on your own machine.
   Import your general ledger, payroll and timesheets, classify expenditure against
   Division 355, and produce a defensible schedule.</p>
-  <p class="wb-meta">Version {w.version} &middot; macOS and Windows &middot; <a href="#release-notes">Release notes</a></p>
+  <p class="wb-meta">Version {w.version} &middot; macOS, Windows{w.linux ? ' and Linux' : ''} &middot; <a href="#release-notes">Release notes</a></p>
   {w.upcoming && (
     <p class="wb-next">Test out this Early Preview, version {w.version}.
     Version {w.upcoming} is coming shortly. Look out for it here.</p>
@@ -58,6 +58,15 @@ const winBehind = w.winVersion !== w.version;
         <span class="wb-dl">Coming soon</span>
       </span>
     )}
+
+    {w.linux && (
+      <a class="wb-card" href={`${base}/${w.linux}`}>
+        <span class="wb-plat">Linux</span>
+        <span class="wb-arch">64-bit AppImage</span>
+        <span class="wb-note">Or the <a href={`${base}/${w.linuxDeb}`}>.deb</a> / <a href={`${base}/${w.linuxRpm}`}>.rpm</a></span>
+        <span class="wb-dl">Download .AppImage &rarr;</span>
+      </a>
+    )}
   </div>
   <p class="wb-size">Around 425 MB on macOS, 291 MB on Windows. Not sure which Mac
   you have? Apple menu &rarr; About This Mac. "Apple M1" or later means Apple silicon.</p>
@@ -78,7 +87,7 @@ const winBehind = w.winVersion !== w.version;
 
   <h2>Requirements</h2>
   <ul>
-    <li>macOS 12 Monterey or later, or Windows 10 / 11 64-bit</li>
+    <li>macOS 12 Monterey or later, or Windows 10 / 11 64-bit{w.linux && ', or a 64-bit Linux desktop'}</li>
     <li>Around 2 GB free disk space after installation</li>
     <li>Internet connection for AI-assisted classification</li>
   </ul>
@@ -99,6 +108,16 @@ const winBehind = w.winVersion !== w.version;
     )}
     <li>Follow the installer, then launch from the Start menu</li>
   </ol>
+
+  {w.linux && (
+    <>
+      <h3>Installing on Linux</h3>
+      <ol>
+        <li>AppImage: make it executable (<code>chmod +x</code>) and run it</li>
+        <li>Debian or Ubuntu: <code>sudo apt install ./&lt;file&gt;.deb</code>; Fedora or RHEL: <code>sudo dnf install ./&lt;file&gt;.rpm</code></li>
+      </ol>
+    </>
+  )}
 
   <h2>Your data</h2>
   <p>Financial data is held in a local database on your own machine. Files you

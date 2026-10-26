@@ -25,7 +25,9 @@ export const workbench = {
   macArm: 'RnD-Tax-Workbench-1.2.4-mac-arm64.dmg',
   macX64: 'RnD-Tax-Workbench-1.2.4-mac-x64.dmg',
   windows: 'RnD-Tax-Workbench-1.2.4-win-x64.exe',
-  linux: '', // leave empty until a Linux build exists
+  linux: '', // AppImage file name; leave empty until a Linux build is published
+  linuxDeb: '',
+  linuxRpm: '',
   upcoming: '', // shows the "coming shortly" note; set to '' to hide it
 };
 
