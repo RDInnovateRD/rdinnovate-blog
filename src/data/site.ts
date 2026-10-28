@@ -15,26 +15,26 @@ export const site = {
 // RnD Tax Workbench download page (/workbench/).
 // To ship a new release: bump `version` and the filenames, commit, push.
 export const workbench = {
-  version: '1.2.4',
+  version: '1.3.0',
   // Windows can trail macOS by a release: its link and checksums come from winVersion.
   // Set winVersion equal to version once the Windows build is published.
-  winVersion: '1.2.4',
+  winVersion: '1.3.0',
   repo: 'RDInnovateRD/rnd-tax-workbench',
   signedMac: true, // notarised; Gatekeeper accepts
   signedWin: false, // flip once the OV certificate is applied
-  macArm: 'RnD-Tax-Workbench-1.2.4-mac-arm64.dmg',
-  macX64: 'RnD-Tax-Workbench-1.2.4-mac-x64.dmg',
-  windows: 'RnD-Tax-Workbench-1.2.4-win-x64.exe',
-  linux: '', // AppImage file name; leave empty until a Linux build is published
-  linuxDeb: '',
-  linuxRpm: '',
+  macArm: 'RnD-Tax-Workbench-1.3.0-mac-arm64.dmg',
+  macX64: 'RnD-Tax-Workbench-1.3.0-mac-x64.dmg',
+  windows: 'RnD-Tax-Workbench-1.3.0-win-x64.exe',
+  linux: 'RnD-Tax-Workbench-1.3.0-x86_64.AppImage', // AppImage; leave empty if a release has no Linux build
+  linuxDeb: 'RnD-Tax-Workbench-1.3.0-linux-amd64.deb',
+  linuxRpm: 'RnD-Tax-Workbench-1.3.0-linux-x86_64.rpm',
   upcoming: '', // shows the "coming shortly" note; set to '' to hide it
 };
 
 // RnD Tax Workbench NZ download page (/workbench-nz/). Hidden from navigation and search until
 // `live` is true; set it in the same commit that publishes the first release.
 export const workbenchNz = {
-  live: false,
+  live: true,
   version: '1.0.0',
   repo: 'RDInnovateRD/rnd-tax-workbench-nz-releases',
   signedMac: true,
@@ -44,4 +44,5 @@ export const workbenchNz = {
   windows: 'RnD-Tax-Workbench-NZ-1.0.0-win-x64.exe',
   linuxAppImage: 'RnD-Tax-Workbench-NZ-1.0.0-x86_64.AppImage',
   linuxDeb: 'RnD-Tax-Workbench-NZ-1.0.0-linux-amd64.deb',
+  linuxRpm: 'RnD-Tax-Workbench-NZ-1.0.0-linux-x86_64.rpm',
 };

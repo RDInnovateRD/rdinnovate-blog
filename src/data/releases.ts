@@ -16,8 +16,8 @@ export interface Release {
 export const releases: Release[] = [
   {
     version: '1.3.0',
-    date: '', // set on the day it is published,
-    published: false,
+    date: '2026-10-28',
+    published: true,
     summary: 'The new gambling and tobacco exclusion, claims that follow the Act and ATO guidance more closely, an accounting standards section, and AI matched to the kind of work.',
     sections: [
       {

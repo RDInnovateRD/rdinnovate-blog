@@ -41,10 +41,12 @@ const base = `https://github.com/${w.repo}/releases/download/v${w.version}`;
     <a class="wb-card" href={`${base}/${w.linuxAppImage}`}>
       <span class="wb-plat">Linux</span>
       <span class="wb-arch">64-bit AppImage</span>
-      <span class="wb-note">Or the <a href={`${base}/${w.linuxDeb}`}>.deb</a> for Debian and Ubuntu</span>
+      <span class="wb-note">Most distributions</span>
       <span class="wb-dl">Download .AppImage &rarr;</span>
     </a>
   </div>
+  <p class="wb-size">Linux packages: <a href={`${base}/${w.linuxDeb}`}>.deb</a> for Debian and Ubuntu,
+  <a href={`${base}/${w.linuxRpm}`}>.rpm</a> for Fedora and RHEL.</p>
   <p class="wb-size">Not sure which Mac you have? Apple menu &rarr; About This Mac. "Apple M1" or
   later means Apple silicon.</p>
 </section>
@@ -68,7 +70,7 @@ const base = `https://github.com/${w.repo}/releases/download/v${w.version}`;
   <h3>Installing on Linux</h3>
   <ol>
     <li>AppImage: make it executable (<code>chmod +x</code>) and run it</li>
-    <li>Debian or Ubuntu: <code>sudo apt install ./&lt;file&gt;.deb</code></li>
+    <li>Debian or Ubuntu: <code>sudo apt install ./&lt;file&gt;.deb</code>; Fedora or RHEL: <code>sudo dnf install ./&lt;file&gt;.rpm</code></li>
   </ol>
 
   <h2>Your data</h2>

@@ -63,12 +63,16 @@ const winBehind = w.winVersion !== w.version;
       <a class="wb-card" href={`${base}/${w.linux}`}>
         <span class="wb-plat">Linux</span>
         <span class="wb-arch">64-bit AppImage</span>
-        <span class="wb-note">Or the <a href={`${base}/${w.linuxDeb}`}>.deb</a> / <a href={`${base}/${w.linuxRpm}`}>.rpm</a></span>
+        <span class="wb-note">Most distributions</span>
         <span class="wb-dl">Download .AppImage &rarr;</span>
       </a>
     )}
   </div>
-  <p class="wb-size">Around 425 MB on macOS, 291 MB on Windows. Not sure which Mac
+  {w.linux && (
+    <p class="wb-size">Linux packages: <a href={`${base}/${w.linuxDeb}`}>.deb</a> for Debian and Ubuntu,
+    <a href={`${base}/${w.linuxRpm}`}>.rpm</a> for Fedora and RHEL.</p>
+  )}
+  <p class="wb-size">Around 440 MB on macOS, 300 MB on Windows{w.linux && ', 400 MB for the Linux AppImage'}. Not sure which Mac
   you have? Apple menu &rarr; About This Mac. "Apple M1" or later means Apple silicon.</p>
 </section>
 <section class="wb-body">
