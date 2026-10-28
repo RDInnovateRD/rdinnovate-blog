@@ -8,18 +8,22 @@ const base = `https://github.com/${w.repo}/releases/download/v${w.version}`;
       noindex={!w.live}>
 <section class="wb-hero">
   <img class="wb-icon" src="/media/rnd-tax-workbench-icon.png" width="112" height="112" alt="">
+  <nav class="wb-country" aria-label="Edition">
+    <a href="/workbench/">Australia</a>
+    <a href="/workbench-nz/" aria-current="page">New Zealand</a>
+  </nav>
   <p class="eyebrow">R&amp;D Innovate</p>
   <h1>RnD Tax Workbench NZ</h1>
   <p class="lede">Prepare New Zealand Research and Development Tax Incentive claims on your own
   machine. Import your general ledger, payroll and timesheets, test eligibility under subpart LY of
   the Income Tax Act 2007, and produce the supplementary return figures and General Approval
   documents.</p>
-  <p class="wb-meta">Version {w.version} &middot; macOS, Windows and Linux</p>
+  <p class="wb-meta">New Zealand edition &middot; Version {w.version} &middot; macOS, Windows and Linux</p>
 </section>
 
 <section class="wb-downloads">
   <h2>Download</h2>
-  <div class="wb-grid">
+  <div class="wb-grid wb-four">
     <a class="wb-card" href={`${base}/${w.macArm}`}>
       <span class="wb-plat">macOS</span>
       <span class="wb-arch">Apple silicon</span>
@@ -42,10 +46,10 @@ const base = `https://github.com/${w.repo}/releases/download/v${w.version}`;
       <span class="wb-plat">Linux</span>
       <span class="wb-arch">64-bit AppImage</span>
       <span class="wb-note">Most distributions</span>
-      <span class="wb-dl">Download .AppImage &rarr;</span>
+      <span class="wb-dl">Download &rarr;</span>
     </a>
   </div>
-  <p class="wb-size">Linux packages: <a href={`${base}/${w.linuxDeb}`}>.deb</a> for Debian and Ubuntu,
+  <p class="wb-size">Linux packages: <a href={`${base}/${w.linuxDeb}`}>.deb</a> for Debian and Ubuntu,{' '}
   <a href={`${base}/${w.linuxRpm}`}>.rpm</a> for Fedora and RHEL.</p>
   <p class="wb-size">Not sure which Mac you have? Apple menu &rarr; About This Mac. "Apple M1" or
   later means Apple silicon.</p>
