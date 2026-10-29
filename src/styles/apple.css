@@ -93,7 +93,7 @@ footer.site small{width:100%;font-size:13px;opacity:.8}
 .wb-hero h1{font-size:clamp(46px,8vw,96px);line-height:1.02;letter-spacing:-.045em;color:#fff}
 .wb-hero .lede{color:var(--mut);font:400 clamp(19px,2.2vw,23px)/1.5 Inter,sans-serif;letter-spacing:-.01em;margin:0 auto;max-width:720px}
 .wb-meta{color:var(--mut);letter-spacing:.04em}
-.wb-country{display:flex;width:fit-content;gap:4px;padding:4px;margin:0 auto 26px;border-radius:999px;background:rgba(255,255,255,.08)}
+.wb-country{display:flex;width:fit-content;gap:4px;padding:4px;margin:26px auto 18px;border-radius:999px;background:rgba(255,255,255,.08)}
 .wb-country a{padding:9px 20px;border-radius:999px;color:var(--mut);font:600 15px/1 Inter,sans-serif;text-decoration:none;letter-spacing:-.01em}
 .wb-country a:hover{color:#fff}
 .wb-country a[aria-current=page]{background:#fff;color:#000}
@@ -113,6 +113,8 @@ a.wb-card:hover .wb-dl{background:#2563eb}
 .wb-soon .wb-dl{background:#2a2a2e;color:var(--mut)}
 .wb-size{color:var(--mut);margin:20px auto 0}
 .wb-size a{color:var(--blue-lt)}
+.wb-ed{color:var(--mut);text-align:center;margin:-6px auto 0;letter-spacing:.02em}
+.wb-downloads + .wb-downloads{padding-top:10px}
 @media (min-width:900px){.wb-grid.wb-four{max-width:1180px;grid-template-columns:repeat(4,1fr)}}
 .wb-video{max-width:1000px;margin:90px auto 0;text-align:center}
 .wb-video-lede{color:var(--mut);margin:0 auto 26px;font-size:19px}

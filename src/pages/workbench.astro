@@ -1,35 +1,37 @@
 ---
 import Base from '../layouts/Base.astro';
-import { site, workbench as w } from '../data/site';
+import { site, workbench as w, workbenchNz as nz } from '../data/site';
 import { releases } from '../data/releases';
 const shown = releases.filter((r) => r.published);
 const fmt = (d: string) => new Date(`${d}T12:00:00Z`).toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Australia/Sydney' });
 const base = `https://github.com/${w.repo}/releases/download/v${w.version}`;
 const winBase = `https://github.com/${w.repo}/releases/download/v${w.winVersion}`;
 const winBehind = w.winVersion !== w.version;
+const nzBase = `https://github.com/${nz.repo}/releases/download/v${nz.version}`;
 ---
 <Base title="RnD Tax Workbench — download"
-      description="Desktop application for preparing Australian R&D Tax Incentive claims. Runs locally on your machine.">
+      description="Desktop application for preparing Australian and New Zealand R&D Tax Incentive claims. Runs locally on your machine.">
 <section class="wb-hero">
   <img class="wb-icon" src="/media/rnd-tax-workbench-icon.png" width="112" height="112" alt="">
-  <nav class="wb-country" aria-label="Edition">
-    <a href="/workbench/" aria-current="page">Australia</a>
-    <a href="/workbench-nz/">New Zealand</a>
-  </nav>
-  <p class="eyebrow">R&amp;D Innovate</p>
+  <p class="eyebrow">Now for Australia and New Zealand</p>
   <h1>RnD Tax Workbench</h1>
-  <p class="lede">Prepare Australian R&amp;D Tax Incentive claims on your own machine.
+  <p class="lede">Prepare R&amp;D Tax Incentive claims on your own machine.
   Import your general ledger, payroll and timesheets, classify expenditure against
-  Division 355, and produce a defensible schedule.</p>
-  <p class="wb-meta">Australian edition &middot; Version {w.version} &middot; macOS, Windows{w.linux ? ' and Linux' : ''} &middot; <a href="#release-notes">Release notes</a></p>
+  the rules, and produce a defensible schedule.</p>
+  <nav class="wb-country" aria-label="Edition">
+    <a href="#au">Australia</a>
+    <a href="#nz">New Zealand</a>
+  </nav>
+  <p class="wb-meta">macOS, Windows{w.linux ? ' and Linux' : ''} &middot; <a href="#release-notes">Release notes</a></p>
   {w.upcoming && (
     <p class="wb-next">Test out this Early Preview, version {w.version}.
     Version {w.upcoming} is coming shortly. Look out for it here.</p>
   )}
 </section>
 
-<section class="wb-downloads">
-  <h2>Download</h2>
+<section class="wb-downloads" id="au">
+  <h2>Australia</h2>
+  <p class="wb-ed">RnD Tax Workbench &middot; version {w.version} &middot; Division 355, ITAA 1997</p>
   <div class={`wb-grid${w.linux ? ' wb-four' : ''}`}>
     <a class="wb-card" href={`${base}/${w.macArm}`}>
       <span class="wb-plat">macOS</span>
@@ -76,11 +78,50 @@ const winBehind = w.winVersion !== w.version;
     <p class="wb-size">Linux packages: <a href={`${base}/${w.linuxDeb}`}>.deb</a> for Debian and Ubuntu,{' '}
     <a href={`${base}/${w.linuxRpm}`}>.rpm</a> for Fedora and RHEL.</p>
   )}
+</section>
+
+{nz.live && (
+<section class="wb-downloads" id="nz">
+  <h2>New Zealand</h2>
+  <p class="wb-ed">RnD Tax Workbench NZ &middot; version {nz.version} &middot; subpart LY, Income Tax Act 2007</p>
+  <div class="wb-grid wb-four">
+    <a class="wb-card" href={`${nzBase}/${nz.macArm}`}>
+      <span class="wb-plat">macOS</span>
+      <span class="wb-arch">Apple silicon</span>
+      <span class="wb-note">M1, M2, M3, M4</span>
+      <span class="wb-dl">Download .dmg &rarr;</span>
+    </a>
+    <a class="wb-card" href={`${nzBase}/${nz.macX64}`}>
+      <span class="wb-plat">macOS</span>
+      <span class="wb-arch">Intel</span>
+      <span class="wb-note">2020 and earlier</span>
+      <span class="wb-dl">Download .dmg &rarr;</span>
+    </a>
+    <a class="wb-card" href={`${nzBase}/${nz.windows}`}>
+      <span class="wb-plat">Windows</span>
+      <span class="wb-arch">64-bit</span>
+      <span class="wb-note">Windows 10 and 11</span>
+      <span class="wb-dl">Download .exe &rarr;</span>
+    </a>
+    <a class="wb-card" href={`${nzBase}/${nz.linuxAppImage}`}>
+      <span class="wb-plat">Linux</span>
+      <span class="wb-arch">64-bit AppImage</span>
+      <span class="wb-note">Most distributions</span>
+      <span class="wb-dl">Download &rarr;</span>
+    </a>
+  </div>
+  <p class="wb-size">Linux packages: <a href={`${nzBase}/${nz.linuxDeb}`}>.deb</a> for Debian and Ubuntu,{' '}
+  <a href={`${nzBase}/${nz.linuxRpm}`}>.rpm</a> for Fedora and RHEL.</p>
+  <p class="wb-size"><a href="/workbench-nz/">New Zealand edition: details, requirements and checksums &rarr;</a></p>
+</section>
+)}
+
+<section class="wb-downloads">
   <p class="wb-size">Around 440 MB on macOS, 300 MB on Windows{w.linux && ', 400 MB for the Linux AppImage'}. Not sure which Mac
   you have? Apple menu &rarr; About This Mac. "Apple M1" or later means Apple silicon.</p>
 </section>
 <section class="wb-body">
-  <h2>What it does</h2>
+  <h2>What it does (Australian edition)</h2>
   <ul>
     <li>Imports general ledger, profit and loss, balance sheet, trial balance,
         payroll and timesheet files, including PDFs</li>
