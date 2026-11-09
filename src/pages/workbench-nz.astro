@@ -78,8 +78,10 @@ const base = `https://github.com/${w.repo}/releases/download/v${w.version}`;
   </ol>
 
   <h2>Your data</h2>
-  <p>Financial data is held in a local database on your own machine. Files you import are not
-  uploaded anywhere.</p>
+  <p>Financial data is held in a local database on your own machine. Files you import stay there;
+  only the text an AI-assisted step needs is sent for processing.</p>
+  <p>AI processing takes place in Australia (Amazon Web Services) when capacity there is available,
+  and otherwise in the United States through Anthropic's Claude API.</p>
 
   <h2>Verifying your download</h2>
   <p><a href={`${base}/SHA256SUMS.txt`}>Published checksums for version {w.version}</a></p>
