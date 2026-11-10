@@ -35,14 +35,14 @@ export const workbench = {
 // `live` is true; set it in the same commit that publishes the first release.
 export const workbenchNz = {
   live: true,
-  version: '1.0.0',
+  version: '1.0.1',
   repo: 'RDInnovateRD/rnd-tax-workbench-nz-releases',
   signedMac: true,
   signedWin: false,
-  macArm: 'RnD-Tax-Workbench-NZ-1.0.0-mac-arm64.dmg',
-  macX64: 'RnD-Tax-Workbench-NZ-1.0.0-mac-x64.dmg',
-  windows: 'RnD-Tax-Workbench-NZ-1.0.0-win-x64.exe',
-  linuxAppImage: 'RnD-Tax-Workbench-NZ-1.0.0-x86_64.AppImage',
-  linuxDeb: 'RnD-Tax-Workbench-NZ-1.0.0-linux-amd64.deb',
-  linuxRpm: 'RnD-Tax-Workbench-NZ-1.0.0-linux-x86_64.rpm',
+  macArm: 'RnD-Tax-Workbench-NZ-1.0.1-mac-arm64.dmg',
+  macX64: 'RnD-Tax-Workbench-NZ-1.0.1-mac-x64.dmg',
+  windows: 'RnD-Tax-Workbench-NZ-1.0.1-win-x64.exe',
+  linuxAppImage: 'RnD-Tax-Workbench-NZ-1.0.1-x86_64.AppImage',
+  linuxDeb: 'RnD-Tax-Workbench-NZ-1.0.1-linux-amd64.deb',
+  linuxRpm: 'RnD-Tax-Workbench-NZ-1.0.1-linux-x86_64.rpm',
 };
