@@ -1,0 +1,100 @@
+---
+import Base from '../layouts/Base.astro';
+import { site, workbenchUk as w } from '../data/site';
+const base = `https://github.com/${w.repo}/releases/download/v${w.version}`;
+---
+<Base title="RnD Tax Workbench UK — download"
+      description="Desktop application for preparing UK R&D tax relief claims (merged scheme, ERIS and the legacy schemes). Runs locally on your machine."
+      noindex={!w.live}>
+<section class="wb-hero">
+  <img class="wb-icon" src="/media/rnd-tax-workbench-icon.png" width="112" height="112" alt="">
+  <nav class="wb-country" aria-label="Edition">
+    <a href="/workbench/">Australia</a>
+    <a href="/workbench-nz/">New Zealand</a>
+    <a href="/workbench-uk/" aria-current="page">United Kingdom</a>
+  </nav>
+  <p class="eyebrow">R&amp;D Innovate</p>
+  <h1>RnD Tax Workbench UK</h1>
+  <p class="lede">Prepare UK R&amp;D tax relief claims on your own machine. Import your trial
+  balance or general ledger, payroll and timesheets, work out qualifying expenditure under Part 13
+  of the Corporation Tax Act 2009, and produce the CT600 and CT600L figures and a draft Additional
+  Information Form. Covers the merged scheme, enhanced R&amp;D intensive support (ERIS) and the
+  legacy SME and RDEC schemes.</p>
+  <p class="wb-meta">United Kingdom edition &middot; Version {w.version} &middot; macOS, Windows and Linux</p>
+</section>
+
+<section class="wb-downloads">
+  <h2>Download</h2>
+  <div class="wb-grid wb-four">
+    <a class="wb-card" href={`${base}/${w.macArm}`}>
+      <span class="wb-plat">macOS</span>
+      <span class="wb-arch">Apple silicon</span>
+      <span class="wb-note">M1, M2, M3, M4</span>
+      <span class="wb-dl">Download .dmg &rarr;</span>
+    </a>
+    <a class="wb-card" href={`${base}/${w.macX64}`}>
+      <span class="wb-plat">macOS</span>
+      <span class="wb-arch">Intel</span>
+      <span class="wb-note">2020 and earlier</span>
+      <span class="wb-dl">Download .dmg &rarr;</span>
+    </a>
+    <a class="wb-card" href={`${base}/${w.windows}`}>
+      <span class="wb-plat">Windows</span>
+      <span class="wb-arch">64-bit</span>
+      <span class="wb-note">Windows 10 and 11</span>
+      <span class="wb-dl">Download .exe &rarr;</span>
+    </a>
+    <a class="wb-card" href={`${base}/${w.linuxAppImage}`}>
+      <span class="wb-plat">Linux</span>
+      <span class="wb-arch">64-bit AppImage</span>
+      <span class="wb-note">Most distributions</span>
+      <span class="wb-dl">Download &rarr;</span>
+    </a>
+  </div>
+  <p class="wb-size">Linux packages: <a href={`${base}/${w.linuxDeb}`}>.deb</a> for Debian and Ubuntu,{' '}
+  <a href={`${base}/${w.linuxRpm}`}>.rpm</a> for Fedora and RHEL.</p>
+  <p class="wb-size">Not sure which Mac you have? Apple menu &rarr; About This Mac. "Apple M1" or
+  later means Apple silicon.</p>
+</section>
+<section class="wb-body">
+  <h2>Requirements</h2>
+  <ul>
+    <li>macOS 10.15 or later, Windows 10 / 11 64-bit, or a 64-bit Linux desktop</li>
+    <li>Around 2 GB free disk space after installation</li>
+    <li>Internet connection for AI-assisted steps</li>
+  </ul>
+
+  <h3>Installing on Windows</h3>
+  <ol>
+    <li>Download the .exe</li>
+    {!w.signedWin && (
+      <li>Windows SmartScreen will show a warning on first run. Choose <strong>More info</strong>, then <strong>Run anyway</strong>.</li>
+    )}
+    <li>Follow the installer, then launch from the Start menu</li>
+  </ol>
+
+  <h3>Installing on Linux</h3>
+  <ol>
+    <li>AppImage: make it executable (<code>chmod +x</code>) and run it</li>
+    <li>Debian or Ubuntu: <code>sudo apt install ./&lt;file&gt;.deb</code>; Fedora or RHEL: <code>sudo dnf install ./&lt;file&gt;.rpm</code></li>
+  </ol>
+
+  <h2>Your data</h2>
+  <p>Financial data is held in a local database on your own machine. Files you import stay there;
+  only the text an AI-assisted step needs is sent for processing.</p>
+  <p>AI processing takes place in Europe (Amazon Web Services, London) when capacity there is
+  available, and otherwise in the United States through Anthropic's Claude API.</p>
+
+  <h2>Pricing</h2>
+  <p>AI-assisted steps use credits, bought in packs: &pound;20 for 500, &pound;35 for 1,000 and
+  &pound;70 for 2,500. Prices exclude VAT. The UK edition is sold to businesses only, and VAT is
+  accounted for by the customer under the reverse charge.</p>
+
+  <h2>Verifying your download</h2>
+  <p><a href={`${base}/SHA256SUMS.txt`}>Published checksums for version {w.version}</a></p>
+
+  <h2>Support</h2>
+  <p><a href="mailto:rd@rdinnovate.com">rd@rdinnovate.com</a></p>
+  <p><a href={site.linkedin} rel="noopener">Follow R&amp;D Innovate on LinkedIn</a>.</p>
+</section>
+</Base>

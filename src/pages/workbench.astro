@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { site, workbench as w, workbenchNz as nz } from '../data/site';
+import { site, workbench as w, workbenchNz as nz, workbenchUk as uk } from '../data/site';
 import { releases } from '../data/releases';
 const shown = releases.filter((r) => r.published);
 const fmt = (d: string) => new Date(`${d}T12:00:00Z`).toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Australia/Sydney' });
@@ -8,12 +8,15 @@ const base = `https://github.com/${w.repo}/releases/download/v${w.version}`;
 const winBase = `https://github.com/${w.repo}/releases/download/v${w.winVersion}`;
 const winBehind = w.winVersion !== w.version;
 const nzBase = `https://github.com/${nz.repo}/releases/download/v${nz.version}`;
+const ukBase = `https://github.com/${uk.repo}/releases/download/v${uk.version}`;
 ---
 <Base title="RnD Tax Workbench — download"
-      description="Desktop application for preparing Australian and New Zealand R&D Tax Incentive claims. Runs locally on your machine.">
+      description={uk.live
+        ? "Desktop application for preparing Australian and New Zealand R&D Tax Incentive claims and UK R&D tax relief claims. Runs locally on your machine."
+        : "Desktop application for preparing Australian and New Zealand R&D Tax Incentive claims. Runs locally on your machine."}>
 <section class="wb-hero">
   <img class="wb-icon" src="/media/rnd-tax-workbench-icon.png" width="112" height="112" alt="">
-  <p class="eyebrow">Now for Australia and New Zealand</p>
+  <p class="eyebrow">{uk.live ? 'Now for Australia, New Zealand and the United Kingdom' : 'Now for Australia and New Zealand'}</p>
   <h1>RnD Tax Workbench</h1>
   <p class="lede">Prepare R&amp;D Tax Incentive claims on your own machine.
   Import your general ledger, payroll and timesheets, classify expenditure against
@@ -21,6 +24,7 @@ const nzBase = `https://github.com/${nz.repo}/releases/download/v${nz.version}`;
   <nav class="wb-country" aria-label="Edition">
     <a href="#au">Australia</a>
     <a href="#nz">New Zealand</a>
+    {uk.live && <a href="#uk">United Kingdom</a>}
   </nav>
   <p class="wb-meta">macOS, Windows{w.linux ? ' and Linux' : ''} &middot; <a href="#release-notes">Release notes</a></p>
   {w.upcoming && (
@@ -113,6 +117,42 @@ const nzBase = `https://github.com/${nz.repo}/releases/download/v${nz.version}`;
   <p class="wb-size">Linux packages: <a href={`${nzBase}/${nz.linuxDeb}`}>.deb</a> for Debian and Ubuntu,{' '}
   <a href={`${nzBase}/${nz.linuxRpm}`}>.rpm</a> for Fedora and RHEL.</p>
   <p class="wb-size"><a href="/workbench-nz/">New Zealand edition: details, requirements and checksums &rarr;</a></p>
+</section>
+)}
+
+{uk.live && (
+<section class="wb-downloads" id="uk">
+  <h2>United Kingdom</h2>
+  <p class="wb-ed">RnD Tax Workbench UK &middot; version {uk.version} &middot; Part 13, Corporation Tax Act 2009</p>
+  <div class="wb-grid wb-four">
+    <a class="wb-card" href={`${ukBase}/${uk.macArm}`}>
+      <span class="wb-plat">macOS</span>
+      <span class="wb-arch">Apple silicon</span>
+      <span class="wb-note">M1, M2, M3, M4</span>
+      <span class="wb-dl">Download .dmg &rarr;</span>
+    </a>
+    <a class="wb-card" href={`${ukBase}/${uk.macX64}`}>
+      <span class="wb-plat">macOS</span>
+      <span class="wb-arch">Intel</span>
+      <span class="wb-note">2020 and earlier</span>
+      <span class="wb-dl">Download .dmg &rarr;</span>
+    </a>
+    <a class="wb-card" href={`${ukBase}/${uk.windows}`}>
+      <span class="wb-plat">Windows</span>
+      <span class="wb-arch">64-bit</span>
+      <span class="wb-note">Windows 10 and 11</span>
+      <span class="wb-dl">Download .exe &rarr;</span>
+    </a>
+    <a class="wb-card" href={`${ukBase}/${uk.linuxAppImage}`}>
+      <span class="wb-plat">Linux</span>
+      <span class="wb-arch">64-bit AppImage</span>
+      <span class="wb-note">Most distributions</span>
+      <span class="wb-dl">Download &rarr;</span>
+    </a>
+  </div>
+  <p class="wb-size">Linux packages: <a href={`${ukBase}/${uk.linuxDeb}`}>.deb</a> for Debian and Ubuntu,{' '}
+  <a href={`${ukBase}/${uk.linuxRpm}`}>.rpm</a> for Fedora and RHEL.</p>
+  <p class="wb-size"><a href="/workbench-uk/">United Kingdom edition: details, requirements and checksums &rarr;</a></p>
 </section>
 )}
 

@@ -46,3 +46,19 @@ export const workbenchNz = {
   linuxDeb: 'RnD-Tax-Workbench-NZ-1.0.1-linux-amd64.deb',
   linuxRpm: 'RnD-Tax-Workbench-NZ-1.0.1-linux-x86_64.rpm',
 };
+
+// RnD Tax Workbench UK download page (/workbench-uk/). Hidden from navigation and search until
+// `live` is true; set it in the same commit that publishes the first release.
+export const workbenchUk = {
+  live: false,
+  version: '1.0.0',
+  repo: 'RDInnovateRD/rnd-tax-workbench-uk-releases',
+  signedMac: true,
+  signedWin: false,
+  macArm: 'RnD-Tax-Workbench-UK-1.0.0-mac-arm64.dmg',
+  macX64: 'RnD-Tax-Workbench-UK-1.0.0-mac-x64.dmg',
+  windows: 'RnD-Tax-Workbench-UK-1.0.0-win-x64.exe',
+  linuxAppImage: 'RnD-Tax-Workbench-UK-1.0.0-x86_64.AppImage',
+  linuxDeb: 'RnD-Tax-Workbench-UK-1.0.0-linux-amd64.deb',
+  linuxRpm: 'RnD-Tax-Workbench-UK-1.0.0-linux-x86_64.rpm',
+};

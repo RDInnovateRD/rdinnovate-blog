@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { site, workbenchNz as w } from '../data/site';
+import { site, workbenchNz as w, workbenchUk as uk } from '../data/site';
 const base = `https://github.com/${w.repo}/releases/download/v${w.version}`;
 ---
 <Base title="RnD Tax Workbench NZ — download"
@@ -11,6 +11,7 @@ const base = `https://github.com/${w.repo}/releases/download/v${w.version}`;
   <nav class="wb-country" aria-label="Edition">
     <a href="/workbench/">Australia</a>
     <a href="/workbench-nz/" aria-current="page">New Zealand</a>
+    {uk.live && <a href="/workbench-uk/">United Kingdom</a>}
   </nav>
   <p class="eyebrow">R&amp;D Innovate</p>
   <h1>RnD Tax Workbench NZ</h1>
