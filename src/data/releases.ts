@@ -15,6 +15,39 @@ export interface Release {
 
 export const releases: Release[] = [
   {
+    version: '1.3.1',
+    date: '2026-11-14',
+    published: true,
+    summary: 'Fixes: auto top-up and card setup in the app, a clearer credit gauge, and timesheet and classification fixes. The law the app applies is unchanged.',
+    sections: [
+      {
+        heading: 'Credits and auto top-up',
+        items: [
+          'Auto top-up settings and saving a card now work from inside the app. In 1.3.0 these screens could fail with "Failed to fetch".',
+          'After saving a card, the confirmation page says the card is saved, auto top-up is on and nothing has been charged.',
+          'When the credit balance cannot be fetched (offline or a slow connection), the gauge shows "—" and "Balance not available" instead of "0.0 Critical".',
+        ],
+      },
+      {
+        heading: 'Timesheets and classification',
+        items: [
+          'A "Non-R&D hours" column is never read as R&D hours.',
+          'In a wide timesheet, "Total hours" is read as hours worked, not R&D hours.',
+          'Columns headed with activity references, as in the app\'s own template, are matched to those activities directly. Employees with no R&D hours are carried at 0 hours.',
+          'Saved R&D hours agree with the allocations on screen.',
+          'A trial balance uploaded on its own shows the classification tabs, and Next to Apportionment is available.',
+          'An overhead account with no stored category is bucketed from its account name, as the Apportionment screen shows it.',
+        ],
+      },
+      {
+        heading: 'Start-up',
+        items: [
+          'On Linux systems where "localhost" resolves to IPv6 only, the window no longer waits 60 seconds before opening.',
+        ],
+      },
+    ],
+  },
+  {
     version: '1.3.0',
     date: '2026-10-28',
     published: true,
