@@ -1,0 +1,292 @@
+WEBVTT
+
+00:00.600 --> 00:04.353
+Welcome to R&D Tax Workbench NZ! In this walkthrough, we'll prepare a complete New Zealand
+
+00:04.353 --> 00:08.107
+R&D tax credit claim for Harrier Bioplastics, from sign-up to the supplementary return
+
+00:08.107 --> 00:11.860
+workpaper. Let's dive in!
+
+00:13.867 --> 00:18.767
+Getting started takes seconds. Create an account with your name, your email and a password.
+
+00:24.447 --> 00:26.387
+Confirm the password, and you're in.
+
+00:28.767 --> 00:32.827
+The AI features, like narratives and account classification, run on credits. Open the
+
+00:32.827 --> 00:36.887
+credit meter, choose a top-up, and pay securely through Stripe.
+
+00:39.167 --> 00:41.207
+Enter your card details and pay.
+
+00:55.700 --> 00:59.090
+Payment confirmed, and the credits land in your balance straight away.
+
+01:03.226 --> 01:05.781
+Create a new claim. Enter the entity name and IRD number, then the balance date and the
+
+01:05.781 --> 01:08.336
+tax year.
+
+01:09.786 --> 01:14.276
+The key deadlines appear straight away. The general approval application is due by the
+
+01:14.276 --> 01:18.766
+last day of the 3rd month after your balance date, the 30th of June here.
+
+01:19.166 --> 01:22.561
+Next come the eligibility questions under section LY 3, like a New Zealand fixed establishment,
+
+01:22.561 --> 01:25.956
+and who owns the results.
+
+01:26.356 --> 01:28.696
+Add the business address and create the claim.
+
+01:32.796 --> 01:37.426
+The entity page keeps the details and the eligible entity tests together for your file.
+
+01:47.973 --> 01:51.123
+Now the R&D project. The AI project setup works from your own notes. Paste them in, and
+
+01:51.123 --> 01:54.273
+it drafts the project for you.
+
+02:00.653 --> 02:03.278
+It proposes the core and supporting activities, and points out what Inland Revenue will
+
+02:03.278 --> 02:05.903
+look for.
+
+02:12.373 --> 02:15.443
+Two core activities, the pilot extrusion trials, and the overseas tank trials in Brisbane
+
+02:15.443 --> 02:18.513
+as a supporting activity.
+
+02:18.913 --> 02:23.223
+Create the project, and the narrative for every activity is written in one go.
+
+02:24.961 --> 02:29.731
+All the narratives are ready. Here's the project with its core and supporting activities.
+
+02:30.131 --> 02:34.611
+One section runs over the app's length limit, so condense it in a couple of clicks.
+
+02:53.651 --> 02:56.921
+Record the general approval. This one is already approved, so add the reference, the years
+
+02:56.921 --> 03:00.191
+covered and the field of research.
+
+03:19.691 --> 03:23.181
+Every activity has its full narrative, ready to review and edit.
+
+03:47.091 --> 03:50.511
+The overseas trials are a supporting activity performed outside New Zealand, which matters
+
+03:50.511 --> 03:53.931
+for the 10% overseas cap.
+
+03:58.611 --> 04:01.131
+And the narratives can be exported at any time.
+
+04:06.765 --> 04:09.805
+Payroll next. Upload the payroll file, and AI maps the columns: gross salary, PAYE, employer
+
+04:09.805 --> 04:12.845
+KiwiSaver and ESCT.
+
+04:25.325 --> 04:28.875
+A quick quality check, then import. Seven employees are loaded.
+
+04:34.165 --> 04:36.935
+Now the timesheet. The smart parser reads each person's R&D hours and matches them to
+
+04:36.935 --> 04:39.705
+the activities.
+
+04:46.085 --> 04:48.825
+Review the mappings. Sam works part time, so his R&D share is based on the hours he actually
+
+04:48.825 --> 04:51.565
+worked.
+
+04:54.885 --> 04:58.250
+The combined view brings it together: each person's salary and KiwiSaver, apportioned
+
+04:58.250 --> 05:01.615
+by R&D time across the activities.
+
+05:02.015 --> 05:04.895
+Grace has no R&D time, so nothing of hers is claimed.
+
+05:09.424 --> 05:12.109
+Now the financials. Upload the general ledger, and its twenty-four accounts are parsed
+
+05:12.109 --> 05:14.794
+and checked.
+
+05:18.864 --> 05:21.979
+Import it, and AI classifies every account against the New Zealand rules, with its reasoning,
+
+05:21.979 --> 05:25.094
+ready for your review.
+
+05:29.024 --> 05:31.459
+Loan interest, the building extension and the core technology licence are excluded by
+
+05:31.459 --> 05:33.894
+law.
+
+05:34.294 --> 05:37.234
+Review the table, then upload the trial balance separately. Each source is stored and
+
+05:37.234 --> 05:40.174
+reconciled on its own.
+
+05:53.101 --> 05:57.221
+42 trial balance accounts, ready to reconcile against the ledger.
+
+05:59.581 --> 06:02.581
+Then the profit and loss statement and the balance sheet.
+
+06:26.741 --> 06:30.161
+This ledger is an expense-only extract, so mark it as partial.
+
+06:34.941 --> 06:39.094
+AI has already marked the R&D items and chosen a category for each, so you just review
+
+06:39.094 --> 06:43.247
+its choices. Bank fees aren't R&D, so take them out, and the Raman Advisory and Brisbane
+
+06:43.247 --> 06:47.401
+lab costs are contract R&D, so set them to contractors.
+
+07:13.546 --> 07:18.026
+Apportionment. Choose a reasonable basis for each cost category, and record why.
+
+07:20.866 --> 07:23.981
+Salaries follow the timesheets. Other costs can use floor space, the FTE ratio, machine
+
+07:23.981 --> 07:27.096
+hours or direct allocation.
+
+07:27.496 --> 07:32.346
+The lab and pilot line use 252 of 420 m², so 60% of the rent. The extruder log gives 80%
+
+07:32.346 --> 07:37.196
+for depreciation.
+
+07:46.696 --> 07:50.046
+The pilot line's energy is metered separately, so it's allocated directly. Every choice
+
+07:50.046 --> 07:53.396
+has a note, ready for Inland Revenue.
+
+07:53.796 --> 07:56.866
+The comparison shows how each method affects the credit.
+
+08:02.113 --> 08:04.918
+Contractors. The ledger has three contractor accounts. Record each one, so the New Zealand
+
+08:04.918 --> 08:07.723
+rules apply.
+
+08:08.123 --> 08:12.913
+Canterbury Polymer Research Institute is an approved research provider. Its spend counts
+
+08:12.913 --> 08:17.703
+even below the $50,000 minimum, and sits outside the refundability cap.
+
+08:36.123 --> 08:41.163
+The Brisbane lab did its work overseas, so it falls under the 10% cap for foreign R&D.
+
+08:50.203 --> 08:54.313
+Raman Advisory is owned by our chief scientist, so it's an associated person and only
+
+08:54.313 --> 08:58.423
+its cost counts: $42,000 of the $60,000 invoiced.
+
+09:01.363 --> 09:05.593
+Link each contractor to the activities it worked on, as evidence for the claim.
+
+09:41.043 --> 09:43.848
+The app spots that Raman's split doesn't match the claimable amount at cost, and auto-fix
+
+09:43.848 --> 09:46.653
+rebalances it.
+
+09:57.972 --> 10:01.757
+Other expenses. Materials, overheads and depreciation are claimed here, while interest,
+
+10:01.757 --> 10:05.542
+buildings and the technology licence stay excluded.
+
+10:10.852 --> 10:14.892
+Feedstock. The surplus pilot pellets sold for $120,000, so the $76,000 of resin and energy
+
+10:14.892 --> 10:18.932
+inputs is excluded.
+
+10:24.292 --> 10:27.122
+A government grant also funded part of the project.
+
+10:31.858 --> 10:36.508
+Spend funded by the grant is ineligible, so the full $100,000 comes out.
+
+10:41.191 --> 10:44.281
+Before the summary, the reconciliation check flagged the trial balance, so line its classifications
+
+10:44.281 --> 10:47.371
+up with the ledger.
+
+10:54.231 --> 10:57.711
+Enter this year's income tax, PAYE and ESCT, and elect a refund.
+
+11:07.624 --> 11:13.599
+The summary. Eligible expenditure is $854,000, after the grant, the feedstock and the
+
+11:13.599 --> 11:19.574
+associate's margin come out. At 15%, the credit is $128,000.
+
+11:19.974 --> 11:22.389
+It first meets this year's tax, and the rest is refunded, within the PAYE, ESCT and FBT
+
+11:22.389 --> 11:24.804
+cap.
+
+11:25.204 --> 11:27.514
+And every deadline for the year is listed.
+
+11:30.757 --> 11:34.062
+The accounting page suggests the journals under NZ IAS 12, and notes the imputation credit,
+
+11:34.062 --> 11:37.367
+ready for your accountant.
+
+11:39.457 --> 11:43.701
+Outputs. The general approval is already in, so the draft checklist is tucked away. Add
+
+11:43.701 --> 11:47.944
+the contact, and the prior year's R&D spend for Inland Revenue's evaluation question.
+
+11:47.944 --> 11:52.187
+That's zero if there wasn't any, and it doesn't change the claim.
+
+11:52.587 --> 11:55.537
+Download the supplementary return workpaper in Excel.
+
+11:57.524 --> 12:01.364
+And the general approval draft in Word, for a new project or a variation.
+
+12:09.657 --> 12:14.327
+That's a complete New Zealand R&D tax credit claim, from ledgers and timesheets to the
+
+12:14.327 --> 12:18.997
+return workpaper. Thanks so much for watching, and find out more at rdinnovate.com.
