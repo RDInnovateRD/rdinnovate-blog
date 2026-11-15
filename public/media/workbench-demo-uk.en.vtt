@@ -1,0 +1,277 @@
+WEBVTT
+
+00:00.600 --> 00:05.290
+Welcome to R&D Tax Workbench UK! In this walkthrough, we'll prepare a complete UK R&D
+
+00:05.290 --> 00:09.980
+claim under the merged R&D expenditure credit scheme for Fernhill Robotics, from sign-up
+
+00:09.980 --> 00:14.670
+to the additional information form and the CT600 boxes. Let's dive in!
+
+00:16.700 --> 00:21.650
+Getting started takes seconds. Create an account with your name, your email and a password.
+
+00:22.050 --> 00:24.210
+Confirm the password, and you're in.
+
+00:28.500 --> 00:32.500
+The AI features, like narratives and account classification, run on credits. Open the
+
+00:32.500 --> 00:36.500
+credit meter, choose a top-up, and pay securely through Stripe.
+
+00:38.533 --> 00:41.873
+Business details are needed once, before your first top-up.
+
+00:43.833 --> 00:46.373
+Pay by card through Stripe's secure checkout.
+
+00:49.133 --> 00:51.213
+Add the billing address, and pay.
+
+00:53.233 --> 00:57.103
+Payment confirmed, and the credits land in your balance straight away.
+
+01:00.266 --> 01:04.386
+Create a new claim. Enter the company name, its tax reference and SIC code.
+
+01:06.186 --> 01:09.881
+Then the accounting period. It starts after 1 April 2024, so the merged R&D expenditure
+
+01:09.881 --> 01:13.576
+credit scheme applies.
+
+01:13.976 --> 01:17.926
+Answer a few questions on company size and status, and create the claim.
+
+01:19.899 --> 01:24.499
+Claim settings hold the figures the computation needs, starting with the company's status.
+
+01:24.899 --> 01:27.969
+Then the corporation tax figures before R&D relief.
+
+01:28.369 --> 01:32.649
+And the PAYE and National Insurance figures, for the cap on the payable credit.
+
+01:33.049 --> 01:35.769
+Add the contacts for the additional information form.
+
+01:42.009 --> 01:45.179
+The company made an R&D claim in the last three years, so it doesn't need to tell HMRC
+
+01:45.179 --> 01:48.349
+in advance that it plans to claim.
+
+01:50.366 --> 01:56.606
+The company page keeps the details together, with the claim time limit: 31 March 2028.
+
+01:58.599 --> 02:01.259
+Now the R&D project. Paste in your own notes, and the AI project setup drafts the project
+
+02:01.259 --> 02:03.919
+for you.
+
+02:09.905 --> 02:13.120
+It proposes the R&D activities and the directly contributing activity, in the terms the
+
+02:13.120 --> 02:16.335
+government's guidelines use.
+
+02:16.735 --> 02:20.795
+Create the project, and the narrative for every activity is written in one go.
+
+02:22.151 --> 02:25.831
+Every activity now has its full narrative, ready to review and edit.
+
+02:36.097 --> 02:39.497
+Payroll next. Upload the payroll file, and AI maps the columns: gross pay, employer National
+
+02:39.497 --> 02:42.897
+Insurance and employer pension.
+
+02:43.297 --> 02:46.777
+A quick quality check, then import. Seven employees are loaded.
+
+02:50.097 --> 02:52.912
+Now the timesheet. The smart parser reads each person's R&D hours and matches them to
+
+02:52.912 --> 02:55.727
+the activities.
+
+02:57.237 --> 02:59.247
+Review the mappings, and save.
+
+03:01.937 --> 03:05.377
+The combined view brings it together: each person's salary, National Insurance and pension,
+
+03:05.377 --> 03:08.817
+apportioned by actual R&D hours.
+
+03:10.663 --> 03:13.318
+Now the financials. Upload the general ledger. The parser reads every account and checks
+
+03:13.318 --> 03:15.973
+the file.
+
+03:16.923 --> 03:20.553
+24 accounts, parsed and checked. Import them, and AI classifies each one against the UK
+
+03:20.553 --> 03:24.183
+rules, with a reason for every decision.
+
+03:24.583 --> 03:27.608
+Salaries, contractors, materials, cloud and data costs are picked out as R&D, and loan
+
+03:27.608 --> 03:30.633
+interest is excluded.
+
+03:34.823 --> 03:39.453
+Upload the trial balance separately. Each source is stored and reconciled on its own.
+
+03:46.138 --> 03:49.178
+Then the profit and loss statement and the balance sheet.
+
+03:51.998 --> 03:56.658
+The ledger is an expense-only extract, so mark it as partial, and the sources reconcile.
+
+03:59.478 --> 04:04.408
+Review the profit and loss items marked as R&D. A category can be changed with one click.
+
+04:12.392 --> 04:16.882
+Apportionment. Choose a just and reasonable basis for each cost, and record why. Staff
+
+04:16.882 --> 04:21.372
+costs follow the timesheets, including employer National Insurance and pension.
+
+04:32.752 --> 04:37.782
+Cloud computing, contractors and materials are wholly for R&D, so they're allocated directly.
+
+04:38.182 --> 04:43.102
+The design software is shared across engineering, so it uses the R&D share of staff time.
+
+04:44.582 --> 04:47.972
+The test facility's power is metered separately, so it's allocated directly too. Every
+
+04:47.972 --> 04:51.362
+choice has a note, ready if HMRC asks.
+
+04:55.862 --> 04:59.892
+And the comparison shows how the choice of method changes the R&D spend.
+
+05:01.892 --> 05:04.872
+Contractors. Record each one as externally provided workers or subcontracted R&D, so the
+
+05:04.872 --> 05:07.852
+UK rules apply.
+
+05:08.252 --> 05:11.302
+Avonbridge University's robotics lab modelled the soil and tine interaction. It's an unconnected
+
+05:11.302 --> 05:14.352
+subcontractor.
+
+05:18.592 --> 05:25.382
+Unconnected subcontractors count at 65% of the payment, so £80,000 gives £52,000.
+
+05:25.782 --> 05:29.062
+Brightwork supplied two agency test engineers on UK payroll: externally provided workers,
+
+05:29.062 --> 05:32.342
+also at 65%.
+
+05:42.622 --> 05:46.226
+Delft Field Robotics ran trials in the Netherlands because it was convenient. Overseas
+
+05:46.226 --> 05:49.829
+work only counts when conditions in the UK can't support it, and cost or convenience doesn't
+
+05:49.829 --> 05:53.432
+count, so it's excluded.
+
+06:06.782 --> 06:10.892
+Link each contractor to the activities it worked on, as evidence for the claim.
+
+06:33.462 --> 06:37.482
+Each card shows the R&D share, and the qualifying amount after the rules.
+
+06:48.292 --> 06:51.732
+Other expenses: consumables, software, data licences and cloud computing. AI has already
+
+06:51.732 --> 06:55.172
+picked out the five R&D accounts.
+
+06:57.532 --> 07:00.959
+In claim settings, confirm the UK cost category for each account. The crop image library
+
+07:00.959 --> 07:04.386
+is a data licence, the GPU training is cloud computing, and the test facility's power
+
+07:04.386 --> 07:07.812
+is a consumable.
+
+07:08.212 --> 07:10.967
+The R&D intensity test for ERIS uses the total expenditure in the accounts. One click
+
+07:10.967 --> 07:13.722
+fills it in.
+
+07:14.122 --> 07:16.182
+And add the date the claim will be made.
+
+07:25.025 --> 07:29.235
+The summary. Every cost is grouped by category at its qualifying amount, under the merged
+
+07:29.235 --> 07:33.445
+scheme. The one warning confirms the overseas trials are excluded.
+
+07:33.845 --> 07:41.435
+Qualifying expenditure is £580,000, so the expenditure credit at 20% is £116,000.
+
+07:41.835 --> 07:47.035
+The seven statutory steps follow the CT600L boxes. The credit first pays this year's corporation
+
+07:47.035 --> 07:52.235
+tax, and after the notional tax step, £14,700 is payable.
+
+07:52.635 --> 07:56.175
+The company is exempt from the PAYE cap, and the claim is in time.
+
+08:01.715 --> 08:06.245
+Any point the law can read more than one way is listed as a position for you to decide.
+
+08:08.192 --> 08:12.277
+Before the outputs, the additional information form needs each project's answers. AI drafts
+
+08:12.277 --> 08:16.362
+them from your notes and narratives, without adding facts.
+
+08:16.762 --> 08:19.167
+Anything it can't find is left as a question for you, so review each answer and make it
+
+08:19.167 --> 08:21.572
+yours.
+
+08:25.902 --> 08:28.562
+Outputs. The additional information form draft is complete, with no errors and nothing
+
+08:28.562 --> 08:31.222
+missing.
+
+08:31.622 --> 08:34.352
+Business details, contacts, the expenditure credit figures by category, and each project's
+
+08:34.352 --> 08:37.082
+answers.
+
+08:46.102 --> 08:50.582
+Then every CT600 and CT600L box, ready to copy into the return.
+
+08:53.202 --> 08:57.242
+Download the computation workpaper in Excel, and the answers as plain text.
+
+09:02.759 --> 09:08.034
+That's a complete UK R&D claim, from ledgers and timesheets to the additional information
+
+09:08.034 --> 09:13.309
+form and the CT600 boxes. Thanks so much for watching, and find out more at rdinnovate.com.
