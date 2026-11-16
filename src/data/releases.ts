@@ -15,6 +15,42 @@ export interface Release {
 
 export const releases: Release[] = [
   {
+    version: '1.3.2',
+    date: '2026-11-16',
+    published: true,
+    summary: 'Fixes: the top-up confirmation, reconciliation and classification, narratives from your project notes, and first sign-in. The law the app applies is unchanged.',
+    sections: [
+      {
+        heading: 'Credits',
+        items: [
+          'After a top-up, the confirmation page waits for the new balance before showing it. It no longer shows "0 credits" for a moment before the credits arrive.',
+        ],
+      },
+      {
+        heading: 'Financials and classification',
+        items: [
+          'Unticking a profit and loss or balance sheet item as R&D also clears the matching general ledger account, which could stay classified as R&D.',
+          'The reconciliation check reads a balance sheet whose liabilities and equity are entered as negative (credit) figures correctly. It no longer reports a difference that is not there.',
+          'The "No items classified as R&D" warning appears only when cost lines were reviewed, not after a balance-sheet-only run.',
+        ],
+      },
+      {
+        heading: 'Projects and narratives',
+        items: [
+          'Narratives are written from the project notes you pasted in, as well as the activity details.',
+          'Closing the project window after the narratives are generated refreshes the page.',
+        ],
+      },
+      {
+        heading: 'Other',
+        items: [
+          'First sign-in no longer fails when several screens ask for the account at the same moment.',
+          'Wording: "1 account", "1 activity" and "1 section exceeds".',
+        ],
+      },
+    ],
+  },
+  {
     version: '1.3.1',
     date: '2026-11-14',
     published: true,
