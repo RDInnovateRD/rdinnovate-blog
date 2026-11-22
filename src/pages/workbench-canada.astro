@@ -1,0 +1,143 @@
+---
+import Base from '../layouts/Base.astro';
+import { site, workbenchUk as uk, workbenchCa as w } from '../data/site';
+const base = `https://github.com/${w.repo}/releases/download/v${w.version}`;
+---
+<Base title="RnD Tax Workbench Canada — download / téléchargement"
+      description="Desktop application for preparing Canadian SR&ED claims (T661, Schedule 31 and the provincial credits), in English or French. Runs locally on your machine."
+      noindex={!w.live}>
+<section class="wb-hero">
+  <img class="wb-icon" src="/media/rnd-tax-workbench-icon.png" width="112" height="112" alt="">
+  <nav class="wb-country" aria-label="Edition">
+    <a href="/workbench/">Australia</a>
+    <a href="/workbench-nz/">New Zealand</a>
+    {uk.live && <a href="/workbench-uk/">United Kingdom</a>}
+    <a href="/workbench-canada/" aria-current="page">Canada</a>
+  </nav>
+  <p class="eyebrow">R&amp;D Innovate</p>
+  <h1>RnD Tax Workbench Canada</h1>
+  <p class="lede">Prepare Canadian scientific research and experimental development (SR&amp;ED)
+  claims on your own machine. Import your trial balance or general ledger, payroll and timesheets,
+  tag each cost to its province, and produce Form T661, Schedule 31 (or T2038(IND)) and the
+  provincial and territorial credit schedules, including Quebec. In English or French.</p>
+  <p class="lede" lang="fr">Préparez vos demandes de crédit pour la recherche scientifique et le
+  développement expérimental (RS&amp;DE) sur votre propre ordinateur : importez votre balance de
+  vérification ou grand livre, la paie et les feuilles de temps, rattachez chaque dépense à sa
+  province, et produisez le formulaire T661, l'annexe 31 (ou le T2038(IND)) et les annexes des
+  crédits provinciaux et territoriaux, y compris ceux du Québec. En français ou en anglais.</p>
+  <p class="wb-meta">Canada edition / édition canadienne &middot; Version {w.version} &middot; macOS, Windows, Linux</p>
+</section>
+
+<section class="wb-downloads">
+  <h2>Download / Téléchargement</h2>
+  <div class="wb-grid wb-four">
+    <a class="wb-card" href={`${base}/${w.macArm}`}>
+      <span class="wb-plat">macOS</span>
+      <span class="wb-arch">Apple silicon</span>
+      <span class="wb-note">M1, M2, M3, M4</span>
+      <span class="wb-dl">.dmg &rarr;</span>
+    </a>
+    <a class="wb-card" href={`${base}/${w.macX64}`}>
+      <span class="wb-plat">macOS</span>
+      <span class="wb-arch">Intel</span>
+      <span class="wb-note">2020 and earlier / 2020 et avant</span>
+      <span class="wb-dl">.dmg &rarr;</span>
+    </a>
+    <a class="wb-card" href={`${base}/${w.windows}`}>
+      <span class="wb-plat">Windows</span>
+      <span class="wb-arch">64-bit / 64 bits</span>
+      <span class="wb-note">Windows 10, 11</span>
+      <span class="wb-dl">.exe &rarr;</span>
+    </a>
+    <a class="wb-card" href={`${base}/${w.linuxAppImage}`}>
+      <span class="wb-plat">Linux</span>
+      <span class="wb-arch">AppImage 64-bit</span>
+      <span class="wb-note">Most distributions / la plupart des distributions</span>
+      <span class="wb-dl">AppImage &rarr;</span>
+    </a>
+  </div>
+  <p class="wb-size">Linux packages / paquets : <a href={`${base}/${w.linuxDeb}`}>.deb</a> (Debian, Ubuntu),{' '}
+  <a href={`${base}/${w.linuxRpm}`}>.rpm</a> (Fedora, RHEL).</p>
+  <p class="wb-size">Not sure which Mac you have? Apple menu &rarr; About This Mac. "Apple M1" or
+  later means Apple silicon.</p>
+  <p class="wb-size" lang="fr">Quel Mac avez-vous? Menu Pomme &rarr; À propos de ce Mac. « Apple M1 »
+  ou plus récent signifie Apple silicon.</p>
+</section>
+
+<section class="wb-body">
+  <h2>What it covers</h2>
+  <ul>
+    <li>Federal SR&amp;ED for corporations, individuals and partnerships: T661, Schedule 31 or
+        T2038(IND), and the T5013 allocation. Tax years beginning before 16 December 2024 and
+        after are both handled.</li>
+    <li>Every province and territory with an R&amp;D credit, the Alberta Innovation Employment
+        Grant and the Quebec CRIC, with each cost tagged to its province.</li>
+    <li>Special forms when the facts call for them, such as Schedule 49, T1174, T1145 and T1146.</li>
+    <li>Points the law leaves open are shown as positions you decide, each with its source.</li>
+  </ul>
+  <h2 lang="fr">Ce que couvre l'application</h2>
+  <ul lang="fr">
+    <li>RS&amp;DE fédérale pour les sociétés, les particuliers et les sociétés de personnes : T661,
+        annexe 31 ou T2038(IND), et répartition T5013. Les années d'imposition commençant avant
+        le 16 décembre 2024 et après sont toutes deux prises en charge.</li>
+    <li>Chaque province et territoire offrant un crédit de R-D, la subvention de l'Alberta pour
+        l'emploi en innovation et le CRIC du Québec, chaque dépense étant rattachée à sa province.</li>
+    <li>Formulaires particuliers au besoin, comme l'annexe 49, le T1174, le T1145 et le T1146.</li>
+    <li>Les points que la loi laisse ouverts sont présentés comme des positions que vous
+        choisissez, avec leur source.</li>
+  </ul>
+
+  <h2>Requirements / Configuration requise</h2>
+  <ul>
+    <li>macOS 10.15 or later, Windows 10 / 11 64-bit, or a 64-bit Linux desktop</li>
+    <li>Around 2 GB free disk space after installation / environ 2 Go d'espace libre</li>
+    <li>Internet connection for AI-assisted steps / connexion Internet pour les étapes assistées par l'IA</li>
+  </ul>
+
+  <h3>Installing on Windows / Installation sous Windows</h3>
+  <ol>
+    <li>Download the .exe / Téléchargez le .exe</li>
+    {!w.signedWin && (
+      <li>Windows SmartScreen shows a warning on first run: choose <strong>More info</strong>, then
+      <strong>Run anyway</strong>. / SmartScreen affiche un avertissement au premier lancement :
+      choisissez <strong>Informations complémentaires</strong>, puis <strong>Exécuter quand même</strong>.</li>
+    )}
+    <li>Follow the installer, then launch from the Start menu / Suivez l'installateur, puis lancez
+    l'application depuis le menu Démarrer</li>
+  </ol>
+
+  <h3>Installing on Linux / Installation sous Linux</h3>
+  <ol>
+    <li>AppImage: <code>chmod +x</code>, then run it / rendez-le exécutable, puis lancez-le</li>
+    <li>Debian, Ubuntu: <code>sudo apt install ./&lt;file&gt;.deb</code>; Fedora, RHEL: <code>sudo dnf install ./&lt;file&gt;.rpm</code></li>
+  </ol>
+
+  <h2>Your data</h2>
+  <p>Financial data is held in a local database on your own machine. Files you import stay there;
+  only the text an AI-assisted step needs is sent for processing. AI processing takes place in
+  Canada (Amazon Web Services, Canada Central and Canada West) when capacity there is available,
+  and otherwise in the United States through Anthropic's Claude API.</p>
+  <h2 lang="fr">Vos données</h2>
+  <p lang="fr">Les données financières sont conservées dans une base de données locale sur votre
+  ordinateur. Les fichiers importés y restent; seul le texte dont une étape assistée par l'IA a
+  besoin est envoyé pour traitement. Le traitement par l'IA a lieu au Canada (Amazon Web Services,
+  Canada Centre et Canada Ouest) lorsque la capacité y est disponible, et sinon aux États-Unis au
+  moyen de l'API Claude d'Anthropic.</p>
+
+  <h2>Pricing / Tarifs</h2>
+  <p>AI-assisted steps use credits, bought in packs: CA$29 for 500, CA$49 for 1,000 and CA$99 for
+  2,500. The Canadian edition is sold to businesses only: give your GST/HST number (and, in
+  Quebec, your QST number) at checkout. No GST/HST or QST is charged.</p>
+  <p lang="fr">Les étapes assistées par l'IA utilisent des crédits, vendus en lots : 29 $ CA pour
+  500, 49 $ CA pour 1 000 et 99 $ CA pour 2 500. L'édition canadienne est vendue uniquement aux
+  entreprises : indiquez votre numéro de TPS/TVH (et, au Québec, votre numéro de TVQ) au paiement.
+  Aucune TPS/TVH ni TVQ n'est facturée.</p>
+
+  <h2>Verifying your download / Vérification</h2>
+  <p><a href={`${base}/SHA256SUMS.txt`}>Checksums for version {w.version} / Sommes de contrôle de la version {w.version}</a></p>
+
+  <h2>Support / Soutien</h2>
+  <p><a href="mailto:rd@rdinnovate.com">rd@rdinnovate.com</a></p>
+  <p><a href={site.linkedin} rel="noopener">Follow R&amp;D Innovate on LinkedIn / Suivez R&amp;D Innovate sur LinkedIn</a></p>
+</section>
+</Base>

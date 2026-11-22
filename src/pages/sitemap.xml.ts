@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import { publishedPosts, urlOf, dateOf } from '../lib/posts';
-import { site, workbenchNz, workbenchUk } from '../data/site';
+import { site, workbenchNz, workbenchUk, workbenchCa } from '../data/site';
 
 export const GET: APIRoute = async () => {
   const posts = await publishedPosts();
@@ -10,6 +10,7 @@ export const GET: APIRoute = async () => {
     { loc: `${site.url}/workbench/` },
     ...(workbenchNz.live ? [{ loc: `${site.url}/workbench-nz/` }] : []),
     ...(workbenchUk.live ? [{ loc: `${site.url}/workbench-uk/` }] : []),
+    ...(workbenchCa.live ? [{ loc: `${site.url}/workbench-canada/` }] : []),
     ...posts.map((p) => ({ loc: new URL(urlOf(p), site.url).href, lastmod: dateOf(p) })),
   ];
   const body = urls

@@ -62,3 +62,17 @@ export const workbenchUk = {
   linuxDeb: 'RnD-Tax-Workbench-UK-1.0.2-linux-amd64.deb',
   linuxRpm: 'RnD-Tax-Workbench-UK-1.0.2-linux-x86_64.rpm',
 };
+
+export const workbenchCa = {
+  live: false,
+  version: '1.0.0',
+  repo: 'RDInnovateRD/rnd-tax-workbench-ca-releases',
+  signedMac: true,
+  signedWin: false,
+  macArm: 'RnD-Tax-Workbench-Canada-1.0.0-mac-arm64.dmg',
+  macX64: 'RnD-Tax-Workbench-Canada-1.0.0-mac-x64.dmg',
+  windows: 'RnD-Tax-Workbench-Canada-1.0.0-win-x64.exe',
+  linuxAppImage: 'RnD-Tax-Workbench-Canada-1.0.0-x86_64.AppImage',
+  linuxDeb: 'RnD-Tax-Workbench-Canada-1.0.0-linux-amd64.deb',
+  linuxRpm: 'RnD-Tax-Workbench-Canada-1.0.0-linux-x86_64.rpm',
+};

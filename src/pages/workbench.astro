@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { site, workbench as w, workbenchNz as nz, workbenchUk as uk } from '../data/site';
+import { site, workbench as w, workbenchNz as nz, workbenchUk as uk, workbenchCa as ca } from '../data/site';
 import { releases } from '../data/releases';
 const shown = releases.filter((r) => r.published);
 const fmt = (d: string) => new Date(`${d}T12:00:00Z`).toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Australia/Sydney' });
@@ -25,6 +25,7 @@ const ukBase = `https://github.com/${uk.repo}/releases/download/v${uk.version}`;
     <a href="#au">Australia</a>
     <a href="#nz">New Zealand</a>
     {uk.live && <a href="#uk">United Kingdom</a>}
+    {ca.live && <a href="/workbench-canada/">Canada</a>}
   </nav>
   <p class="wb-meta">macOS, Windows{w.linux ? ' and Linux' : ''} &middot; <a href="#release-notes">Release notes</a></p>
   {w.upcoming && (
