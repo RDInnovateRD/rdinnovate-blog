@@ -64,7 +64,7 @@ export const workbenchUk = {
 };
 
 export const workbenchCa = {
-  live: false,
+  live: true,
   version: '1.0.0',
   repo: 'RDInnovateRD/rnd-tax-workbench-ca-releases',
   signedMac: true,

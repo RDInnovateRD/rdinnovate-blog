@@ -1,0 +1,345 @@
+WEBVTT
+
+1
+00:00:00.600 --> 00:00:05.357
+Welcome to R&D Tax Workbench Canada! In this walkthrough, we'll prepare a complete SR&ED
+
+2
+00:00:05.357 --> 00:00:10.113
+claim for Northvane Sensing, an Ontario company with a lab in Quebec, from sign-up to
+
+3
+00:00:10.113 --> 00:00:14.870
+the T661, Schedule 31 and the provincial credit forms. Let's dive in!
+
+4
+00:00:17.840 --> 00:00:22.680
+Getting started takes seconds. Create an account with your name, your email and a password.
+
+5
+00:00:23.080 --> 00:00:25.080
+Confirm the password, and you're in.
+
+6
+00:00:31.640 --> 00:00:36.660
+The AI features, like project setup, account classification and the T661 descriptions,
+
+7
+00:00:36.660 --> 00:00:41.680
+run on credits. Open the credit meter, choose a top-up, and pay securely through Stripe.
+
+8
+00:00:42.080 --> 00:00:45.505
+The Canadian edition is sold to businesses, so the business name and GST/HST number are
+
+9
+00:00:45.505 --> 00:00:48.930
+needed once, before your first top-up.
+
+10
+00:00:55.067 --> 00:00:57.667
+Pay by card through Stripe's secure checkout.
+
+11
+00:01:06.732 --> 00:01:08.752
+Add the billing address, and pay.
+
+12
+00:01:10.865 --> 00:01:14.705
+Payment confirmed, and the credits land in your balance straight away.
+
+13
+00:01:21.318 --> 00:01:25.313
+Create a new claim. Choose the claimant, a corporation, then its legal name, business
+
+14
+00:01:25.313 --> 00:01:29.308
+number and status: a Canadian-controlled private corporation.
+
+15
+00:01:32.518 --> 00:01:36.468
+Then the tax year. It begins after 15 December 2024, so the new federal rules apply: the
+
+16
+00:01:36.468 --> 00:01:40.418
+$6 million expenditure limit, and capital expenditures qualify. In Quebec, the new CRIC
+
+17
+00:01:40.418 --> 00:01:44.368
+applies.
+
+18
+00:01:44.768 --> 00:01:47.978
+Choose the provinces with a permanent establishment, Ontario and Quebec, and the proxy
+
+19
+00:01:47.978 --> 00:01:51.188
+method. Then create the claim.
+
+20
+00:01:55.568 --> 00:01:58.438
+Add the address. Every change saves automatically.
+
+21
+00:02:06.564 --> 00:02:11.179
+Claim settings hold the figures the credits depend on: prior-year taxable capital and
+
+22
+00:02:11.179 --> 00:02:15.794
+income, for the expenditure limit and the refund rate, and the tax otherwise payable.
+
+23
+00:02:16.194 --> 00:02:19.239
+The Ontario figures for its innovation tax credit. Only the questions for the company's
+
+24
+00:02:19.239 --> 00:02:22.284
+own provinces are shown.
+
+25
+00:02:29.154 --> 00:02:32.629
+Government assistance, like this NRC IRAP contribution, reduces the pool and the qualified
+
+26
+00:02:32.629 --> 00:02:36.104
+expenditures, so it's recorded here.
+
+27
+00:02:36.504 --> 00:02:39.259
+Then the T661 contacts and funding sources, and the total overhead that caps the proxy
+
+28
+00:02:39.259 --> 00:02:42.014
+amount.
+
+29
+00:03:01.110 --> 00:03:03.880
+Now the SR&ED project. Paste in your own notes, and the AI project setup drafts the project
+
+30
+00:03:03.880 --> 00:03:06.650
+for you.
+
+31
+00:03:07.050 --> 00:03:09.580
+It proposes the SR&ED work, and the support work that serves it, in the terms the CRA
+
+32
+00:03:09.580 --> 00:03:12.110
+uses.
+
+33
+00:03:12.754 --> 00:03:15.549
+Create the project, and every description is written in one go: the project overview,
+
+34
+00:03:15.549 --> 00:03:18.344
+and each activity.
+
+35
+00:03:25.743 --> 00:03:29.613
+Every activity now has its full description, ready to review and edit.
+
+36
+00:03:37.963 --> 00:03:43.343
+Then T661, Part 2. Add the dates and the field of science, and AI drafts lines 242, 244
+
+37
+00:03:43.343 --> 00:03:48.723
+and 246 from your notes and descriptions, within the CRA's word limits.
+
+38
+00:04:01.503 --> 00:04:04.353
+It adds no facts. Anything it can't find is left as a question for you, so review each
+
+39
+00:04:04.353 --> 00:04:07.203
+line and make it yours.
+
+40
+00:04:11.356 --> 00:04:14.649
+Payroll next. Upload the payroll file, and AI maps the columns: salary, bonuses, taxable
+
+41
+00:04:14.649 --> 00:04:17.942
+benefits, hours worked, and the province of employment. Employer CPP and EI stay out of
+
+42
+00:04:17.942 --> 00:04:21.236
+salary.
+
+43
+00:04:21.636 --> 00:04:26.856
+A quick quality check, then import. 8 employees are loaded, with the Quebec staff in Quebec.
+
+44
+00:04:27.256 --> 00:04:30.936
+The CTO owns a quarter of the shares, so mark her as a specified employee. Her bonus is
+
+45
+00:04:30.936 --> 00:04:34.616
+left out, and the specified-employee rules apply.
+
+46
+00:04:37.389 --> 00:04:40.389
+Now the timesheet. The parser reads each person's SR&ED hours, and matches them to the
+
+47
+00:04:40.389 --> 00:04:43.389
+activities by title.
+
+48
+00:04:43.789 --> 00:04:46.589
+6 people, each allocated to the right activity.
+
+49
+00:04:53.049 --> 00:04:57.804
+The combined view brings it together: each person's salary, bonus and benefits, apportioned
+
+50
+00:04:57.804 --> 00:05:02.559
+by actual SR&ED hours. The two people with no SR&ED hours stay out of the claim.
+
+51
+00:05:04.855 --> 00:05:09.345
+Now the financials. Upload the general ledger. Every account is read and checked.
+
+52
+00:05:09.745 --> 00:05:13.690
+20 accounts and 121 transactions. Import them, and AI classifies each one for SR&ED, with
+
+53
+00:05:13.690 --> 00:05:17.635
+a reason for every decision.
+
+54
+00:05:19.655 --> 00:05:22.995
+Upload the trial balance separately, and AI classifies it too.
+
+55
+00:05:25.900 --> 00:05:30.310
+It spots the new environmental test chamber as capital property bought this year.
+
+56
+00:05:32.160 --> 00:05:36.485
+Salaries, contracts and materials are picked out as SR&ED. Rent, cloud and software are
+
+57
+00:05:36.485 --> 00:05:40.810
+overhead, covered by the proxy amount, and loan interest is excluded.
+
+58
+00:05:42.826 --> 00:05:47.236
+Then the income statement and the balance sheet, each read and saved to the claim.
+
+59
+00:06:00.626 --> 00:06:05.476
+The ledger is an expense-only extract, so mark it as partial, and every source reconciles.
+
+60
+00:06:10.226 --> 00:06:14.256
+Apportionment. Salaries follow the timesheets. Under the proxy method, overhead is covered
+
+61
+00:06:14.256 --> 00:06:18.286
+by the prescribed proxy amount, so it isn't claimed twice.
+
+62
+00:06:27.653 --> 00:06:32.213
+Contractors. Choose the T661 line for each one, and where the work was done.
+
+63
+00:06:32.613 --> 00:06:36.858
+Ottawa Valley Composites built the clamp housings at arm's length, so it goes on line
+
+64
+00:06:36.858 --> 00:06:41.103
+340, and 80% of it qualifies for the federal credit.
+
+65
+00:06:48.713 --> 00:06:51.708
+Gatineau Test Labs ran the icing tunnel in Quebec. It's a Quebec subcontract, so half
+
+66
+00:06:51.708 --> 00:06:54.703
+of it counts for the CRIC.
+
+67
+00:07:06.213 --> 00:07:10.433
+Link each contractor to the activities it worked on, as evidence for the claim.
+
+68
+00:07:27.705 --> 00:07:31.685
+Other expenses. AI has already found the materials consumed in testing. Under the proxy
+
+69
+00:07:31.685 --> 00:07:35.665
+method, overhead isn't claimed: the proxy amount replaces it.
+
+70
+00:07:36.065 --> 00:07:39.595
+In claim settings, each account goes on its T661 line.
+
+71
+00:07:39.995 --> 00:07:44.670
+The test chamber from the trial balance is capital property, bought in June 2025 and used
+
+72
+00:07:44.670 --> 00:07:49.345
+all or substantially all for SR&ED, so it goes on line 390.
+
+73
+00:07:51.358 --> 00:07:56.358
+The summary. The federal credit is $264,000, with $79,000 refunded after tax, plus $115,000
+
+74
+00:07:56.358 --> 00:08:01.358
+in provincial credits.
+
+75
+00:08:01.758 --> 00:08:06.398
+Every T661 and Schedule 31 line is worked out: current and capital expenditures, the proxy
+
+76
+00:08:06.398 --> 00:08:11.038
+amount, assistance, and the 35% enhanced credit.
+
+77
+00:08:11.438 --> 00:08:15.958
+Ontario's innovation and R&D tax credits, and Quebec's CRIC, each with its form.
+
+78
+00:08:16.918 --> 00:08:19.603
+Any point the law can read more than one way is listed as a position for you to decide,
+
+79
+00:08:19.603 --> 00:08:22.288
+with its source.
+
+80
+00:08:25.791 --> 00:08:30.151
+Outputs. Drafts of every form the claim needs, with anything still to complete.
+
+81
+00:08:30.551 --> 00:08:35.151
+The T661, line by line, ready to copy into the return or your tax software.
+
+82
+00:08:35.551 --> 00:08:41.891
+Schedule 31, the Ontario schedules, and Quebec's RD-1029.8 for the CO-17 return.
+
+83
+00:08:42.291 --> 00:08:44.261
+Download the workpaper in Excel.
+
+84
+00:08:46.757 --> 00:08:51.267
+And it all works in French: one click switches the app, the forms and the downloads.
+
+85
+00:09:04.957 --> 00:09:10.432
+That's a complete SR&ED claim, federal, Ontario and Quebec, from ledgers and timesheets
+
+86
+00:09:10.432 --> 00:09:15.907
+to the T661 and every credit form. Thanks so much for watching, and find out more at rdinnovate.com.
